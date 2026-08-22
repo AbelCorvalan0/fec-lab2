@@ -1,3 +1,4 @@
+import numpy as np
 from .defs import *
 
 class GaloisField:
@@ -159,3 +160,23 @@ class GaloisField:
             i = (a*abs(b)) % self._cycle
 
         return self(i)
+
+    def mat_mul(self, a, b):
+        """
+        Multiply vector-matrix/matrix-matrix over GF2. Implements the "addition of rows" approach 
+
+        Args:
+            a: Vector/Matrix to multiply
+            b: Matrix to multiply (cannot be a vector)
+
+        Returns:
+            np.array: Result of multiplication
+        """
+        ans = None
+        for ar in np.atleast_2d(a):
+            row = None
+            for j, ac in enumerate(ar):
+                if ac == 1:
+                    row = b[j] if row is None else row ^ b[j]
+            ans = row if ans is None else np.vstack((ans, row))
+        return ans
