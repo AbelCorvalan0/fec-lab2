@@ -172,11 +172,15 @@ class GaloisField:
         Returns:
             np.array: Result of multiplication
         """
-        ans = None
-        for ar in np.atleast_2d(a):
-            row = None
-            for j, ac in enumerate(ar):
-                if ac == 1:
-                    row = b[j] if row is None else row ^ b[j]
-            ans = row if ans is None else np.vstack((ans, row))
+        if np.all(a == 0) or np.all(b == 0):
+            ans = np.zeros_like(b[0,:])
+        else:
+            ans = None
+            for ar in np.atleast_2d(a):
+                ans_row = None
+                for i, ac in enumerate(ar):
+                    if ac == 1:
+                        ans_row = b[i] if ans_row is None else ans_row ^ b[i]
+                ans = ans_row if ans is None else np.vstack((ans, ans_row))
+
         return ans
