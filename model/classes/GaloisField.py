@@ -161,6 +161,14 @@ class GaloisField:
 
         return self(i)
 
+    def do_pack(self, bits):
+        value = sum([int(bi) << i for i, bi in enumerate(bits[::-1])])
+        return int(value)
+
+    def do_unpack(self, value, bit_width=12):
+        bits = [(value >> i) & 1 for i in range(bit_width)]
+        return np.array(bits[::-1], dtype=np.uint8)
+
     def mat_mul(self, a, b):
         """
         Multiply vector-matrix/matrix-matrix over GF2. Implements the "addition of rows" approach 
@@ -184,3 +192,8 @@ class GaloisField:
                 ans = ans_row if ans is None else np.vstack((ans, ans_row))
 
         return ans
+
+    def hamming_weight(self, a):
+        if isinstance(a, int):
+            a = self.do_unpack(a)
+        return np.sum(a)
