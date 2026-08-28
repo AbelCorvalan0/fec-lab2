@@ -1,0 +1,8 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,uvm,,,,,,
+/home/abel/Desktop/desktop/FEC/labs/lab2/code/rtl/golay_encoder.sv,1787352372,systemVerilog,,/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder_1.sv,,golay_encoder,,uvm,../../../../../../../../../../../Documents/Vivado/2025.2/data/rsb/busdef,,,,,
+/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder.sv,1787346705,systemVerilog,,,,tb_golay_encode,,uvm,../../../../../../../../../../../Documents/Vivado/2025.2/data/rsb/busdef,,,,,
+/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder_1.sv,1787346843,systemVerilog,,,,tb_golay_encoder_1,,uvm,../../../../../../../../../../../Documents/Vivado/2025.2/data/rsb/busdef,,,,,

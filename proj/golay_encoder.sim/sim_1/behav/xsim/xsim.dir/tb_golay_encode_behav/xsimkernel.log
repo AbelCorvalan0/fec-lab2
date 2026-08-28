@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_golay_encode_behav/xsimk -simmode gui -wdb tb_golay_encode_behav.wdb -simrunnum 0 -socket 34141
+Design successfully loaded
+Design Loading Memory Usage: 199140 KB (Peak: 199196 KB)
+Design Loading CPU Usage: 1450 ms
+Simulation completed
+Simulation Memory Usage: 289588 KB (Peak: 338408 KB)
+Simulation CPU Usage: 1520 ms

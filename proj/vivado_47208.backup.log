@@ -1,0 +1,1278 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Aug 21 18:15:00 2026
+# Process ID         : 47208
+# Current directory  : /home/abel/Desktop/desktop/FEC/labs/lab2/code/proj
+# Command line       : vivado
+# Log file           : /home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/vivado.log
+# Journal file       : /home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/vivado.jou
+# Running On         : asus
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency      : 1054.318 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8006 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 12301 MB
+# Available Virtual  : 6701 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-10:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/arty-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-20:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/arty-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cmod-s7-25:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/cmod-s7-25/B.0/board.xml as part xc7s25csga225-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-07s:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/cora-z7-07s/B.0/board.xml as part xc7z007sclg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-10:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/cora-z7-10/B.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/eclypse-z7/A.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/genesys-zu-3eg/B.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zedboard:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/zedboard/1.3/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-10:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/zybo-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-20:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/zybo-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/zybo/B.3/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:2.0 available at /home/abel/Documents/Vivado/2025.2/data/boards/board_files/zybo/B.4/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.0/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.1/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.1/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.7/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.1/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/scu35/1.0/board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/v80/1.0/board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.5/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.4/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.1/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385_2/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.2/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.3/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.0/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.1/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.5/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at /home/abel/Documents/Vivado/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+create_project golay_encoder . -part xc7a35ticsg324-1L
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/abel/Documents/Vivado/2025.2/data/ip'.
+set_property board_part digilentinc.com:arty-a7-35:part0:1.0 [current_project]
+add_files -norecurse /home/abel/Desktop/desktop/FEC/labs/lab2/code/rtl/golay_encoder.sv
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder_1.sv /home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder.sv}
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Project 1-5737] Running on host asus (64) - Ubuntu 24.04.4 LTS
+INFO: [Vivado 12-28535] Process started - Fri Aug 21 18:16:47 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_golay_encode'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/abel/Documents/Vivado/2025.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_golay_encode' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj tb_golay_encode_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abel/Desktop/desktop/FEC/labs/lab2/code/rtl/golay_encoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module golay_encoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_golay_encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_golay_encode_behav xil_defaultlib.tb_golay_encode xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/abel/Documents/Vivado/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_golay_encode_behav xil_defaultlib.tb_golay_encode xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4398] File "/home/abel/Desktop/desktop/FEC/labs/lab2/code/rtl/golay_encoder.sv" Line 29 : Function calls inside wait/event expression are sensitive to arguments only."identity_matrix()" is called without any argument which may not unblock the wait/event expression.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.golay_encoder
+Compiling module xil_defaultlib.tb_golay_encode
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_golay_encode_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_golay_encode_behav -key {Behavioral:sim_1:Functional:tb_golay_encode} -tclbatch {tb_golay_encode.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_golay_encode.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+[FAIL] i_word=001  cw=4e798f  expected=00198f
+[FAIL] i_word=002  cw=be2357  expected=0024e7
+[FAIL] i_word=003  cw=f05ad8  expected=003d68
+[FAIL] i_word=004  cw=7ccdd1  expected=004357
+[FAIL] i_word=005  cw=32b45e  expected=005ad8
+[FAIL] i_word=006  cw=c2ee86  expected=0067b0
+[FAIL] i_word=007  cw=8c9709  expected=007e3f
+[FAIL] i_word=008  cw=2be53d  expected=008be2
+[FAIL] i_word=009  cw=659cb2  expected=00926d
+[FAIL] i_word=00a  cw=95c66a  expected=00af05
+[FAIL] i_word=00b  cw=dbbfe5  expected=00b68a
+[FAIL] i_word=00c  cw=5728ec  expected=00c8b5
+[FAIL] i_word=00d  cw=195163  expected=00d13a
+[FAIL] i_word=00e  cw=e90bbb  expected=00ec52
+[FAIL] i_word=00f  cw=a77234  expected=00f5dd
+[FAIL] i_word=010  cw=e7487b  expected=010dd1
+[FAIL] i_word=011  cw=a931f4  expected=01145e
+[FAIL] i_word=012  cw=596b2c  expected=012936
+[FAIL] i_word=013  cw=1712a3  expected=0130b9
+[FAIL] i_word=014  cw=9b85aa  expected=014e86
+[FAIL] i_word=015  cw=d5fc25  expected=015709
+[FAIL] i_word=016  cw=25a6fd  expected=016a61
+[FAIL] i_word=017  cw=6bdf72  expected=0173ee
+[FAIL] i_word=018  cw=ccad46  expected=018633
+[FAIL] i_word=019  cw=82d4c9  expected=019fbc
+[FAIL] i_word=01a  cw=728e11  expected=01a2d4
+[FAIL] i_word=01b  cw=3cf79e  expected=01bb5b
+[FAIL] i_word=01c  cw=b06097  expected=01c564
+[FAIL] i_word=01d  cw=fe1918  expected=01dceb
+[FAIL] i_word=01e  cw=0e43c0  expected=01e183
+[FAIL] i_word=01f  cw=403a4f  expected=01f80c
+[FAIL] i_word=020  cw=ea9f1a  expected=0207cc
+[FAIL] i_word=021  cw=a4e695  expected=021e43
+[FAIL] i_word=022  cw=54bc4d  expected=02232b
+[FAIL] i_word=023  cw=1ac5c2  expected=023aa4
+[FAIL] i_word=024  cw=9652cb  expected=02449b
+[FAIL] i_word=025  cw=d82b44  expected=025d14
+[FAIL] i_word=026  cw=28719c  expected=02607c
+[FAIL] i_word=027  cw=660813  expected=0279f3
+[FAIL] i_word=028  cw=c17a27  expected=028c2e
+[FAIL] i_word=029  cw=8f03a8  expected=0295a1
+[FAIL] i_word=02a  cw=7f5970  expected=02a8c9
+[FAIL] i_word=02b  cw=3120ff  expected=02b146
+[FAIL] i_word=02c  cw=bdb7f6  expected=02cf79
+[FAIL] i_word=02d  cw=f3ce79  expected=02d6f6
+[FAIL] i_word=02e  cw=0394a1  expected=02eb9e
+[FAIL] i_word=02f  cw=4ded2e  expected=02f211
+[FAIL] i_word=030  cw=0dd761  expected=030a1d
+[FAIL] i_word=031  cw=43aeee  expected=031392
+[FAIL] i_word=032  cw=b3f436  expected=032efa
+[FAIL] i_word=033  cw=fd8db9  expected=033775
+[FAIL] i_word=034  cw=711ab0  expected=03494a
+[FAIL] i_word=035  cw=3f633f  expected=0350c5
+[FAIL] i_word=036  cw=cf39e7  expected=036dad
+[FAIL] i_word=037  cw=814068  expected=037422
+[FAIL] i_word=038  cw=26325c  expected=0381ff
+[FAIL] i_word=039  cw=684bd3  expected=039870
+[FAIL] i_word=03a  cw=98110b  expected=03a518
+[FAIL] i_word=03b  cw=d66884  expected=03bc97
+[FAIL] i_word=03c  cw=5aff8d  expected=03c2a8
+[FAIL] i_word=03d  cw=148602  expected=03db27
+[FAIL] i_word=03e  cw=e4dcda  expected=03e64f
+[FAIL] i_word=03f  cw=aaa555  expected=03ffc0
+[FAIL] i_word=040  cw=002001  expected=04053d
+[FAIL] i_word=041  cw=4e598e  expected=041cb2
+[FAIL] i_word=042  cw=be0356  expected=0421da
+[FAIL] i_word=043  cw=f07ad9  expected=043855
+[FAIL] i_word=044  cw=7cedd0  expected=04466a
+[FAIL] i_word=045  cw=32945f  expected=045fe5
+[FAIL] i_word=046  cw=c2ce87  expected=04628d
+[FAIL] i_word=047  cw=8cb708  expected=047b02
+[FAIL] i_word=048  cw=2bc53c  expected=048edf
+[FAIL] i_word=049  cw=65bcb3  expected=049750
+[FAIL] i_word=04a  cw=95e66b  expected=04aa38
+[FAIL] i_word=04b  cw=db9fe4  expected=04b3b7
+[FAIL] i_word=04c  cw=5708ed  expected=04cd88
+[FAIL] i_word=04d  cw=197162  expected=04d407
+[FAIL] i_word=04e  cw=e92bba  expected=04e96f
+[FAIL] i_word=04f  cw=a75235  expected=04f0e0
+[FAIL] i_word=050  cw=e7687a  expected=0508ec
+[FAIL] i_word=051  cw=a911f5  expected=051163
+[FAIL] i_word=052  cw=594b2d  expected=052c0b
+[FAIL] i_word=053  cw=1732a2  expected=053584
+[FAIL] i_word=054  cw=9ba5ab  expected=054bbb
+[FAIL] i_word=055  cw=d5dc24  expected=055234
+[FAIL] i_word=056  cw=2586fc  expected=056f5c
+[FAIL] i_word=057  cw=6bff73  expected=0576d3
+[FAIL] i_word=058  cw=cc8d47  expected=05830e
+[FAIL] i_word=059  cw=82f4c8  expected=059a81
+[FAIL] i_word=05a  cw=72ae10  expected=05a7e9
+[FAIL] i_word=05b  cw=3cd79f  expected=05be66
+[FAIL] i_word=05c  cw=b04096  expected=05c059
+[FAIL] i_word=05d  cw=fe3919  expected=05d9d6
+[FAIL] i_word=05e  cw=0e63c1  expected=05e4be
+[FAIL] i_word=05f  cw=401a4e  expected=05fd31
+[FAIL] i_word=060  cw=eabf1b  expected=0602f1
+[FAIL] i_word=061  cw=a4c694  expected=061b7e
+[FAIL] i_word=062  cw=549c4c  expected=062616
+[FAIL] i_word=063  cw=1ae5c3  expected=063f99
+[FAIL] i_word=064  cw=9672ca  expected=0641a6
+[FAIL] i_word=065  cw=d80b45  expected=065829
+[FAIL] i_word=066  cw=28519d  expected=066541
+[FAIL] i_word=067  cw=662812  expected=067cce
+[FAIL] i_word=068  cw=c15a26  expected=068913
+[FAIL] i_word=069  cw=8f23a9  expected=06909c
+[FAIL] i_word=06a  cw=7f7971  expected=06adf4
+[FAIL] i_word=06b  cw=3100fe  expected=06b47b
+[FAIL] i_word=06c  cw=bd97f7  expected=06ca44
+[FAIL] i_word=06d  cw=f3ee78  expected=06d3cb
+[FAIL] i_word=06e  cw=03b4a0  expected=06eea3
+[FAIL] i_word=06f  cw=4dcd2f  expected=06f72c
+[FAIL] i_word=070  cw=0df760  expected=070f20
+[FAIL] i_word=071  cw=438eef  expected=0716af
+[FAIL] i_word=072  cw=b3d437  expected=072bc7
+[FAIL] i_word=073  cw=fdadb8  expected=073248
+[FAIL] i_word=074  cw=713ab1  expected=074c77
+[FAIL] i_word=075  cw=3f433e  expected=0755f8
+[FAIL] i_word=076  cw=cf19e6  expected=076890
+[FAIL] i_word=077  cw=816069  expected=07711f
+[FAIL] i_word=078  cw=26125d  expected=0784c2
+[FAIL] i_word=079  cw=686bd2  expected=079d4d
+[FAIL] i_word=07a  cw=98310a  expected=07a025
+[FAIL] i_word=07b  cw=d64885  expected=07b9aa
+[FAIL] i_word=07c  cw=5adf8c  expected=07c795
+[FAIL] i_word=07d  cw=14a603  expected=07de1a
+[FAIL] i_word=07e  cw=e4fcdb  expected=07e372
+[FAIL] i_word=07f  cw=aa8554  expected=07fafd
+[FAIL] i_word=080  cw=008004  expected=0802be
+[FAIL] i_word=081  cw=4ef98b  expected=081b31
+[FAIL] i_word=082  cw=bea353  expected=082659
+[FAIL] i_word=083  cw=f0dadc  expected=083fd6
+[FAIL] i_word=084  cw=7c4dd5  expected=0841e9
+[FAIL] i_word=085  cw=32345a  expected=085866
+[FAIL] i_word=086  cw=c26e82  expected=08650e
+[FAIL] i_word=087  cw=8c170d  expected=087c81
+[FAIL] i_word=088  cw=2b6539  expected=08895c
+[FAIL] i_word=089  cw=651cb6  expected=0890d3
+[FAIL] i_word=08a  cw=95466e  expected=08adbb
+[FAIL] i_word=08b  cw=db3fe1  expected=08b434
+[FAIL] i_word=08c  cw=57a8e8  expected=08ca0b
+[FAIL] i_word=08d  cw=19d167  expected=08d384
+[FAIL] i_word=08e  cw=e98bbf  expected=08eeec
+[FAIL] i_word=08f  cw=a7f230  expected=08f763
+[FAIL] i_word=090  cw=e7c87f  expected=090f6f
+[FAIL] i_word=091  cw=a9b1f0  expected=0916e0
+[FAIL] i_word=092  cw=59eb28  expected=092b88
+[FAIL] i_word=093  cw=1792a7  expected=093207
+[FAIL] i_word=094  cw=9b05ae  expected=094c38
+[FAIL] i_word=095  cw=d57c21  expected=0955b7
+[FAIL] i_word=096  cw=2526f9  expected=0968df
+[FAIL] i_word=097  cw=6b5f76  expected=097150
+[FAIL] i_word=098  cw=cc2d42  expected=09848d
+[FAIL] i_word=099  cw=8254cd  expected=099d02
+[FAIL] i_word=09a  cw=720e15  expected=09a06a
+[FAIL] i_word=09b  cw=3c779a  expected=09b9e5
+[FAIL] i_word=09c  cw=b0e093  expected=09c7da
+[FAIL] i_word=09d  cw=fe991c  expected=09de55
+[FAIL] i_word=09e  cw=0ec3c4  expected=09e33d
+[FAIL] i_word=09f  cw=40ba4b  expected=09fab2
+[FAIL] i_word=0a0  cw=ea1f1e  expected=0a0572
+[FAIL] i_word=0a1  cw=a46691  expected=0a1cfd
+[FAIL] i_word=0a2  cw=543c49  expected=0a2195
+[FAIL] i_word=0a3  cw=1a45c6  expected=0a381a
+[FAIL] i_word=0a4  cw=96d2cf  expected=0a4625
+[FAIL] i_word=0a5  cw=d8ab40  expected=0a5faa
+[FAIL] i_word=0a6  cw=28f198  expected=0a62c2
+[FAIL] i_word=0a7  cw=668817  expected=0a7b4d
+[FAIL] i_word=0a8  cw=c1fa23  expected=0a8e90
+[FAIL] i_word=0a9  cw=8f83ac  expected=0a971f
+[FAIL] i_word=0aa  cw=7fd974  expected=0aaa77
+[FAIL] i_word=0ab  cw=31a0fb  expected=0ab3f8
+[FAIL] i_word=0ac  cw=bd37f2  expected=0acdc7
+[FAIL] i_word=0ad  cw=f34e7d  expected=0ad448
+[FAIL] i_word=0ae  cw=0314a5  expected=0ae920
+[FAIL] i_word=0af  cw=4d6d2a  expected=0af0af
+[FAIL] i_word=0b0  cw=0d5765  expected=0b08a3
+[FAIL] i_word=0b1  cw=432eea  expected=0b112c
+[FAIL] i_word=0b2  cw=b37432  expected=0b2c44
+[FAIL] i_word=0b3  cw=fd0dbd  expected=0b35cb
+[FAIL] i_word=0b4  cw=719ab4  expected=0b4bf4
+[FAIL] i_word=0b5  cw=3fe33b  expected=0b527b
+[FAIL] i_word=0b6  cw=cfb9e3  expected=0b6f13
+[FAIL] i_word=0b7  cw=81c06c  expected=0b769c
+[FAIL] i_word=0b8  cw=26b258  expected=0b8341
+[FAIL] i_word=0b9  cw=68cbd7  expected=0b9ace
+[FAIL] i_word=0ba  cw=98910f  expected=0ba7a6
+[FAIL] i_word=0bb  cw=d6e880  expected=0bbe29
+[FAIL] i_word=0bc  cw=5a7f89  expected=0bc016
+[FAIL] i_word=0bd  cw=140606  expected=0bd999
+[FAIL] i_word=0be  cw=e45cde  expected=0be4f1
+[FAIL] i_word=0bf  cw=aa2551  expected=0bfd7e
+[FAIL] i_word=0c0  cw=00a005  expected=0c0783
+[FAIL] i_word=0c1  cw=4ed98a  expected=0c1e0c
+[FAIL] i_word=0c2  cw=be8352  expected=0c2364
+[FAIL] i_word=0c3  cw=f0fadd  expected=0c3aeb
+[FAIL] i_word=0c4  cw=7c6dd4  expected=0c44d4
+[FAIL] i_word=0c5  cw=32145b  expected=0c5d5b
+[FAIL] i_word=0c6  cw=c24e83  expected=0c6033
+[FAIL] i_word=0c7  cw=8c370c  expected=0c79bc
+[FAIL] i_word=0c8  cw=2b4538  expected=0c8c61
+[FAIL] i_word=0c9  cw=653cb7  expected=0c95ee
+[FAIL] i_word=0ca  cw=95666f  expected=0ca886
+[FAIL] i_word=0cb  cw=db1fe0  expected=0cb109
+[FAIL] i_word=0cc  cw=5788e9  expected=0ccf36
+[FAIL] i_word=0cd  cw=19f166  expected=0cd6b9
+[FAIL] i_word=0ce  cw=e9abbe  expected=0cebd1
+[FAIL] i_word=0cf  cw=a7d231  expected=0cf25e
+[FAIL] i_word=0d0  cw=e7e87e  expected=0d0a52
+[FAIL] i_word=0d1  cw=a991f1  expected=0d13dd
+[FAIL] i_word=0d2  cw=59cb29  expected=0d2eb5
+[FAIL] i_word=0d3  cw=17b2a6  expected=0d373a
+[FAIL] i_word=0d4  cw=9b25af  expected=0d4905
+[FAIL] i_word=0d5  cw=d55c20  expected=0d508a
+[FAIL] i_word=0d6  cw=2506f8  expected=0d6de2
+[FAIL] i_word=0d7  cw=6b7f77  expected=0d746d
+[FAIL] i_word=0d8  cw=cc0d43  expected=0d81b0
+[FAIL] i_word=0d9  cw=8274cc  expected=0d983f
+[FAIL] i_word=0da  cw=722e14  expected=0da557
+[FAIL] i_word=0db  cw=3c579b  expected=0dbcd8
+[FAIL] i_word=0dc  cw=b0c092  expected=0dc2e7
+[FAIL] i_word=0dd  cw=feb91d  expected=0ddb68
+[FAIL] i_word=0de  cw=0ee3c5  expected=0de600
+[FAIL] i_word=0df  cw=409a4a  expected=0dff8f
+[FAIL] i_word=0e0  cw=ea3f1f  expected=0e004f
+[FAIL] i_word=0e1  cw=a44690  expected=0e19c0
+[FAIL] i_word=0e2  cw=541c48  expected=0e24a8
+[FAIL] i_word=0e3  cw=1a65c7  expected=0e3d27
+[FAIL] i_word=0e4  cw=96f2ce  expected=0e4318
+[FAIL] i_word=0e5  cw=d88b41  expected=0e5a97
+[FAIL] i_word=0e6  cw=28d199  expected=0e67ff
+[FAIL] i_word=0e7  cw=66a816  expected=0e7e70
+[FAIL] i_word=0e8  cw=c1da22  expected=0e8bad
+[FAIL] i_word=0e9  cw=8fa3ad  expected=0e9222
+[FAIL] i_word=0ea  cw=7ff975  expected=0eaf4a
+[FAIL] i_word=0eb  cw=3180fa  expected=0eb6c5
+[FAIL] i_word=0ec  cw=bd17f3  expected=0ec8fa
+[FAIL] i_word=0ed  cw=f36e7c  expected=0ed175
+[FAIL] i_word=0ee  cw=0334a4  expected=0eec1d
+[FAIL] i_word=0ef  cw=4d4d2b  expected=0ef592
+[FAIL] i_word=0f0  cw=0d7764  expected=0f0d9e
+[FAIL] i_word=0f1  cw=430eeb  expected=0f1411
+[FAIL] i_word=0f2  cw=b35433  expected=0f2979
+[FAIL] i_word=0f3  cw=fd2dbc  expected=0f30f6
+[FAIL] i_word=0f4  cw=71bab5  expected=0f4ec9
+[FAIL] i_word=0f5  cw=3fc33a  expected=0f5746
+[FAIL] i_word=0f6  cw=cf99e2  expected=0f6a2e
+[FAIL] i_word=0f7  cw=81e06d  expected=0f73a1
+[FAIL] i_word=0f8  cw=269259  expected=0f867c
+[FAIL] i_word=0f9  cw=68ebd6  expected=0f9ff3
+[FAIL] i_word=0fa  cw=98b10e  expected=0fa29b
+[FAIL] i_word=0fb  cw=d6c881  expected=0fbb14
+[FAIL] i_word=0fc  cw=5a5f88  expected=0fc52b
+[FAIL] i_word=0fd  cw=142607  expected=0fdca4
+[FAIL] i_word=0fe  cw=e47cdf  expected=0fe1cc
+[FAIL] i_word=0ff  cw=aa0550  expected=0ff843
+[FAIL] i_word=100  cw=020010  expected=10087b
+[FAIL] i_word=101  cw=4c799f  expected=1011f4
+[FAIL] i_word=102  cw=bc2347  expected=102c9c
+[FAIL] i_word=103  cw=f25ac8  expected=103513
+[FAIL] i_word=104  cw=7ecdc1  expected=104b2c
+[FAIL] i_word=105  cw=30b44e  expected=1052a3
+[FAIL] i_word=106  cw=c0ee96  expected=106fcb
+[FAIL] i_word=107  cw=8e9719  expected=107644
+[FAIL] i_word=108  cw=29e52d  expected=108399
+[FAIL] i_word=109  cw=679ca2  expected=109a16
+[FAIL] i_word=10a  cw=97c67a  expected=10a77e
+[FAIL] i_word=10b  cw=d9bff5  expected=10bef1
+[FAIL] i_word=10c  cw=5528fc  expected=10c0ce
+[FAIL] i_word=10d  cw=1b5173  expected=10d941
+[FAIL] i_word=10e  cw=eb0bab  expected=10e429
+[FAIL] i_word=10f  cw=a57224  expected=10fda6
+[FAIL] i_word=110  cw=e5486b  expected=1105aa
+[FAIL] i_word=111  cw=ab31e4  expected=111c25
+[FAIL] i_word=112  cw=5b6b3c  expected=11214d
+[FAIL] i_word=113  cw=1512b3  expected=1138c2
+[FAIL] i_word=114  cw=9985ba  expected=1146fd
+[FAIL] i_word=115  cw=d7fc35  expected=115f72
+[FAIL] i_word=116  cw=27a6ed  expected=11621a
+[FAIL] i_word=117  cw=69df62  expected=117b95
+[FAIL] i_word=118  cw=cead56  expected=118e48
+[FAIL] i_word=119  cw=80d4d9  expected=1197c7
+[FAIL] i_word=11a  cw=708e01  expected=11aaaf
+[FAIL] i_word=11b  cw=3ef78e  expected=11b320
+[FAIL] i_word=11c  cw=b26087  expected=11cd1f
+[FAIL] i_word=11d  cw=fc1908  expected=11d490
+[FAIL] i_word=11e  cw=0c43d0  expected=11e9f8
+[FAIL] i_word=11f  cw=423a5f  expected=11f077
+[FAIL] i_word=120  cw=e89f0a  expected=120fb7
+[FAIL] i_word=121  cw=a6e685  expected=121638
+[FAIL] i_word=122  cw=56bc5d  expected=122b50
+[FAIL] i_word=123  cw=18c5d2  expected=1232df
+[FAIL] i_word=124  cw=9452db  expected=124ce0
+[FAIL] i_word=125  cw=da2b54  expected=12556f
+[FAIL] i_word=126  cw=2a718c  expected=126807
+[FAIL] i_word=127  cw=640803  expected=127188
+[FAIL] i_word=128  cw=c37a37  expected=128455
+[FAIL] i_word=129  cw=8d03b8  expected=129dda
+[FAIL] i_word=12a  cw=7d5960  expected=12a0b2
+[FAIL] i_word=12b  cw=3320ef  expected=12b93d
+[FAIL] i_word=12c  cw=bfb7e6  expected=12c702
+[FAIL] i_word=12d  cw=f1ce69  expected=12de8d
+[FAIL] i_word=12e  cw=0194b1  expected=12e3e5
+[FAIL] i_word=12f  cw=4fed3e  expected=12fa6a
+[FAIL] i_word=130  cw=0fd771  expected=130266
+[FAIL] i_word=131  cw=41aefe  expected=131be9
+[FAIL] i_word=132  cw=b1f426  expected=132681
+[FAIL] i_word=133  cw=ff8da9  expected=133f0e
+[FAIL] i_word=134  cw=731aa0  expected=134131
+[FAIL] i_word=135  cw=3d632f  expected=1358be
+[FAIL] i_word=136  cw=cd39f7  expected=1365d6
+[FAIL] i_word=137  cw=834078  expected=137c59
+[FAIL] i_word=138  cw=24324c  expected=138984
+[FAIL] i_word=139  cw=6a4bc3  expected=13900b
+[FAIL] i_word=13a  cw=9a111b  expected=13ad63
+[FAIL] i_word=13b  cw=d46894  expected=13b4ec
+[FAIL] i_word=13c  cw=58ff9d  expected=13cad3
+[FAIL] i_word=13d  cw=168612  expected=13d35c
+[FAIL] i_word=13e  cw=e6dcca  expected=13ee34
+[FAIL] i_word=13f  cw=a8a545  expected=13f7bb
+[FAIL] i_word=140  cw=022011  expected=140d46
+[FAIL] i_word=141  cw=4c599e  expected=1414c9
+[FAIL] i_word=142  cw=bc0346  expected=1429a1
+[FAIL] i_word=143  cw=f27ac9  expected=14302e
+[FAIL] i_word=144  cw=7eedc0  expected=144e11
+[FAIL] i_word=145  cw=30944f  expected=14579e
+[FAIL] i_word=146  cw=c0ce97  expected=146af6
+[FAIL] i_word=147  cw=8eb718  expected=147379
+[FAIL] i_word=148  cw=29c52c  expected=1486a4
+[FAIL] i_word=149  cw=67bca3  expected=149f2b
+[FAIL] i_word=14a  cw=97e67b  expected=14a243
+[FAIL] i_word=14b  cw=d99ff4  expected=14bbcc
+[FAIL] i_word=14c  cw=5508fd  expected=14c5f3
+[FAIL] i_word=14d  cw=1b7172  expected=14dc7c
+[FAIL] i_word=14e  cw=eb2baa  expected=14e114
+[FAIL] i_word=14f  cw=a55225  expected=14f89b
+[FAIL] i_word=150  cw=e5686a  expected=150097
+[FAIL] i_word=151  cw=ab11e5  expected=151918
+[FAIL] i_word=152  cw=5b4b3d  expected=152470
+[FAIL] i_word=153  cw=1532b2  expected=153dff
+[FAIL] i_word=154  cw=99a5bb  expected=1543c0
+[FAIL] i_word=155  cw=d7dc34  expected=155a4f
+[FAIL] i_word=156  cw=2786ec  expected=156727
+[FAIL] i_word=157  cw=69ff63  expected=157ea8
+[FAIL] i_word=158  cw=ce8d57  expected=158b75
+[FAIL] i_word=159  cw=80f4d8  expected=1592fa
+[FAIL] i_word=15a  cw=70ae00  expected=15af92
+[FAIL] i_word=15b  cw=3ed78f  expected=15b61d
+[FAIL] i_word=15c  cw=b24086  expected=15c822
+[FAIL] i_word=15d  cw=fc3909  expected=15d1ad
+[FAIL] i_word=15e  cw=0c63d1  expected=15ecc5
+[FAIL] i_word=15f  cw=421a5e  expected=15f54a
+[FAIL] i_word=160  cw=e8bf0b  expected=160a8a
+[FAIL] i_word=161  cw=a6c684  expected=161305
+[FAIL] i_word=162  cw=569c5c  expected=162e6d
+[FAIL] i_word=163  cw=18e5d3  expected=1637e2
+[FAIL] i_word=164  cw=9472da  expected=1649dd
+[FAIL] i_word=165  cw=da0b55  expected=165052
+[FAIL] i_word=166  cw=2a518d  expected=166d3a
+[FAIL] i_word=167  cw=642802  expected=1674b5
+[FAIL] i_word=168  cw=c35a36  expected=168168
+[FAIL] i_word=169  cw=8d23b9  expected=1698e7
+[FAIL] i_word=16a  cw=7d7961  expected=16a58f
+[FAIL] i_word=16b  cw=3300ee  expected=16bc00
+[FAIL] i_word=16c  cw=bf97e7  expected=16c23f
+[FAIL] i_word=16d  cw=f1ee68  expected=16dbb0
+[FAIL] i_word=16e  cw=01b4b0  expected=16e6d8
+[FAIL] i_word=16f  cw=4fcd3f  expected=16ff57
+[FAIL] i_word=170  cw=0ff770  expected=17075b
+[FAIL] i_word=171  cw=418eff  expected=171ed4
+[FAIL] i_word=172  cw=b1d427  expected=1723bc
+[FAIL] i_word=173  cw=ffada8  expected=173a33
+[FAIL] i_word=174  cw=733aa1  expected=17440c
+[FAIL] i_word=175  cw=3d432e  expected=175d83
+[FAIL] i_word=176  cw=cd19f6  expected=1760eb
+[FAIL] i_word=177  cw=836079  expected=177964
+[FAIL] i_word=178  cw=24124d  expected=178cb9
+[FAIL] i_word=179  cw=6a6bc2  expected=179536
+[FAIL] i_word=17a  cw=9a311a  expected=17a85e
+[FAIL] i_word=17b  cw=d44895  expected=17b1d1
+[FAIL] i_word=17c  cw=58df9c  expected=17cfee
+[FAIL] i_word=17d  cw=16a613  expected=17d661
+[FAIL] i_word=17e  cw=e6fccb  expected=17eb09
+[FAIL] i_word=17f  cw=a88544  expected=17f286
+[FAIL] i_word=180  cw=028014  expected=180ac5
+[FAIL] i_word=181  cw=4cf99b  expected=18134a
+[FAIL] i_word=182  cw=bca343  expected=182e22
+[FAIL] i_word=183  cw=f2dacc  expected=1837ad
+[FAIL] i_word=184  cw=7e4dc5  expected=184992
+[FAIL] i_word=185  cw=30344a  expected=18501d
+[FAIL] i_word=186  cw=c06e92  expected=186d75
+[FAIL] i_word=187  cw=8e171d  expected=1874fa
+[FAIL] i_word=188  cw=296529  expected=188127
+[FAIL] i_word=189  cw=671ca6  expected=1898a8
+[FAIL] i_word=18a  cw=97467e  expected=18a5c0
+[FAIL] i_word=18b  cw=d93ff1  expected=18bc4f
+[FAIL] i_word=18c  cw=55a8f8  expected=18c270
+[FAIL] i_word=18d  cw=1bd177  expected=18dbff
+[FAIL] i_word=18e  cw=eb8baf  expected=18e697
+[FAIL] i_word=18f  cw=a5f220  expected=18ff18
+[FAIL] i_word=190  cw=e5c86f  expected=190714
+[FAIL] i_word=191  cw=abb1e0  expected=191e9b
+[FAIL] i_word=192  cw=5beb38  expected=1923f3
+[FAIL] i_word=193  cw=1592b7  expected=193a7c
+[FAIL] i_word=194  cw=9905be  expected=194443
+[FAIL] i_word=195  cw=d77c31  expected=195dcc
+[FAIL] i_word=196  cw=2726e9  expected=1960a4
+[FAIL] i_word=197  cw=695f66  expected=19792b
+[FAIL] i_word=198  cw=ce2d52  expected=198cf6
+[FAIL] i_word=199  cw=8054dd  expected=199579
+[FAIL] i_word=19a  cw=700e05  expected=19a811
+[FAIL] i_word=19b  cw=3e778a  expected=19b19e
+[FAIL] i_word=19c  cw=b2e083  expected=19cfa1
+[FAIL] i_word=19d  cw=fc990c  expected=19d62e
+[FAIL] i_word=19e  cw=0cc3d4  expected=19eb46
+[FAIL] i_word=19f  cw=42ba5b  expected=19f2c9
+[FAIL] i_word=1a0  cw=e81f0e  expected=1a0d09
+[FAIL] i_word=1a1  cw=a66681  expected=1a1486
+[FAIL] i_word=1a2  cw=563c59  expected=1a29ee
+[FAIL] i_word=1a3  cw=1845d6  expected=1a3061
+[FAIL] i_word=1a4  cw=94d2df  expected=1a4e5e
+[FAIL] i_word=1a5  cw=daab50  expected=1a57d1
+[FAIL] i_word=1a6  cw=2af188  expected=1a6ab9
+[FAIL] i_word=1a7  cw=648807  expected=1a7336
+[FAIL] i_word=1a8  cw=c3fa33  expected=1a86eb
+[FAIL] i_word=1a9  cw=8d83bc  expected=1a9f64
+[FAIL] i_word=1aa  cw=7dd964  expected=1aa20c
+[FAIL] i_word=1ab  cw=33a0eb  expected=1abb83
+[FAIL] i_word=1ac  cw=bf37e2  expected=1ac5bc
+[FAIL] i_word=1ad  cw=f14e6d  expected=1adc33
+[FAIL] i_word=1ae  cw=0114b5  expected=1ae15b
+[FAIL] i_word=1af  cw=4f6d3a  expected=1af8d4
+[FAIL] i_word=1b0  cw=0f5775  expected=1b00d8
+[FAIL] i_word=1b1  cw=412efa  expected=1b1957
+[FAIL] i_word=1b2  cw=b17422  expected=1b243f
+[FAIL] i_word=1b3  cw=ff0dad  expected=1b3db0
+[FAIL] i_word=1b4  cw=739aa4  expected=1b438f
+[FAIL] i_word=1b5  cw=3de32b  expected=1b5a00
+[FAIL] i_word=1b6  cw=cdb9f3  expected=1b6768
+[FAIL] i_word=1b7  cw=83c07c  expected=1b7ee7
+[FAIL] i_word=1b8  cw=24b248  expected=1b8b3a
+[FAIL] i_word=1b9  cw=6acbc7  expected=1b92b5
+[FAIL] i_word=1ba  cw=9a911f  expected=1bafdd
+[FAIL] i_word=1bb  cw=d4e890  expected=1bb652
+[FAIL] i_word=1bc  cw=587f99  expected=1bc86d
+[FAIL] i_word=1bd  cw=160616  expected=1bd1e2
+[FAIL] i_word=1be  cw=e65cce  expected=1bec8a
+[FAIL] i_word=1bf  cw=a82541  expected=1bf505
+[FAIL] i_word=1c0  cw=02a015  expected=1c0ff8
+[FAIL] i_word=1c1  cw=4cd99a  expected=1c1677
+[FAIL] i_word=1c2  cw=bc8342  expected=1c2b1f
+[FAIL] i_word=1c3  cw=f2facd  expected=1c3290
+[FAIL] i_word=1c4  cw=7e6dc4  expected=1c4caf
+[FAIL] i_word=1c5  cw=30144b  expected=1c5520
+[FAIL] i_word=1c6  cw=c04e93  expected=1c6848
+[FAIL] i_word=1c7  cw=8e371c  expected=1c71c7
+[FAIL] i_word=1c8  cw=294528  expected=1c841a
+[FAIL] i_word=1c9  cw=673ca7  expected=1c9d95
+[FAIL] i_word=1ca  cw=97667f  expected=1ca0fd
+[FAIL] i_word=1cb  cw=d91ff0  expected=1cb972
+[FAIL] i_word=1cc  cw=5588f9  expected=1cc74d
+[FAIL] i_word=1cd  cw=1bf176  expected=1cdec2
+[FAIL] i_word=1ce  cw=ebabae  expected=1ce3aa
+[FAIL] i_word=1cf  cw=a5d221  expected=1cfa25
+[FAIL] i_word=1d0  cw=e5e86e  expected=1d0229
+[FAIL] i_word=1d1  cw=ab91e1  expected=1d1ba6
+[FAIL] i_word=1d2  cw=5bcb39  expected=1d26ce
+[FAIL] i_word=1d3  cw=15b2b6  expected=1d3f41
+[FAIL] i_word=1d4  cw=9925bf  expected=1d417e
+[FAIL] i_word=1d5  cw=d75c30  expected=1d58f1
+[FAIL] i_word=1d6  cw=2706e8  expected=1d6599
+[FAIL] i_word=1d7  cw=697f67  expected=1d7c16
+[FAIL] i_word=1d8  cw=ce0d53  expected=1d89cb
+[FAIL] i_word=1d9  cw=8074dc  expected=1d9044
+[FAIL] i_word=1da  cw=702e04  expected=1dad2c
+[FAIL] i_word=1db  cw=3e578b  expected=1db4a3
+[FAIL] i_word=1dc  cw=b2c082  expected=1dca9c
+[FAIL] i_word=1dd  cw=fcb90d  expected=1dd313
+[FAIL] i_word=1de  cw=0ce3d5  expected=1dee7b
+[FAIL] i_word=1df  cw=429a5a  expected=1df7f4
+[FAIL] i_word=1e0  cw=e83f0f  expected=1e0834
+[FAIL] i_word=1e1  cw=a64680  expected=1e11bb
+[FAIL] i_word=1e2  cw=561c58  expected=1e2cd3
+[FAIL] i_word=1e3  cw=1865d7  expected=1e355c
+[FAIL] i_word=1e4  cw=94f2de  expected=1e4b63
+[FAIL] i_word=1e5  cw=da8b51  expected=1e52ec
+[FAIL] i_word=1e6  cw=2ad189  expected=1e6f84
+[FAIL] i_word=1e7  cw=64a806  expected=1e760b
+[FAIL] i_word=1e8  cw=c3da32  expected=1e83d6
+[FAIL] i_word=1e9  cw=8da3bd  expected=1e9a59
+[FAIL] i_word=1ea  cw=7df965  expected=1ea731
+[FAIL] i_word=1eb  cw=3380ea  expected=1ebebe
+[FAIL] i_word=1ec  cw=bf17e3  expected=1ec081
+[FAIL] i_word=1ed  cw=f16e6c  expected=1ed90e
+[FAIL] i_word=1ee  cw=0134b4  expected=1ee466
+[FAIL] i_word=1ef  cw=4f4d3b  expected=1efde9
+[FAIL] i_word=1f0  cw=0f7774  expected=1f05e5
+[FAIL] i_word=1f1  cw=410efb  expected=1f1c6a
+[FAIL] i_word=1f2  cw=b15423  expected=1f2102
+[FAIL] i_word=1f3  cw=ff2dac  expected=1f388d
+[FAIL] i_word=1f4  cw=73baa5  expected=1f46b2
+[FAIL] i_word=1f5  cw=3dc32a  expected=1f5f3d
+[FAIL] i_word=1f6  cw=cd99f2  expected=1f6255
+[FAIL] i_word=1f7  cw=83e07d  expected=1f7bda
+[FAIL] i_word=1f8  cw=249249  expected=1f8e07
+[FAIL] i_word=1f9  cw=6aebc6  expected=1f9788
+[FAIL] i_word=1fa  cw=9ab11e  expected=1faae0
+[FAIL] i_word=1fb  cw=d4c891  expected=1fb36f
+[FAIL] i_word=1fc  cw=585f98  expected=1fcd50
+[FAIL] i_word=1fd  cw=162617  expected=1fd4df
+[FAIL] i_word=1fe  cw=e67ccf  expected=1fe9b7
+[FAIL] i_word=1ff  cw=a80540  expected=1ff038
+[FAIL] i_word=200  cw=080040  expected=200e74
+[FAIL] i_word=201  cw=4679cf  expected=2017fb
+[FAIL] i_word=202  cw=b62317  expected=202a93
+[FAIL] i_word=203  cw=f85a98  expected=20331c
+[FAIL] i_word=204  cw=74cd91  expected=204d23
+[FAIL] i_word=205  cw=3ab41e  expected=2054ac
+[FAIL] i_word=206  cw=caeec6  expected=2069c4
+[FAIL] i_word=207  cw=849749  expected=20704b
+[FAIL] i_word=208  cw=23e57d  expected=208596
+[FAIL] i_word=209  cw=6d9cf2  expected=209c19
+[FAIL] i_word=20a  cw=9dc62a  expected=20a171
+[FAIL] i_word=20b  cw=d3bfa5  expected=20b8fe
+[FAIL] i_word=20c  cw=5f28ac  expected=20c6c1
+[FAIL] i_word=20d  cw=115123  expected=20df4e
+[FAIL] i_word=20e  cw=e10bfb  expected=20e226
+[FAIL] i_word=20f  cw=af7274  expected=20fba9
+[FAIL] i_word=210  cw=ef483b  expected=2103a5
+[FAIL] i_word=211  cw=a131b4  expected=211a2a
+[FAIL] i_word=212  cw=516b6c  expected=212742
+[FAIL] i_word=213  cw=1f12e3  expected=213ecd
+[FAIL] i_word=214  cw=9385ea  expected=2140f2
+[FAIL] i_word=215  cw=ddfc65  expected=21597d
+[FAIL] i_word=216  cw=2da6bd  expected=216415
+[FAIL] i_word=217  cw=63df32  expected=217d9a
+[FAIL] i_word=218  cw=c4ad06  expected=218847
+[FAIL] i_word=219  cw=8ad489  expected=2191c8
+[FAIL] i_word=21a  cw=7a8e51  expected=21aca0
+[FAIL] i_word=21b  cw=34f7de  expected=21b52f
+[FAIL] i_word=21c  cw=b860d7  expected=21cb10
+[FAIL] i_word=21d  cw=f61958  expected=21d29f
+[FAIL] i_word=21e  cw=064380  expected=21eff7
+[FAIL] i_word=21f  cw=483a0f  expected=21f678
+[FAIL] i_word=220  cw=e29f5a  expected=2209b8
+[FAIL] i_word=221  cw=ace6d5  expected=221037
+[FAIL] i_word=222  cw=5cbc0d  expected=222d5f
+[FAIL] i_word=223  cw=12c582  expected=2234d0
+[FAIL] i_word=224  cw=9e528b  expected=224aef
+[FAIL] i_word=225  cw=d02b04  expected=225360
+[FAIL] i_word=226  cw=2071dc  expected=226e08
+[FAIL] i_word=227  cw=6e0853  expected=227787
+[FAIL] i_word=228  cw=c97a67  expected=22825a
+[FAIL] i_word=229  cw=8703e8  expected=229bd5
+[FAIL] i_word=22a  cw=775930  expected=22a6bd
+[FAIL] i_word=22b  cw=3920bf  expected=22bf32
+[FAIL] i_word=22c  cw=b5b7b6  expected=22c10d
+[FAIL] i_word=22d  cw=fbce39  expected=22d882
+[FAIL] i_word=22e  cw=0b94e1  expected=22e5ea
+[FAIL] i_word=22f  cw=45ed6e  expected=22fc65
+[FAIL] i_word=230  cw=05d721  expected=230469
+[FAIL] i_word=231  cw=4baeae  expected=231de6
+[FAIL] i_word=232  cw=bbf476  expected=23208e
+[FAIL] i_word=233  cw=f58df9  expected=233901
+[FAIL] i_word=234  cw=791af0  expected=23473e
+[FAIL] i_word=235  cw=37637f  expected=235eb1
+[FAIL] i_word=236  cw=c739a7  expected=2363d9
+[FAIL] i_word=237  cw=894028  expected=237a56
+[FAIL] i_word=238  cw=2e321c  expected=238f8b
+[FAIL] i_word=239  cw=604b93  expected=239604
+[FAIL] i_word=23a  cw=90114b  expected=23ab6c
+[FAIL] i_word=23b  cw=de68c4  expected=23b2e3
+[FAIL] i_word=23c  cw=52ffcd  expected=23ccdc
+[FAIL] i_word=23d  cw=1c8642  expected=23d553
+[FAIL] i_word=23e  cw=ecdc9a  expected=23e83b
+[FAIL] i_word=23f  cw=a2a515  expected=23f1b4
+[FAIL] i_word=240  cw=082041  expected=240b49
+[FAIL] i_word=241  cw=4659ce  expected=2412c6
+[FAIL] i_word=242  cw=b60316  expected=242fae
+[FAIL] i_word=243  cw=f87a99  expected=243621
+[FAIL] i_word=244  cw=74ed90  expected=24481e
+[FAIL] i_word=245  cw=3a941f  expected=245191
+[FAIL] i_word=246  cw=cacec7  expected=246cf9
+[FAIL] i_word=247  cw=84b748  expected=247576
+[FAIL] i_word=248  cw=23c57c  expected=2480ab
+[FAIL] i_word=249  cw=6dbcf3  expected=249924
+[FAIL] i_word=24a  cw=9de62b  expected=24a44c
+[FAIL] i_word=24b  cw=d39fa4  expected=24bdc3
+[FAIL] i_word=24c  cw=5f08ad  expected=24c3fc
+[FAIL] i_word=24d  cw=117122  expected=24da73
+[FAIL] i_word=24e  cw=e12bfa  expected=24e71b
+[FAIL] i_word=24f  cw=af5275  expected=24fe94
+[FAIL] i_word=250  cw=ef683a  expected=250698
+[FAIL] i_word=251  cw=a111b5  expected=251f17
+[FAIL] i_word=252  cw=514b6d  expected=25227f
+[FAIL] i_word=253  cw=1f32e2  expected=253bf0
+[FAIL] i_word=254  cw=93a5eb  expected=2545cf
+[FAIL] i_word=255  cw=dddc64  expected=255c40
+[FAIL] i_word=256  cw=2d86bc  expected=256128
+[FAIL] i_word=257  cw=63ff33  expected=2578a7
+[FAIL] i_word=258  cw=c48d07  expected=258d7a
+[FAIL] i_word=259  cw=8af488  expected=2594f5
+[FAIL] i_word=25a  cw=7aae50  expected=25a99d
+[FAIL] i_word=25b  cw=34d7df  expected=25b012
+[FAIL] i_word=25c  cw=b840d6  expected=25ce2d
+[FAIL] i_word=25d  cw=f63959  expected=25d7a2
+[FAIL] i_word=25e  cw=066381  expected=25eaca
+[FAIL] i_word=25f  cw=481a0e  expected=25f345
+[FAIL] i_word=260  cw=e2bf5b  expected=260c85
+[FAIL] i_word=261  cw=acc6d4  expected=26150a
+[FAIL] i_word=262  cw=5c9c0c  expected=262862
+[FAIL] i_word=263  cw=12e583  expected=2631ed
+[FAIL] i_word=264  cw=9e728a  expected=264fd2
+[FAIL] i_word=265  cw=d00b05  expected=26565d
+[FAIL] i_word=266  cw=2051dd  expected=266b35
+[FAIL] i_word=267  cw=6e2852  expected=2672ba
+[FAIL] i_word=268  cw=c95a66  expected=268767
+[FAIL] i_word=269  cw=8723e9  expected=269ee8
+[FAIL] i_word=26a  cw=777931  expected=26a380
+[FAIL] i_word=26b  cw=3900be  expected=26ba0f
+[FAIL] i_word=26c  cw=b597b7  expected=26c430
+[FAIL] i_word=26d  cw=fbee38  expected=26ddbf
+[FAIL] i_word=26e  cw=0bb4e0  expected=26e0d7
+[FAIL] i_word=26f  cw=45cd6f  expected=26f958
+[FAIL] i_word=270  cw=05f720  expected=270154
+[FAIL] i_word=271  cw=4b8eaf  expected=2718db
+[FAIL] i_word=272  cw=bbd477  expected=2725b3
+[FAIL] i_word=273  cw=f5adf8  expected=273c3c
+[FAIL] i_word=274  cw=793af1  expected=274203
+[FAIL] i_word=275  cw=37437e  expected=275b8c
+[FAIL] i_word=276  cw=c719a6  expected=2766e4
+[FAIL] i_word=277  cw=896029  expected=277f6b
+[FAIL] i_word=278  cw=2e121d  expected=278ab6
+[FAIL] i_word=279  cw=606b92  expected=279339
+[FAIL] i_word=27a  cw=90314a  expected=27ae51
+[FAIL] i_word=27b  cw=de48c5  expected=27b7de
+[FAIL] i_word=27c  cw=52dfcc  expected=27c9e1
+[FAIL] i_word=27d  cw=1ca643  expected=27d06e
+[FAIL] i_word=27e  cw=ecfc9b  expected=27ed06
+[FAIL] i_word=27f  cw=a28514  expected=27f489
+[FAIL] i_word=280  cw=088044  expected=280cca
+[FAIL] i_word=281  cw=46f9cb  expected=281545
+[FAIL] i_word=282  cw=b6a313  expected=28282d
+[FAIL] i_word=283  cw=f8da9c  expected=2831a2
+[FAIL] i_word=284  cw=744d95  expected=284f9d
+[FAIL] i_word=285  cw=3a341a  expected=285612
+[FAIL] i_word=286  cw=ca6ec2  expected=286b7a
+[FAIL] i_word=287  cw=84174d  expected=2872f5
+[FAIL] i_word=288  cw=236579  expected=288728
+[FAIL] i_word=289  cw=6d1cf6  expected=289ea7
+[FAIL] i_word=28a  cw=9d462e  expected=28a3cf
+[FAIL] i_word=28b  cw=d33fa1  expected=28ba40
+[FAIL] i_word=28c  cw=5fa8a8  expected=28c47f
+[FAIL] i_word=28d  cw=11d127  expected=28ddf0
+[FAIL] i_word=28e  cw=e18bff  expected=28e098
+[FAIL] i_word=28f  cw=aff270  expected=28f917
+[FAIL] i_word=290  cw=efc83f  expected=29011b
+[FAIL] i_word=291  cw=a1b1b0  expected=291894
+[FAIL] i_word=292  cw=51eb68  expected=2925fc
+[FAIL] i_word=293  cw=1f92e7  expected=293c73
+[FAIL] i_word=294  cw=9305ee  expected=29424c
+[FAIL] i_word=295  cw=dd7c61  expected=295bc3
+[FAIL] i_word=296  cw=2d26b9  expected=2966ab
+[FAIL] i_word=297  cw=635f36  expected=297f24
+[FAIL] i_word=298  cw=c42d02  expected=298af9
+[FAIL] i_word=299  cw=8a548d  expected=299376
+[FAIL] i_word=29a  cw=7a0e55  expected=29ae1e
+[FAIL] i_word=29b  cw=3477da  expected=29b791
+[FAIL] i_word=29c  cw=b8e0d3  expected=29c9ae
+[FAIL] i_word=29d  cw=f6995c  expected=29d021
+[FAIL] i_word=29e  cw=06c384  expected=29ed49
+[FAIL] i_word=29f  cw=48ba0b  expected=29f4c6
+[FAIL] i_word=2a0  cw=e21f5e  expected=2a0b06
+[FAIL] i_word=2a1  cw=ac66d1  expected=2a1289
+[FAIL] i_word=2a2  cw=5c3c09  expected=2a2fe1
+[FAIL] i_word=2a3  cw=124586  expected=2a366e
+[FAIL] i_word=2a4  cw=9ed28f  expected=2a4851
+[FAIL] i_word=2a5  cw=d0ab00  expected=2a51de
+[FAIL] i_word=2a6  cw=20f1d8  expected=2a6cb6
+[FAIL] i_word=2a7  cw=6e8857  expected=2a7539
+[FAIL] i_word=2a8  cw=c9fa63  expected=2a80e4
+[FAIL] i_word=2a9  cw=8783ec  expected=2a996b
+[FAIL] i_word=2aa  cw=77d934  expected=2aa403
+[FAIL] i_word=2ab  cw=39a0bb  expected=2abd8c
+[FAIL] i_word=2ac  cw=b537b2  expected=2ac3b3
+[FAIL] i_word=2ad  cw=fb4e3d  expected=2ada3c
+[FAIL] i_word=2ae  cw=0b14e5  expected=2ae754
+[FAIL] i_word=2af  cw=456d6a  expected=2afedb
+[FAIL] i_word=2b0  cw=055725  expected=2b06d7
+[FAIL] i_word=2b1  cw=4b2eaa  expected=2b1f58
+[FAIL] i_word=2b2  cw=bb7472  expected=2b2230
+[FAIL] i_word=2b3  cw=f50dfd  expected=2b3bbf
+[FAIL] i_word=2b4  cw=799af4  expected=2b4580
+[FAIL] i_word=2b5  cw=37e37b  expected=2b5c0f
+[FAIL] i_word=2b6  cw=c7b9a3  expected=2b6167
+[FAIL] i_word=2b7  cw=89c02c  expected=2b78e8
+[FAIL] i_word=2b8  cw=2eb218  expected=2b8d35
+[FAIL] i_word=2b9  cw=60cb97  expected=2b94ba
+[FAIL] i_word=2ba  cw=90914f  expected=2ba9d2
+[FAIL] i_word=2bb  cw=dee8c0  expected=2bb05d
+[FAIL] i_word=2bc  cw=527fc9  expected=2bce62
+[FAIL] i_word=2bd  cw=1c0646  expected=2bd7ed
+[FAIL] i_word=2be  cw=ec5c9e  expected=2bea85
+[FAIL] i_word=2bf  cw=a22511  expected=2bf30a
+[FAIL] i_word=2c0  cw=08a045  expected=2c09f7
+[FAIL] i_word=2c1  cw=46d9ca  expected=2c1078
+[FAIL] i_word=2c2  cw=b68312  expected=2c2d10
+[FAIL] i_word=2c3  cw=f8fa9d  expected=2c349f
+[FAIL] i_word=2c4  cw=746d94  expected=2c4aa0
+[FAIL] i_word=2c5  cw=3a141b  expected=2c532f
+[FAIL] i_word=2c6  cw=ca4ec3  expected=2c6e47
+[FAIL] i_word=2c7  cw=84374c  expected=2c77c8
+[FAIL] i_word=2c8  cw=234578  expected=2c8215
+[FAIL] i_word=2c9  cw=6d3cf7  expected=2c9b9a
+[FAIL] i_word=2ca  cw=9d662f  expected=2ca6f2
+[FAIL] i_word=2cb  cw=d31fa0  expected=2cbf7d
+[FAIL] i_word=2cc  cw=5f88a9  expected=2cc142
+[FAIL] i_word=2cd  cw=11f126  expected=2cd8cd
+[FAIL] i_word=2ce  cw=e1abfe  expected=2ce5a5
+[FAIL] i_word=2cf  cw=afd271  expected=2cfc2a
+[FAIL] i_word=2d0  cw=efe83e  expected=2d0426
+[FAIL] i_word=2d1  cw=a191b1  expected=2d1da9
+[FAIL] i_word=2d2  cw=51cb69  expected=2d20c1
+[FAIL] i_word=2d3  cw=1fb2e6  expected=2d394e
+[FAIL] i_word=2d4  cw=9325ef  expected=2d4771
+[FAIL] i_word=2d5  cw=dd5c60  expected=2d5efe
+[FAIL] i_word=2d6  cw=2d06b8  expected=2d6396
+[FAIL] i_word=2d7  cw=637f37  expected=2d7a19
+[FAIL] i_word=2d8  cw=c40d03  expected=2d8fc4
+[FAIL] i_word=2d9  cw=8a748c  expected=2d964b
+[FAIL] i_word=2da  cw=7a2e54  expected=2dab23
+[FAIL] i_word=2db  cw=3457db  expected=2db2ac
+[FAIL] i_word=2dc  cw=b8c0d2  expected=2dcc93
+[FAIL] i_word=2dd  cw=f6b95d  expected=2dd51c
+[FAIL] i_word=2de  cw=06e385  expected=2de874
+[FAIL] i_word=2df  cw=489a0a  expected=2df1fb
+[FAIL] i_word=2e0  cw=e23f5f  expected=2e0e3b
+[FAIL] i_word=2e1  cw=ac46d0  expected=2e17b4
+[FAIL] i_word=2e2  cw=5c1c08  expected=2e2adc
+[FAIL] i_word=2e3  cw=126587  expected=2e3353
+[FAIL] i_word=2e4  cw=9ef28e  expected=2e4d6c
+[FAIL] i_word=2e5  cw=d08b01  expected=2e54e3
+[FAIL] i_word=2e6  cw=20d1d9  expected=2e698b
+[FAIL] i_word=2e7  cw=6ea856  expected=2e7004
+[FAIL] i_word=2e8  cw=c9da62  expected=2e85d9
+[FAIL] i_word=2e9  cw=87a3ed  expected=2e9c56
+[FAIL] i_word=2ea  cw=77f935  expected=2ea13e
+[FAIL] i_word=2eb  cw=3980ba  expected=2eb8b1
+[FAIL] i_word=2ec  cw=b517b3  expected=2ec68e
+[FAIL] i_word=2ed  cw=fb6e3c  expected=2edf01
+[FAIL] i_word=2ee  cw=0b34e4  expected=2ee269
+[FAIL] i_word=2ef  cw=454d6b  expected=2efbe6
+[FAIL] i_word=2f0  cw=057724  expected=2f03ea
+[FAIL] i_word=2f1  cw=4b0eab  expected=2f1a65
+[FAIL] i_word=2f2  cw=bb5473  expected=2f270d
+[FAIL] i_word=2f3  cw=f52dfc  expected=2f3e82
+[FAIL] i_word=2f4  cw=79baf5  expected=2f40bd
+[FAIL] i_word=2f5  cw=37c37a  expected=2f5932
+[FAIL] i_word=2f6  cw=c799a2  expected=2f645a
+[FAIL] i_word=2f7  cw=89e02d  expected=2f7dd5
+[FAIL] i_word=2f8  cw=2e9219  expected=2f8808
+[FAIL] i_word=2f9  cw=60eb96  expected=2f9187
+[FAIL] i_word=2fa  cw=90b14e  expected=2facef
+[FAIL] i_word=2fb  cw=dec8c1  expected=2fb560
+[FAIL] i_word=2fc  cw=525fc8  expected=2fcb5f
+[FAIL] i_word=2fd  cw=1c2647  expected=2fd2d0
+[FAIL] i_word=2fe  cw=ec7c9f  expected=2fefb8
+[FAIL] i_word=2ff  cw=a20510  expected=2ff637
+[FAIL] i_word=300  cw=0a0050  expected=30060f
+[FAIL] i_word=301  cw=4479df  expected=301f80
+[FAIL] i_word=302  cw=b42307  expected=3022e8
+[FAIL] i_word=303  cw=fa5a88  expected=303b67
+[FAIL] i_word=304  cw=76cd81  expected=304558
+[FAIL] i_word=305  cw=38b40e  expected=305cd7
+[FAIL] i_word=306  cw=c8eed6  expected=3061bf
+[FAIL] i_word=307  cw=869759  expected=307830
+[FAIL] i_word=308  cw=21e56d  expected=308ded
+[FAIL] i_word=309  cw=6f9ce2  expected=309462
+[FAIL] i_word=30a  cw=9fc63a  expected=30a90a
+[FAIL] i_word=30b  cw=d1bfb5  expected=30b085
+[FAIL] i_word=30c  cw=5d28bc  expected=30ceba
+[FAIL] i_word=30d  cw=135133  expected=30d735
+[FAIL] i_word=30e  cw=e30beb  expected=30ea5d
+[FAIL] i_word=30f  cw=ad7264  expected=30f3d2
+[FAIL] i_word=310  cw=ed482b  expected=310bde
+[FAIL] i_word=311  cw=a331a4  expected=311251
+[FAIL] i_word=312  cw=536b7c  expected=312f39
+[FAIL] i_word=313  cw=1d12f3  expected=3136b6
+[FAIL] i_word=314  cw=9185fa  expected=314889
+[FAIL] i_word=315  cw=dffc75  expected=315106
+[FAIL] i_word=316  cw=2fa6ad  expected=316c6e
+[FAIL] i_word=317  cw=61df22  expected=3175e1
+[FAIL] i_word=318  cw=c6ad16  expected=31803c
+[FAIL] i_word=319  cw=88d499  expected=3199b3
+[FAIL] i_word=31a  cw=788e41  expected=31a4db
+[FAIL] i_word=31b  cw=36f7ce  expected=31bd54
+[FAIL] i_word=31c  cw=ba60c7  expected=31c36b
+[FAIL] i_word=31d  cw=f41948  expected=31dae4
+[FAIL] i_word=31e  cw=044390  expected=31e78c
+[FAIL] i_word=31f  cw=4a3a1f  expected=31fe03
+[FAIL] i_word=320  cw=e09f4a  expected=3201c3
+[FAIL] i_word=321  cw=aee6c5  expected=32184c
+[FAIL] i_word=322  cw=5ebc1d  expected=322524
+[FAIL] i_word=323  cw=10c592  expected=323cab
+[FAIL] i_word=324  cw=9c529b  expected=324294
+[FAIL] i_word=325  cw=d22b14  expected=325b1b
+[FAIL] i_word=326  cw=2271cc  expected=326673
+[FAIL] i_word=327  cw=6c0843  expected=327ffc
+[FAIL] i_word=328  cw=cb7a77  expected=328a21
+[FAIL] i_word=329  cw=8503f8  expected=3293ae
+[FAIL] i_word=32a  cw=755920  expected=32aec6
+[FAIL] i_word=32b  cw=3b20af  expected=32b749
+[FAIL] i_word=32c  cw=b7b7a6  expected=32c976
+[FAIL] i_word=32d  cw=f9ce29  expected=32d0f9
+[FAIL] i_word=32e  cw=0994f1  expected=32ed91
+[FAIL] i_word=32f  cw=47ed7e  expected=32f41e
+[FAIL] i_word=330  cw=07d731  expected=330c12
+[FAIL] i_word=331  cw=49aebe  expected=33159d
+[FAIL] i_word=332  cw=b9f466  expected=3328f5
+[FAIL] i_word=333  cw=f78de9  expected=33317a
+[FAIL] i_word=334  cw=7b1ae0  expected=334f45
+[FAIL] i_word=335  cw=35636f  expected=3356ca
+[FAIL] i_word=336  cw=c539b7  expected=336ba2
+[FAIL] i_word=337  cw=8b4038  expected=33722d
+[FAIL] i_word=338  cw=2c320c  expected=3387f0
+[FAIL] i_word=339  cw=624b83  expected=339e7f
+[FAIL] i_word=33a  cw=92115b  expected=33a317
+[FAIL] i_word=33b  cw=dc68d4  expected=33ba98
+[FAIL] i_word=33c  cw=50ffdd  expected=33c4a7
+[FAIL] i_word=33d  cw=1e8652  expected=33dd28
+[FAIL] i_word=33e  cw=eedc8a  expected=33e040
+[FAIL] i_word=33f  cw=a0a505  expected=33f9cf
+[FAIL] i_word=340  cw=0a2051  expected=340332
+[FAIL] i_word=341  cw=4459de  expected=341abd
+[FAIL] i_word=342  cw=b40306  expected=3427d5
+[FAIL] i_word=343  cw=fa7a89  expected=343e5a
+[FAIL] i_word=344  cw=76ed80  expected=344065
+[FAIL] i_word=345  cw=38940f  expected=3459ea
+[FAIL] i_word=346  cw=c8ced7  expected=346482
+[FAIL] i_word=347  cw=86b758  expected=347d0d
+[FAIL] i_word=348  cw=21c56c  expected=3488d0
+[FAIL] i_word=349  cw=6fbce3  expected=34915f
+[FAIL] i_word=34a  cw=9fe63b  expected=34ac37
+[FAIL] i_word=34b  cw=d19fb4  expected=34b5b8
+[FAIL] i_word=34c  cw=5d08bd  expected=34cb87
+[FAIL] i_word=34d  cw=137132  expected=34d208
+[FAIL] i_word=34e  cw=e32bea  expected=34ef60
+[FAIL] i_word=34f  cw=ad5265  expected=34f6ef
+[FAIL] i_word=350  cw=ed682a  expected=350ee3
+[FAIL] i_word=351  cw=a311a5  expected=35176c
+[FAIL] i_word=352  cw=534b7d  expected=352a04
+[FAIL] i_word=353  cw=1d32f2  expected=35338b
+[FAIL] i_word=354  cw=91a5fb  expected=354db4
+[FAIL] i_word=355  cw=dfdc74  expected=35543b
+[FAIL] i_word=356  cw=2f86ac  expected=356953
+[FAIL] i_word=357  cw=61ff23  expected=3570dc
+[FAIL] i_word=358  cw=c68d17  expected=358501
+[FAIL] i_word=359  cw=88f498  expected=359c8e
+[FAIL] i_word=35a  cw=78ae40  expected=35a1e6
+[FAIL] i_word=35b  cw=36d7cf  expected=35b869
+[FAIL] i_word=35c  cw=ba40c6  expected=35c656
+[FAIL] i_word=35d  cw=f43949  expected=35dfd9
+[FAIL] i_word=35e  cw=046391  expected=35e2b1
+[FAIL] i_word=35f  cw=4a1a1e  expected=35fb3e
+[FAIL] i_word=360  cw=e0bf4b  expected=3604fe
+[FAIL] i_word=361  cw=aec6c4  expected=361d71
+[FAIL] i_word=362  cw=5e9c1c  expected=362019
+[FAIL] i_word=363  cw=10e593  expected=363996
+[FAIL] i_word=364  cw=9c729a  expected=3647a9
+[FAIL] i_word=365  cw=d20b15  expected=365e26
+[FAIL] i_word=366  cw=2251cd  expected=36634e
+[FAIL] i_word=367  cw=6c2842  expected=367ac1
+[FAIL] i_word=368  cw=cb5a76  expected=368f1c
+[FAIL] i_word=369  cw=8523f9  expected=369693
+[FAIL] i_word=36a  cw=757921  expected=36abfb
+[FAIL] i_word=36b  cw=3b00ae  expected=36b274
+[FAIL] i_word=36c  cw=b797a7  expected=36cc4b
+[FAIL] i_word=36d  cw=f9ee28  expected=36d5c4
+[FAIL] i_word=36e  cw=09b4f0  expected=36e8ac
+[FAIL] i_word=36f  cw=47cd7f  expected=36f123
+[FAIL] i_word=370  cw=07f730  expected=37092f
+[FAIL] i_word=371  cw=498ebf  expected=3710a0
+[FAIL] i_word=372  cw=b9d467  expected=372dc8
+[FAIL] i_word=373  cw=f7ade8  expected=373447
+[FAIL] i_word=374  cw=7b3ae1  expected=374a78
+[FAIL] i_word=375  cw=35436e  expected=3753f7
+[FAIL] i_word=376  cw=c519b6  expected=376e9f
+[FAIL] i_word=377  cw=8b6039  expected=377710
+[FAIL] i_word=378  cw=2c120d  expected=3782cd
+[FAIL] i_word=379  cw=626b82  expected=379b42
+[FAIL] i_word=37a  cw=92315a  expected=37a62a
+[FAIL] i_word=37b  cw=dc48d5  expected=37bfa5
+[FAIL] i_word=37c  cw=50dfdc  expected=37c19a
+[FAIL] i_word=37d  cw=1ea653  expected=37d815
+[FAIL] i_word=37e  cw=eefc8b  expected=37e57d
+[FAIL] i_word=37f  cw=a08504  expected=37fcf2
+[FAIL] i_word=380  cw=0a8054  expected=3804b1
+[FAIL] i_word=381  cw=44f9db  expected=381d3e
+[FAIL] i_word=382  cw=b4a303  expected=382056
+[FAIL] i_word=383  cw=fada8c  expected=3839d9
+[FAIL] i_word=384  cw=764d85  expected=3847e6
+[FAIL] i_word=385  cw=38340a  expected=385e69
+[FAIL] i_word=386  cw=c86ed2  expected=386301
+[FAIL] i_word=387  cw=86175d  expected=387a8e
+[FAIL] i_word=388  cw=216569  expected=388f53
+[FAIL] i_word=389  cw=6f1ce6  expected=3896dc
+[FAIL] i_word=38a  cw=9f463e  expected=38abb4
+[FAIL] i_word=38b  cw=d13fb1  expected=38b23b
+[FAIL] i_word=38c  cw=5da8b8  expected=38cc04
+[FAIL] i_word=38d  cw=13d137  expected=38d58b
+[FAIL] i_word=38e  cw=e38bef  expected=38e8e3
+[FAIL] i_word=38f  cw=adf260  expected=38f16c
+[FAIL] i_word=390  cw=edc82f  expected=390960
+[FAIL] i_word=391  cw=a3b1a0  expected=3910ef
+[FAIL] i_word=392  cw=53eb78  expected=392d87
+[FAIL] i_word=393  cw=1d92f7  expected=393408
+[FAIL] i_word=394  cw=9105fe  expected=394a37
+[FAIL] i_word=395  cw=df7c71  expected=3953b8
+[FAIL] i_word=396  cw=2f26a9  expected=396ed0
+[FAIL] i_word=397  cw=615f26  expected=39775f
+[FAIL] i_word=398  cw=c62d12  expected=398282
+[FAIL] i_word=399  cw=88549d  expected=399b0d
+[FAIL] i_word=39a  cw=780e45  expected=39a665
+[FAIL] i_word=39b  cw=3677ca  expected=39bfea
+[FAIL] i_word=39c  cw=bae0c3  expected=39c1d5
+[FAIL] i_word=39d  cw=f4994c  expected=39d85a
+[FAIL] i_word=39e  cw=04c394  expected=39e532
+[FAIL] i_word=39f  cw=4aba1b  expected=39fcbd
+[FAIL] i_word=3a0  cw=e01f4e  expected=3a037d
+[FAIL] i_word=3a1  cw=ae66c1  expected=3a1af2
+[FAIL] i_word=3a2  cw=5e3c19  expected=3a279a
+[FAIL] i_word=3a3  cw=104596  expected=3a3e15
+[FAIL] i_word=3a4  cw=9cd29f  expected=3a402a
+[FAIL] i_word=3a5  cw=d2ab10  expected=3a59a5
+[FAIL] i_word=3a6  cw=22f1c8  expected=3a64cd
+[FAIL] i_word=3a7  cw=6c8847  expected=3a7d42
+[FAIL] i_word=3a8  cw=cbfa73  expected=3a889f
+[FAIL] i_word=3a9  cw=8583fc  expected=3a9110
+[FAIL] i_word=3aa  cw=75d924  expected=3aac78
+[FAIL] i_word=3ab  cw=3ba0ab  expected=3ab5f7
+[FAIL] i_word=3ac  cw=b737a2  expected=3acbc8
+[FAIL] i_word=3ad  cw=f94e2d  expected=3ad247
+[FAIL] i_word=3ae  cw=0914f5  expected=3aef2f
+[FAIL] i_word=3af  cw=476d7a  expected=3af6a0
+[FAIL] i_word=3b0  cw=075735  expected=3b0eac
+[FAIL] i_word=3b1  cw=492eba  expected=3b1723
+[FAIL] i_word=3b2  cw=b97462  expected=3b2a4b
+[FAIL] i_word=3b3  cw=f70ded  expected=3b33c4
+[FAIL] i_word=3b4  cw=7b9ae4  expected=3b4dfb
+[FAIL] i_word=3b5  cw=35e36b  expected=3b5474
+[FAIL] i_word=3b6  cw=c5b9b3  expected=3b691c
+[FAIL] i_word=3b7  cw=8bc03c  expected=3b7093
+[FAIL] i_word=3b8  cw=2cb208  expected=3b854e
+[FAIL] i_word=3b9  cw=62cb87  expected=3b9cc1
+[FAIL] i_word=3ba  cw=92915f  expected=3ba1a9
+[FAIL] i_word=3bb  cw=dce8d0  expected=3bb826
+[FAIL] i_word=3bc  cw=507fd9  expected=3bc619
+[FAIL] i_word=3bd  cw=1e0656  expected=3bdf96
+[FAIL] i_word=3be  cw=ee5c8e  expected=3be2fe
+[FAIL] i_word=3bf  cw=a02501  expected=3bfb71
+[FAIL] i_word=3c0  cw=0aa055  expected=3c018c
+[FAIL] i_word=3c1  cw=44d9da  expected=3c1803
+[FAIL] i_word=3c2  cw=b48302  expected=3c256b
+[FAIL] i_word=3c3  cw=fafa8d  expected=3c3ce4
+[FAIL] i_word=3c4  cw=766d84  expected=3c42db
+[FAIL] i_word=3c5  cw=38140b  expected=3c5b54
+[FAIL] i_word=3c6  cw=c84ed3  expected=3c663c
+[FAIL] i_word=3c7  cw=86375c  expected=3c7fb3
+[FAIL] i_word=3c8  cw=214568  expected=3c8a6e
+[FAIL] i_word=3c9  cw=6f3ce7  expected=3c93e1
+[FAIL] i_word=3ca  cw=9f663f  expected=3cae89
+[FAIL] i_word=3cb  cw=d11fb0  expected=3cb706
+[FAIL] i_word=3cc  cw=5d88b9  expected=3cc939
+[FAIL] i_word=3cd  cw=13f136  expected=3cd0b6
+[FAIL] i_word=3ce  cw=e3abee  expected=3cedde
+[FAIL] i_word=3cf  cw=add261  expected=3cf451
+[FAIL] i_word=3d0  cw=ede82e  expected=3d0c5d
+[FAIL] i_word=3d1  cw=a391a1  expected=3d15d2
+[FAIL] i_word=3d2  cw=53cb79  expected=3d28ba
+[FAIL] i_word=3d3  cw=1db2f6  expected=3d3135
+[FAIL] i_word=3d4  cw=9125ff  expected=3d4f0a
+[FAIL] i_word=3d5  cw=df5c70  expected=3d5685
+[FAIL] i_word=3d6  cw=2f06a8  expected=3d6bed
+[FAIL] i_word=3d7  cw=617f27  expected=3d7262
+[FAIL] i_word=3d8  cw=c60d13  expected=3d87bf
+[FAIL] i_word=3d9  cw=88749c  expected=3d9e30
+[FAIL] i_word=3da  cw=782e44  expected=3da358
+[FAIL] i_word=3db  cw=3657cb  expected=3dbad7
+[FAIL] i_word=3dc  cw=bac0c2  expected=3dc4e8
+[FAIL] i_word=3dd  cw=f4b94d  expected=3ddd67
+[FAIL] i_word=3de  cw=04e395  expected=3de00f
+[FAIL] i_word=3df  cw=4a9a1a  expected=3df980
+[FAIL] i_word=3e0  cw=e03f4f  expected=3e0640
+[FAIL] i_word=3e1  cw=ae46c0  expected=3e1fcf
+[FAIL] i_word=3e2  cw=5e1c18  expected=3e22a7
+[FAIL] i_word=3e3  cw=106597  expected=3e3b28
+[FAIL] i_word=3e4  cw=9cf29e  expected=3e4517
+[FAIL] i_word=3e5  cw=d28b11  expected=3e5c98
+[FAIL] i_word=3e6  cw=22d1c9  expected=3e61f0
+[FAIL] i_word=3e7  cw=6ca846  expected=3e787f
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_golay_encode_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 10138.492 ; gain = 95.156 ; free physical = 277 ; free virtual = 5527
+update_compile_order -fileset sim_1
+close_sim -f
+INFO: xsimkernel Simulation Memory Usage: 289588 KB (Peak: 338408 KB), Simulation CPU Usage: 1520 ms
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_golay_encoder_1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Project 1-5737] Running on host asus (64) - Ubuntu 24.04.4 LTS
+INFO: [Vivado 12-28535] Process started - Fri Aug 21 18:17:40 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_golay_encoder_1'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/abel/Documents/Vivado/2025.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_golay_encoder_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj tb_golay_encoder_1_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_golay_encoder_1
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_golay_encoder_1_behav xil_defaultlib.tb_golay_encoder_1 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/abel/Documents/Vivado/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_golay_encoder_1_behav xil_defaultlib.tb_golay_encoder_1 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4398] File "/home/abel/Desktop/desktop/FEC/labs/lab2/code/rtl/golay_encoder.sv" Line 29 : Function calls inside wait/event expression are sensitive to arguments only."identity_matrix()" is called without any argument which may not unblock the wait/event expression.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.golay_encoder
+Compiling module xil_defaultlib.tb_golay_encoder_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_golay_encoder_1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/abel/Desktop/desktop/FEC/labs/lab2/code/proj/golay_encoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_golay_encoder_1_behav -key {Behavioral:sim_1:Functional:tb_golay_encoder_1} -tclbatch {tb_golay_encoder_1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_golay_encoder_1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+i_word = a5c  cw = 3844d6
+$finish called at time : 1 ns : File "/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder_1.sv" Line 30
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_golay_encoder_1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 10175.496 ; gain = 36.969 ; free physical = 278 ; free virtual = 5503
+close_sim -force
+INFO: xsimkernel Simulation Memory Usage: 280860 KB (Peak: 338392 KB), Simulation CPU Usage: 1460 ms
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 21 18:18:35 2026...
