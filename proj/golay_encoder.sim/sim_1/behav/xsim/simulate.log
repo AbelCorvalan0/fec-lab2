@@ -1,4 +1,0 @@
-Time resolution is 1 ps
-i_word = a5c  cw = d2ab10
-$finish called at time : 1 ns : File "/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder_1.sv" Line 30
-INFO: xsimkernel Simulation Memory Usage: 280860 KB (Peak: 338392 KB), Simulation CPU Usage: 1310 ms

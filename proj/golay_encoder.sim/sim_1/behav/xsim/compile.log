@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abel/Desktop/desktop/FEC/labs/lab2/code/rtl/golay_encoder.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module golay_encoder
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abel/Desktop/desktop/FEC/labs/lab2/code/tb/tb_golay_encoder_1.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_golay_encoder_1

@@ -1,0 +1,8 @@
+# Vivado related
+*.cache
+*.hw
+*.ip_user_files
+*.sim
+xsim.*
+*.jou
+*.log
