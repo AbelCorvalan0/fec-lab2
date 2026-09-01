@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="tb_pkg" />
+            <top_module name="tb_top" />
+            <top_module name="uvm_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="212.884 ns"></ZoomStartTime>
+      <ZoomEndTime time="295.112 ns"></ZoomEndTime>
+      <Cursor1Time time="2,070.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject type="logic" fp_name="/tb_top/vif/i_clock">
+      <obj_property name="ElementShortName">i_clock</obj_property>
+      <obj_property name="ObjectShortName">i_clock</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/vif/o_msg">
+      <obj_property name="ElementShortName">o_msg[11:0]</obj_property>
+      <obj_property name="ObjectShortName">o_msg[11:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/vif/o_err">
+      <obj_property name="ElementShortName">o_err[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_err[23:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/vif/o_corrected">
+      <obj_property name="ElementShortName">o_corrected</obj_property>
+      <obj_property name="ObjectShortName">o_corrected</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/vif/o_uncorrectable">
+      <obj_property name="ElementShortName">o_uncorrectable</obj_property>
+      <obj_property name="ObjectShortName">o_uncorrectable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/vif/i_rx">
+      <obj_property name="ElementShortName">i_rx[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rx[23:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/vif/i_rst">
+      <obj_property name="ElementShortName">i_rst</obj_property>
+      <obj_property name="ObjectShortName">i_rst</obj_property>
+   </wvobject>
+</wave_config>
