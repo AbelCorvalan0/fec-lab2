@@ -13,5 +13,10 @@ module golay_correct(
 // i_err = {i_err[23:0] | i_err[11:0]}
 //              q       |      s
 
+assign o_cw = i_rx ^ i_err;
+
+assign o_msg = o_cw[23:12];
+
+assign o_corrected = (i_rx[23:12] == o_msg);
 
 endmodule
