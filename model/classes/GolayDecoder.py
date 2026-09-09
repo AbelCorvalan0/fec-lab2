@@ -49,13 +49,15 @@ class GolayDecoder:
         Returns:
             tuple: (corrected_vector, corrected_flag, uncorrectable_flag)
         """
-        r_low           = r[0:self._k]
-        r_high          = r[self._k::]
+        # r_low           = r[0:self._k]
+        # r_high          = r[self._k::]
         corrected       = False
         uncorrectable   = False
 
-        s = self._gf.mat_mul(r_low, self._G2412B) ^ r_high
-        q = self._gf.mat_mul(r_high, self._G2412B) ^ r_low
+        # s = self._gf.mat_mul(r_low, self._G2412B) ^ r_high
+        # q = self._gf.mat_mul(r_high, self._G2412B) ^ r_low
+
+        s, q = self.get_s_q(r)
         
         if self._gf.do_pack(s) != 0:
             error = self.get_error(s, q)
@@ -68,7 +70,25 @@ class GolayDecoder:
                 corrected   = True
 
         return r, corrected, uncorrectable
-    
+
+    def get_s_q(self, r: np.ndarray):
+        """
+        Separates and calculates s and q values for the algorithm
+
+        Args:
+            r : received word
+        Returns:
+            tuple: (s, q)
+        """
+        r_low           = r[0:self._k]
+        r_high          = r[self._k::]
+
+        # s = r_high * B
+        # q = r_low  * B
+        s = self._gf.mat_mul(r_low, self._G2412B) ^ r_high
+        q = self._gf.mat_mul(r_high, self._G2412B) ^ r_low
+        return s, q
+
     def get_error(self, s, q):
         """
         Implements the golay 24,12 decoder 4 cases
