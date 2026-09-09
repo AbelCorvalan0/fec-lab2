@@ -89,6 +89,18 @@ class GolayDecoder:
         q = self._gf.mat_mul(r_high, self._G2412B) ^ r_low
         return s, q
 
+    def get_sbi_qbi(self, s, q, bi):
+        sbi = s ^ bi
+        qbi = q ^ bi
+        return sbi, qbi
+
+    # Check weight
+    def weight_less_than_n(self, v : np.array, weight : int):
+        flag = 0
+        if self._gf.hamming_weight(v) <= weight:
+            flag = 1
+        return flag
+
     def get_error(self, s, q):
         """
         Implements the golay 24,12 decoder 4 cases
@@ -104,25 +116,30 @@ class GolayDecoder:
         error_high  = None
 
         # all errors in parity
-        if self._gf.hamming_weight(s) <= 3:
+        #if self._gf.hamming_weight(s) <= 3:
+        if self.weight_less_than_n(s, 3):
             error_low   = self._gf.do_unpack(0, self._k)
             error_high  = s
+
         # all errors in word
-        elif self._gf.hamming_weight(q) <= 3:
+        #elif self._gf.hamming_weight(q) <= 3:
+        elif self.weight_less_than_n(q, 3):    
             error_low   = q
             error_high  = self._gf.do_unpack(0, self._k)
         else:
             for i, bi in enumerate(self._G2412B):
-                sbi = s ^ bi
-                qbi = q ^ bi
+                # sbi = s ^ bi
+                # qbi = q ^ bi
+                sbi, qbi = self.get_sbi_qbi(s, q, bi)
                 ui  = self._gf.do_unpack(1<<i, self._k)[::-1]
                 # only one error in word, remaining in parity
-                if self._gf.hamming_weight(sbi) <= 2:
+                #if self._gf.hamming_weight(sbi) <= 2:
+                if self.weight_less_than_n(sbi, 2): 
                     error_low   = ui
                     error_high  = sbi
                     break
                 # only one error in parity remaining in word
-                elif self._gf.hamming_weight(qbi) <= 2:
+                elif self.weight_less_than_n(qbi, 2):
                     error_low   = qbi
                     error_high  = ui
                     break
