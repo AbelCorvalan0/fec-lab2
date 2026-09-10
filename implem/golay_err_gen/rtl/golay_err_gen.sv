@@ -1,30 +1,27 @@
 `timescale 1ns/1ps
 
-module golay_err_gen(
-     input logic [11 : 0] i_syn, //s
-     input logic [11 : 0]   i_q, //q
-     
-     input logic [11 : 0] i_res_syn, //s^bi
-     input logic [11 : 0] i_res_q,   //q^bi 
-
-     input logic [3  : 0] i_w_syn,   //w(s)
-     input logic [3  : 0] i_w_q,     //w(q)
-
-     input logic [3  : 0] i_idx_syn, //for {u_{i}, s^bi}
-     input logic [3  : 0] i_idx_q,   //for {q^bi, u_{i}} 
-
-     input logic          i_found_syn, // se encontró índice síndrome (flag)
-     input logic          i_found_q,   // se encontró índice q (flag)
-
-     output logic [23 : 0] o_err,      // error mask
-     output logic          o_uncorrectable, // uncorrectable flag
-
-     input logic  [3  : 0] i_w_res_syn, // w(s^bi)
-     input logic  [3  : 0] i_w_res_q    // w(q^bi)
-
+module golay_err_gen #(
+     parameter int NB_WORD = 12,
+     parameter int NB_ERR  = 24,
+     parameter int NB_CNT  =  4
+)(
+     input  logic [NB_WORD - 1 : 0] i_syn, //s
+     input  logic [NB_WORD - 1 : 0]   i_q, //q
+     input  logic [NB_WORD - 1 : 0] i_res_syn, //s^bi
+     input  logic [NB_WORD - 1 : 0] i_res_q,   //q^bi 
+     input  logic [NB_CNT  - 1 : 0] i_w_syn,   //w(s)
+     input  logic [NB_CNT  - 1 : 0] i_w_q,     //w(q)
+     input  logic [NB_CNT  - 1 : 0] i_idx_syn, //for {u_{i}, s^bi}
+     input  logic [NB_CNT  - 1 : 0] i_idx_q,   //for {q^bi, u_{i}} 
+     input  logic                   i_found_syn, // se encontró índice síndrome (flag)
+     input  logic                   i_found_q,   // se encontró índice q (flag)
+     output logic [NB_ERR  - 1 : 0] o_err,      // error mask
+     output logic                   o_uncorrectable, // uncorrectable flag
+     input  logic [NB_CNT  - 1 : 0] i_w_res_syn, // w(s^bi)
+     input  logic [NB_CNT  - 1 : 0] i_w_res_q    // w(q^bi)
 );
 
-localparam int NB_WORD = 12; 
+//localparam int NB_WORD = 12; 
 
 logic [23 : 0] prev_err;
 
