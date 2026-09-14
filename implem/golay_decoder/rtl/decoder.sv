@@ -2,12 +2,8 @@
 
 module decoder
 #(
-    // PIPE STAGE 1
     parameter                                   NB_WORD         = 12    ,
     parameter                                   NB_CODEWORD     = 24    
-
-    // PIPE STAGE 2
-    
 )(
     output  logic   [NB_WORD        - 1 : 0]    o_msg                   ,
     output  logic   [NB_CODEWORD    - 1 : 0]    o_err                   ,
@@ -17,8 +13,6 @@ module decoder
     input   logic                               i_rst                   ,
     input   logic                               i_clk                   
 );
-    // LOCALPARAM/VARIABLES
-
     // LOGIC STAGE 1
     // ======================================================================
     localparam                                  NB_PIPE_STAGE_1 = NB_WORD+1+NB_CODEWORD ;
@@ -53,7 +47,11 @@ module decoder
     // ======================================================================
     localparam                                  NB_ROW_INDEX            = $clog2(NB_WORD)       ;
     localparam                                  NB_WEIGHT               = $clog2(NB_WORD+1)     ;
-    localparam                                  NB_PIPE_STAGE_2         = 5*NB_WORD+2*NB_WEIGHT ;
+    localparam                                  NB_PIPE_STAGE_2         = NB_CODEWORD
+                                                                            +NB_WORD*4
+                                                                            +NB_WEIGHT*2
+                                                                            +NB_ROW_INDEX*2
+                                                                            + 2                 ;
     logic       [NB_WORD            - 1 : 0]    syndrome_d                                      ;
     logic                                       syndrome_zero_d                                 ;
     logic       [NB_CODEWORD        - 1 : 0]    rx_d                                            ;
@@ -140,7 +138,7 @@ module decoder
     // LOGIC STAGE 3
     // ======================================================================
 
-    localparam NB_PIPE_STAGE_3   = NB_WORD;
+    localparam NB_PIPE_STAGE_3   = NB_WORD + NB_CODEWORD + 2;
 
     logic       [NB_CODEWORD  - 1 : 0]    rx_dd                       ;
     logic       [NB_WORD      - 1 : 0]    syndrome_dd                 ;
@@ -154,16 +152,28 @@ module decoder
     logic                                 row_search_s_found_d        ;
     logic                                 row_search_q_found_d        ;
 
-    assign {syndrome_d, syndrome_zero_d, rx_d}  = pipe_stage_1 ;
+    assign { syndrome_dd             ,             
+             q_vector_d              ,
+             weight_s_d              ,
+             weight_q_d              ,
+             rx_dd                   , 
+             row_search_s_res_d      ,
+             row_search_s_row_index_d,
+             row_search_s_found_d    ,
+             row_search_q_res_d      ,
+             row_search_q_row_index_d,
+             row_search_q_found_d      } = pipe_stage_2 ;
 
-    logic       [NB_PIPE_STAGE_3 - 1 : 0] pipe_stage_3;
+    logic [NB_PIPE_STAGE_3 - 1 : 0] pipe_stage_3;
+    logic [NB_CODEWORD     - 1 : 0] err_gen_err;
+    logic                           err_gen_uncorrectable;
 
     golay_err_gen # (
         .NB_WORD            ( NB_WORD                       ),
-        .NB_ERR             ( NB_ERR                        ),
-        .NB_CNT             ( NB_CNT                        ),
+        .NB_ERR             ( NB_CODEWORD                   ),
+        .NB_CNT             ( NB_WEIGHT                     )
     )
-    golay_err_gen_inst  (
+    err_gen_inst  (
         .i_syn              ( syndrome_dd                   ),
         .i_q                ( q_vector_d                    ),
         .i_res_syn          ( row_search_s_res_d            ),
@@ -171,29 +181,33 @@ module decoder
         .i_w_syn            ( weight_s_d                    ),
         .i_w_q              ( weight_q_d                    ),
         .i_idx_syn          ( row_search_s_row_index_d      ),
-        .i_idx_q            ( row_search_q_row_index_q      ),
+        .i_idx_q            ( row_search_q_row_index_d      ),
         .i_found_syn        ( row_search_s_found_d          ),
         .i_found_q          ( row_search_q_found_d          ),
         .i_w_res_syn        ( weight_s_d                    ),
         .i_w_res_q          ( weight_q_d                    ),
-        .o_err              ( golay_correct_err             ),
-        .o_uncorrectable    ( golay_correct_uncorrectable   )
-    );
-
-    logic [NB_ERR - 1 : 0] golay_correct_err;
-
-    golay_correct  
-    golay_correct_inst (
-        .i_rx               ( rx_dd                 ),
-        .i_err              ( golay_correct_err     ),
-        .o_cw               ( codeword              ),
-        .o_msg              ( message               ),
-        .o_corrected        ( corrected             )
+        .o_err              ( err_gen_err                   ),
+        .o_uncorrectable    ( err_gen_uncorrectable         )
     );
 
     logic [NB_CODEWORD - 1 : 0] codeword;
     logic [NB_WORD     - 1 : 0] message; 
     logic                       corrected;
+
+
+    golay_correct  
+    correct_inst (
+        .i_rx               ( rx_dd         ),
+        .i_err              ( err_gen_err   ),
+        .o_cw               ( codeword      ),
+        .o_msg              ( message       ),
+        .o_corrected        ( corrected     )
+    );
+
+    logic [NB_WORD      - 1 : 0]    message_d; 
+    logic [NB_CODEWORD  - 1 : 0]    err_gen_err_d;
+    logic                           corrected_d;
+    logic                           err_gen_uncorrectable_d;
 
     always_ff @(posedge i_clk) begin
         if (i_rst) begin
@@ -201,20 +215,20 @@ module decoder
         end
         else begin
             pipe_stage_3 <= {   
-                                rx_dd            , 
-                                golay_correct_err, 
-                                codeword         , 
-                                message          , 
-                                corrected
+                                message                    ,
+                                err_gen_err                ,
+                                corrected                  ,
+                                err_gen_uncorrectable       
                             };            
         end
     end
 
+assign {message_d, err_gen_err_d, corrected_d, err_gen_uncorrectable_d} = pipe_stage_3;
+
 // OUTPUT ASSIGNATION
- 
-assign o_msg 	   = ;
-assign o_err       = ;
-assign o_corrected = ;
-assign o_uncorrectable = ;
+assign o_msg 	       = message_d                  ;
+assign o_err           = err_gen_err_d              ;
+assign o_corrected     = corrected_d                ;
+assign o_uncorrectable = err_gen_uncorrectable_d    ;
 
 endmodule
