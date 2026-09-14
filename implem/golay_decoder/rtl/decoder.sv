@@ -154,7 +154,8 @@ module decoder
     logic                                 row_search_s_found_d        ;
     logic                                 row_search_q_found_d        ;
 
-    
+    assign {syndrome_d, syndrome_zero_d, rx_d}  = pipe_stage_1 ;
+
     logic       [NB_PIPE_STAGE_3 - 1 : 0] pipe_stage_3;
 
     golay_err_gen # (
@@ -185,10 +186,14 @@ module decoder
     golay_correct_inst (
         .i_rx               ( rx_dd                 ),
         .i_err              ( golay_correct_err     ),
-        .o_cw               ( o_cw                  ),
-        .o_msg              ( o_msg                 ),
-        .o_corrected        ( o_corrected           )
+        .o_cw               ( codeword              ),
+        .o_msg              ( message               ),
+        .o_corrected        ( corrected             )
     );
+
+    logic [NB_CODEWORD - 1 : 0] codeword;
+    logic [NB_WORD     - 1 : 0] message; 
+    logic                       corrected;
 
     always_ff @(posedge i_clk) begin
         if (i_rst) begin
@@ -198,13 +203,18 @@ module decoder
             pipe_stage_3 <= {   
                                 rx_dd            , 
                                 golay_correct_err, 
-                                o_cw             , 
-                                o_msg            , 
-                                o_corrected
+                                codeword         , 
+                                message          , 
+                                corrected
                             };            
         end
     end
 
 // OUTPUT ASSIGNATION
+ 
+assign o_msg 	   = ;
+assign o_err       = ;
+assign o_corrected = ;
+assign o_uncorrectable = ;
 
 endmodule
