@@ -21,15 +21,11 @@ class tb_scoreboard extends uvm_scoreboard;
         seq_item    model_output = seq_item::type_id::create("model_output");
         bit         error_flags [$];
         
-        // if (!item.input_valid) begin
-        //     valid_zero: assert (!item.output_valid && item.output_data == '0 && !item.corrected)
-        //         else `uvm_fatal(get_name(), $sformatf(  "Assertion valid_zero failed!: !%0b && %0b == '0 && !%0b"   ,
-        //                                                 item.output_valid, item.output_data, item.corrected         ))
-        // end
-        // else begin
-        //     model_output.copy(item);
-        //     model.get_output(model_output.input_data, model_output.syndrome, model_output.output_data, model_output.corrected);
 
+        // else begin
+            model_output.copy(item);
+            model.get_output(model_output.rx_data, model_output.msg_data, model_output.error_pattern, model_output.corrected, model_output.uncorrectable);
+            model_output.print();
         //     if (!item.compare(model_output)) begin
         //         error_flags = '{
         //             item.output_data != model_output.output_data    ,
