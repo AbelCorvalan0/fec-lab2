@@ -15,7 +15,7 @@ class tb_virtual_seq extends uvm_sequence;
         codeword_with_error_seq = codeword_with_error_sequence::type_id::create("codeword_with_error_seq");
 
         `uvm_info(get_name(), $sformatf("\nLauching codeword_with_error_seq (no errors)...\n"), UVM_NONE)
-        repeat (100) codeword_with_error_seq.start(sequencer);
+        codeword_with_error_seq.start(sequencer);
         
     endtask
 

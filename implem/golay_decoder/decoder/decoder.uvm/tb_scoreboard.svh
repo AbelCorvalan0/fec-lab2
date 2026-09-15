@@ -7,48 +7,58 @@ class tb_scoreboard extends uvm_scoreboard;
         super.new(name, parent);
     endfunction
 
-    dut_model_t                                 model;
     uvm_analysis_imp#(seq_item, tb_scoreboard)  scb_analysis_imp;
-
+    // Index for rx_data (assoc).
+    // for each codeword, save index
+    int cw_to_idx[bit [NB_CODEWORD - 1 : 0]];
+    
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-
-        model               = dut_model_t::type_id::create("model");
         scb_analysis_imp    = new("scb_analysis_imp", this);
+    
+        foreach (golay_code[i])
+            cw_to_idx[golay_code[i]] = i;
+
     endfunction
 
-    virtual function write(seq_item item);
-        seq_item    model_output = seq_item::type_id::create("model_output");
-        bit         error_flags [$];
+    virtual function void write(seq_item item);
+        // item comes from monitos (tb_monitor.svh), loaded with info that comes from RTL
+        // item.rx_data = vif.i_rx (input)
+        // item.msg_data, item.error_pattern, item.corrected, item.uncorrectable -> outputs from DUT
+
+        int                   idx;      // index of gold model for this codeword
+        bit [NB_WORD - 1 : 0] exp_msg;  // golden model msg
+
+        // Verify
+        if(!cw_to_idx.exists(item.rx_data)) begin
+            // codeword isn't within golde model table
+            `uvm_error(get_name(), $sformatf(
+                "rx_data 0x%0h isn't within golden model table",
+                item.rx_data))
+            return;
+        end
+
+        idx = cw_to_idx[item.rx_data];
         
-        // if (!item.input_valid) begin
-        //     valid_zero: assert (!item.output_valid && item.output_data == '0 && !item.corrected)
-        //         else `uvm_fatal(get_name(), $sformatf(  "Assertion valid_zero failed!: !%0b && %0b == '0 && !%0b"   ,
-        //                                                 item.output_valid, item.output_data, item.corrected         ))
-        // end
-        // else begin
-        //     model_output.copy(item);
-        //     model.get_output(model_output.input_data, model_output.syndrome, model_output.output_data, model_output.corrected);
+        exp_msg = decoded_data[idx][NB_CODEWORD-1 -: NB_WORD];
 
-        //     if (!item.compare(model_output)) begin
-        //         error_flags = '{
-        //             item.output_data != model_output.output_data    ,
-        //             item.corrected != model_output.corrected        
-        //         };
+        // expected message = 12-bits (msg|parity)
+        if (item.msg_data != exp_msg)
+            `uvm_error(get_name(), $sformatf(
+                "[MSG] rx=0x%0h: DUT=%0b esperado=%0b", item.rx_data, item.msg_data, exp_msg))
 
-        //         if (error_flags[0]) begin
-        //             `uvm_error(get_name(), $sformatf(   "[DATA ERROR] r = %04b: DUT = %04b, model = %04b"           ,
-        //                                                 item.input_data, item.output_data, model_output.output_data ))
-        //         end
-        //         if (error_flags[1]) begin
-        //             `uvm_error(get_name(), $sformatf(   "[CORRECTED FLAG ERROR] r = %04b: DUT = %0b, model = %0b"   ,
-        //                                                 item.input_data, item.corrected, model_output.corrected     ))
-        //         end
-        //         model_output.print();
-        //         item.print();
-        //     end
-        // end
+        if (item.error_pattern != err[idx])
+            `uvm_error(get_name(), $sformatf(
+                "[ERR] rx=0x%0h: DUT=%0b esperado=%0b", item.rx_data, item.error_pattern, err[idx]))
 
+        if (item.corrected != corrected_data[idx])
+            `uvm_error(get_name(), $sformatf(
+                "[CORRECTED] rx=0x%0h: DUT=%0b esperado=%0b", item.rx_data, item.corrected, corrected_data[idx]))
+
+        if (item.uncorrectable != uncorrectable[idx])
+    `uvm_error(get_name(), $sformatf(
+        "[UNCORRECTABLE] rx=0x%0h: DUT=%0b esperado=%0b", item.rx_data, item.uncorrectable, uncorrectable[idx]))
+        
     endfunction
     
 endclass
