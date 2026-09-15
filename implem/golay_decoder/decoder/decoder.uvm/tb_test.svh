@@ -32,14 +32,13 @@ class tb_test extends uvm_test;
         vseq            = tb_virtual_seq::type_id::create("vseq");
         vseq.sequencer  = env.agent.sequencer;
 
-        `uvm_info("TEST", $sformatf("Reseting DUT"), UVM_LOW)
+        `uvm_info("TEST", $sformatf("\nReseting DUT"), UVM_LOW)
         vif.i_rx    = 'b0;
-        vif.i_rst   = 1;
-        repeat(2) @(posedge vif.i_clock);
         vif.i_rst   = 0;
+        repeat(1) @(posedge vif.i_clock);
 
         vseq.start(null);
-        repeat(2) @(posedge vif.i_clock);
+        repeat(tb_monitor::PIPE_LATENCY + 1) @(posedge vif.i_clock);
 
         phase.drop_objection(this);
     endtask

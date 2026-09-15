@@ -1,13 +1,12 @@
-// The UVM monitor is derived from uvm_monitor and has a virtual interface handle to listen to activity on the given interface.
-// It tries to capture pin level activity into a seq_item object which it can send out to other testbench components.
-// Since it has to decode and capture any activity happening on the DUT interface, it has to run for as long as the simulation is active
-// and hence it is placed inside a forever loop.
 class tb_monitor extends uvm_monitor;
     `uvm_component_utils(tb_monitor)
 
     function new(string name="tb_monitor", uvm_component parent=null);
         super.new(name, parent);
     endfunction
+
+    // DUT Latency
+    localparam int PIPE_LATENCY = 3;
 
     virtual dut_if                  vif;
     uvm_analysis_port#(seq_item)    mon_analysis_port;
@@ -20,20 +19,30 @@ class tb_monitor extends uvm_monitor;
     endfunction
 
     virtual task run_phase(uvm_phase phase);
+        // queue
+        bit [NB_CODEWORD-1:0] rx_pipe[$];
         super.run_phase(phase);
-        
-        forever begin
-            seq_item item = seq_item::type_id::create("item", this);
 
+        forever begin
             @(posedge vif.i_clock);
-            item.msg_data       = vif.o_msg;
-            item.error_pattern  = vif.o_err;
-            item.corrected      = vif.o_corrected;
-            item.uncorrectable  = vif.o_uncorrectable;
-            item.rx_data        = vif.i_rx;
-            // item.print();
-            
-            mon_analysis_port.write(item);
+            #1; // state
+
+            // save any i_rx that that arrives to DUT
+            // history needed to compensate pipeline latency
+            rx_pipe.push_back(vif.i_rx);
+
+            // pop when size > 3. three latency cycles
+            if (rx_pipe.size() > PIPE_LATENCY) begin
+                seq_item item = seq_item::type_id::create("item", this);
+
+                item.rx_data        = rx_pipe.pop_front();
+                item.msg_data       = vif.o_msg;
+                item.error_pattern  = vif.o_err;
+                item.corrected      = vif.o_corrected;
+                item.uncorrectable  = vif.o_uncorrectable;
+
+                mon_analysis_port.write(item);
+            end
         end
     endtask
 

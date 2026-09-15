@@ -9,14 +9,13 @@ class tb_virtual_seq extends uvm_sequence;
     endfunction
 
     uvm_sequencer#(seq_item)            sequencer;
-    random_codeword_with_error_sequence random_codeword_with_error_seq;
-    all_codeword_with_error_sequence    all_codeword_with_error_seq;
+    codewords_test        codewords_test_sequence;
     
     task body();
-        codeword_with_error_seq = codeword_with_error_sequence::type_id::create("codeword_with_error_seq");
-
-        `uvm_info(get_name(), $sformatf("\nLauching codeword_with_error_seq (no errors)...\n"), UVM_NONE)
-        codeword_with_error_seq.start(sequencer);
+        codewords_test_sequence  = codewords_test::type_id::create("codewords_test_sequence");
+    
+        `uvm_info(get_name(), $sformatf("\nLauching codewords_test_sequence sequence (no errors)...\n"), UVM_NONE)
+        codewords_test_sequence.start(sequencer);
         
     endtask
 

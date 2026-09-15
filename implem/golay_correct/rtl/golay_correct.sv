@@ -17,6 +17,6 @@ assign o_cw = i_rx ^ i_err;
 
 assign o_msg = o_cw[23:12];
 
-assign o_corrected = (i_rx[23:12] == o_msg);
+assign o_corrected = (i_err != 24'b0);
 
 endmodule

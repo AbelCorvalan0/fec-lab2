@@ -22,7 +22,7 @@ class tb_driver extends uvm_driver#(seq_item);
         forever begin
             seq_item item;
     
-            `uvm_info("DRV", $sformatf("Wait for item from sequencer"), UVM_DEBUG)
+            `uvm_info("DRV", $sformatf("\nWait for item from sequencer"), UVM_DEBUG)
                 
             seq_item_port.get_next_item(item);
 

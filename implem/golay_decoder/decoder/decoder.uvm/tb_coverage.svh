@@ -30,8 +30,8 @@ class tb_coverage extends uvm_subscriber#(seq_item);
     endfunction
 
     function void report_phase(uvm_phase phase);
-        `uvm_info(get_name(), $sformatf("DUT Coverage = %.2f%%", cov_dut.get_inst_coverage()), UVM_NONE)
-        `uvm_info(get_name(), $sformatf("Sequences Coverage = %.2f%%", cov_sequences.get_inst_coverage()), UVM_NONE)
+        `uvm_info(get_name(), $sformatf("\nDUT Coverage = %.2f%%", cov_dut.get_inst_coverage()), UVM_NONE)
+        `uvm_info(get_name(), $sformatf("\nSequences Coverage = %.2f%%", cov_sequences.get_inst_coverage()), UVM_NONE)
     endfunction
 
 endclass

@@ -8,9 +8,6 @@ package tb_pkg;
     parameter   NB_WORD     = 12;
     parameter   NB_CODEWORD = 24;
 
-    `include "dut_model.svh"
-    typedef decoder_model#(NB_WORD, NB_CODEWORD) dut_model_t;
-
     `include "sequences/codewords_testing_golay_code.svh"
     `include "sequences/seq_item.svh"
     `include "sequences/seq_lib.svh"

@@ -16,11 +16,11 @@ class tb_sequence extends uvm_sequence;
             start_item(item_s);
             item_s.randomize();
 
-            `uvm_info("SEQ", $sformatf("Generate new item: "), UVM_DEBUG)
+            `uvm_info("SEQ", $sformatf("\nGenerate new item: "), UVM_DEBUG)
             // item_s.print();
             finish_item(item_s);
         end
-        `uvm_info("SEQ", $sformatf("Done generation of %0d items", N_ITEMS), UVM_LOW)
+        `uvm_info("SEQ", $sformatf("\nDone generation of %0d items", N_ITEMS), UVM_LOW)
     endtask
 
 endclass
