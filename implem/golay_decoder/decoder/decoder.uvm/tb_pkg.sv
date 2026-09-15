@@ -11,7 +11,7 @@ package tb_pkg;
     `include "dut_model.svh"
     typedef decoder_model#(NB_WORD, NB_CODEWORD) dut_model_t;
 
-    `include "sequences/golay_code_constraint.svh"
+    `include "sequences/codewords_testing_golay_code.svh"
     `include "sequences/seq_item.svh"
     `include "sequences/seq_lib.svh"
     
