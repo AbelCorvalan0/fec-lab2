@@ -6,21 +6,18 @@ class tb_environment extends uvm_env;
         super.new(name, parent);
     endfunction
 
-    tb_agent        agent;
-    tb_scoreboard   scoreboard;
-    // tb_coverage     cov;
+    tb_agent      agent;
+    tb_scoreboard scoreboard;
 
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        agent       = tb_agent::type_id::create("agent", this);
-        scoreboard  = tb_scoreboard::type_id::create("scoreboard", this);
-        // cov         = tb_coverage::type_id::create("cov", this);
+        agent      = tb_agent::type_id::create("agent", this);
+        scoreboard = tb_scoreboard::type_id::create("scoreboard", this);
     endfunction
 
     virtual function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
         agent.monitor.mon_analysis_port.connect(scoreboard.scb_analysis_imp);
-        // agent.monitor.mon_analysis_port.connect(cov.analysis_export);
     endfunction
 
 endclass
