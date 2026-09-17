@@ -5,40 +5,53 @@ class tb_scoreboard extends uvm_scoreboard;
         super.new(name, parent);
     endfunction
 
-    uvm_analysis_imp#(seq_item, tb_scoreboard) scb_analysis_imp;
+    // DUT Latency
+    localparam int PIPE_LATENCY = 3 + 1;
 
-    // Indice dentro de los arrays golden (msg, err, corrected_data, uncorrectable)
+    uvm_analysis_imp#(seq_item, tb_scoreboard) scb_analysis_imp;
+    
     int unsigned idx;
+    // Pipeline de inputs
+    bit [NB_CODEWORD-1:0] rx_pipe [$];
 
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         scb_analysis_imp = new("scb_analysis_imp", this);
-        idx = 0;
     endfunction
 
     virtual function void write(seq_item item);
-        if (idx >= $size(golay_code)) begin
-            `uvm_warning(get_name(), $sformatf("Item recibido fuera de rango (idx=%0d) - se ignora", idx))
-            return;
+        rx_pipe.push_front(item.rx_data);
+        if (rx_pipe.size() > PIPE_LATENCY) begin
+            void'(rx_pipe.pop_back());
         end
+        // `uvm_error(get_name(), $sformatf("\nrx_pipe: %0p", rx_pipe))
 
-        if (item.msg_data != msg[idx])
-            `uvm_error(get_name(), $sformatf("[MSG ERROR] idx=%0d rx=%0h : DUT=%0h, esperado=%0h",
-                                              idx, item.rx_data, item.msg_data, msg[idx]))
+        // if (rx_pipe.size() >= PIPE_LATENCY) begin
+            foreach (golay_code[i]) begin 
+                // `uvm_error(get_name(), $sformatf("\ngolay_code[%0d] == rx_pipe[$] = %024h == %024h = %0b : %0p", i, golay_code[i], rx_pipe[$], golay_code[i] == rx_pipe[$], rx_pipe))
+                if (golay_code[i] == rx_pipe[$]) begin
+                    // `uvm_error(get_name(), $sformatf("\nINDEX: %0p", rx_pipe))
+                    idx = i;
+                end
+            end
 
-        if (item.error_pattern != err[idx])
-            `uvm_error(get_name(), $sformatf("[ERR ERROR] idx=%0d rx=%0h : DUT=%0h, esperado=%0h",
-                                              idx, item.rx_data, item.error_pattern, err[idx]))
+            if (item.msg_data != msg[idx])
+                `uvm_error(get_name(), $sformatf("\n[MSG ERROR] idx=%0d rx=%0h : DUT=%0h, esperado=%0h",
+                                                  idx, item.rx_data, item.msg_data, msg[idx]))
+    
+            if (item.error_pattern != err[idx])
+                `uvm_error(get_name(), $sformatf("[ERR ERROR] idx=%0d rx=%0h : DUT=%0h, esperado=%0h",
+                                                  idx, item.rx_data, item.error_pattern, err[idx]))
+    
+            if (item.corrected != corrected_data[idx])
+                `uvm_error(get_name(), $sformatf("[CORRECTED ERROR] idx=%0d rx=%0h : DUT=%0b, esperado=%0b",
+                                                  idx, item.rx_data, item.corrected, corrected_data[idx]))
+    
+            if (item.uncorrectable != uncorrectable[idx])
+                `uvm_error(get_name(), $sformatf("[UNCORRECTABLE ERROR] idx=%0d rx=%0h : DUT=%0b, esperado=%0b",
+                                                  idx, item.rx_data, item.uncorrectable, uncorrectable[idx]))
+        // end
 
-        if (item.corrected != corrected_data[idx])
-            `uvm_error(get_name(), $sformatf("[CORRECTED ERROR] idx=%0d rx=%0h : DUT=%0b, esperado=%0b",
-                                              idx, item.rx_data, item.corrected, corrected_data[idx]))
-
-        if (item.uncorrectable != uncorrectable[idx])
-            `uvm_error(get_name(), $sformatf("[UNCORRECTABLE ERROR] idx=%0d rx=%0h : DUT=%0b, esperado=%0b",
-                                              idx, item.rx_data, item.uncorrectable, uncorrectable[idx]))
-
-        idx++;
     endfunction
 
 endclass

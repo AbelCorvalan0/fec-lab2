@@ -5,16 +5,8 @@ class tb_monitor extends uvm_monitor;
         super.new(name, parent);
     endfunction
 
-    // DUT Latency
-    localparam int PIPE_LATENCY = 3;
-
     virtual dut_if               vif;
     uvm_analysis_port#(seq_item) mon_analysis_port;
-
-    int cycle_count;
-
-    // Pipeline de inputs
-    bit [NB_CODEWORD-1:0] rx_pipe[$];
 
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
@@ -25,35 +17,35 @@ class tb_monitor extends uvm_monitor;
         mon_analysis_port = new("mon_analysis_port", this);
     endfunction
 
-
     virtual task run_phase(uvm_phase phase);
-        seq_item item;
         super.run_phase(phase);
-
-        cycle_count = 0;
-
+        
+        // cycle_count = 0;
+        
         forever begin
+            seq_item item = seq_item::type_id::create("item", this);
 
             @(posedge vif.i_clock);
+            
+            // // Reset
+            // if (vif.i_rst) begin
+            //     cycle_count = 0;
+            //     rx_pipe.delete();
+            //     continue;
+            // end
 
-            // Reset
-            if (vif.i_rst) begin
-                cycle_count = 0;
-                rx_pipe.delete();
-                continue;
-            end
+            // cycle_count++;
 
-            cycle_count++;
+            // // Guardar input actual
+            // rx_pipe.push_back(vif.i_rx);
 
-            // Guardar input actual
-            rx_pipe.push_back(vif.i_rx);
+            // if (rx_pipe.size() >= PIPE_LATENCY) begin
 
-            if (rx_pipe.size() >= PIPE_LATENCY) begin
+            //     item = 
 
-                item = seq_item::type_id::create("item", this);
-
-                // Input correspondiente a la salida actual
-                item.rx_data = rx_pipe.pop_front();
+            //     // Input correspondiente a la salida actual
+                item.rx_data = vif.i_rx;
+                // item.rx_data = rx_pipe.pop_front();
 
                 // Outputs del DUT
                 item.msg_data      = vif.o_msg;
@@ -62,7 +54,7 @@ class tb_monitor extends uvm_monitor;
                 item.uncorrectable = vif.o_uncorrectable;
 
                 mon_analysis_port.write(item);
-            end
+            // end
         end
 
     endtask

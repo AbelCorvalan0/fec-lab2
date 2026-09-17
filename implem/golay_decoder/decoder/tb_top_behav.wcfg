@@ -14,13 +14,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="212.884 ns"></ZoomStartTime>
-      <ZoomEndTime time="295.112 ns"></ZoomEndTime>
-      <Cursor1Time time="2,070.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="82.030001 us"></ZoomEndTime>
+      <Cursor1Time time="0.050000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="7" />
    <wvobject type="logic" fp_name="/tb_top/vif/i_clock">
@@ -30,7 +30,7 @@
    <wvobject type="array" fp_name="/tb_top/vif/o_msg">
       <obj_property name="ElementShortName">o_msg[11:0]</obj_property>
       <obj_property name="ObjectShortName">o_msg[11:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/vif/o_err">
       <obj_property name="ElementShortName">o_err[23:0]</obj_property>
@@ -48,7 +48,7 @@
    <wvobject type="array" fp_name="/tb_top/vif/i_rx">
       <obj_property name="ElementShortName">i_rx[23:0]</obj_property>
       <obj_property name="ObjectShortName">i_rx[23:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_top/vif/i_rst">
       <obj_property name="ElementShortName">i_rst</obj_property>
