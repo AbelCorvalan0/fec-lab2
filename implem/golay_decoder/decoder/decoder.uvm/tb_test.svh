@@ -27,16 +27,15 @@ class tb_test extends uvm_test;
         vseq.sequencer = env.agent.sequencer;
 
         `uvm_info("TEST", "Reseting DUT", UVM_LOW)
-        vif.i_rst = 1'b1;
-        vif.i_rx  = '0;
+        vif.i_rst <= 1'b1;
+        vif.i_rx  <= '0;
         repeat(2) @(posedge vif.i_clock);
-        vif.i_rst = 1'b0;
-        @(posedge vif.i_clock);
 
+        vif.i_rst <= 1'b0;
         vseq.start(null);
 
         // drenar el pipeline (3 ciclos) antes de cortar
-        repeat(3) @(posedge vif.i_clock);
+        repeat(4) @(posedge vif.i_clock);
 
         phase.drop_objection(this);
     endtask
