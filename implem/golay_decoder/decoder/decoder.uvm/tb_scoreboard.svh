@@ -18,7 +18,7 @@ class tb_scoreboard extends uvm_scoreboard;
         scb_analysis_imp = new("scb_analysis_imp", this);
         
         $system("pwd");
-        file_handle = $fopen("../../../../decoder.uvm/sequences/decoder_testing/codewords/codewords_testing_golay_code.txt", "r");
+        file_handle = $fopen("../../../../decoder.uvm/sequences/codewords_testing_golay_code.txt", "r");
         if (file_handle == 0) begin
             `uvm_fatal("FILE_OPEN_ERROR", "Failed to open file for reading!")
         end
