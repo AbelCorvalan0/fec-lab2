@@ -5,14 +5,14 @@ class tb_virtual_seq extends uvm_sequence;
         super.new(name);
     endfunction
 
-    uvm_sequencer#(seq_item) sequencer;
-    codewords_test           codewords_seq;
+    uvm_sequencer#(seq_item)        sequencer;
+    codewords_with_error_sequence   codewords_with_error_seq;
 
     task body();
-        codewords_seq = codewords_test::type_id::create("codewords_seq");
+        codewords_with_error_seq = codewords_with_error_sequence::type_id::create("codewords_with_error_seq");
 
-        `uvm_info(get_name(), $sformatf("\n\nLaunching codewords_test...\n"), UVM_NONE)
-        codewords_seq.start(sequencer);
+        `uvm_info(get_name(), $sformatf("\n\nLaunching codewords_with_error_seq...\n"), UVM_NONE)
+        codewords_with_error_seq.start(sequencer);
     endtask
 
 endclass
