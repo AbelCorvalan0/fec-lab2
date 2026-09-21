@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}}{4}{section.1}%
+\contentsline {section}{\numberline {2}Ejercicio 1}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Análsis de etapas}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Consignas}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}adder\_4b}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}adder\_7b}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}multiplexer}{5}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}register1}{5}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}top}{6}{subsubsection.2.2.5}%
+\contentsline {section}{\numberline {3}Ejercicio 2}{9}{section.3}%
+\contentsline {section}{\numberline {4}Ejercicio 3}{10}{section.4}%
+\contentsline {section}{\numberline {5}Ejercicio 4}{11}{section.5}%
+\contentsline {subsubsection}{\numberline {5.0.1}Camino directo (términos de entrada)}{14}{subsubsection.5.0.1}%
+\contentsline {subsubsection}{\numberline {5.0.2}Camino de realimentación}{15}{subsubsection.5.0.2}%
+\contentsline {subsubsection}{\numberline {5.0.3}Cálculo del peor caso total}{15}{subsubsection.5.0.3}%
+\contentsline {section}{\numberline {6}LABORATORIO 2 - FEC - Grupo 1}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Ejercicio 1 - Matrices y parámetros}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Ejercicio 2 - Distancia mínima y capacidad de corrección}{16}{subsection.6.2}%
