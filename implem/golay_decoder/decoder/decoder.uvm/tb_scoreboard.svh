@@ -11,12 +11,11 @@ class tb_scoreboard extends uvm_scoreboard;
     int                                         file_handle;
     int                                         latency;
     seq_item                                    item;
+    tb_report                                   report;
     uvm_analysis_imp#(seq_item, tb_scoreboard)  scb_analysis_imp;
 
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        scb_analysis_imp = new("scb_analysis_imp", this);
-        
         $system("pwd");
         file_handle = $fopen("../../../../decoder.uvm/sequences/codewords_testing_golay_code.txt", "r");
         if (file_handle == 0) begin
@@ -24,6 +23,9 @@ class tb_scoreboard extends uvm_scoreboard;
         end
         latency = 0;
         item    = null;
+        report  = tb_report::type_id::create("report");
+
+        scb_analysis_imp = new("scb_analysis_imp", this);
     endfunction
   
     virtual function void write(seq_item item);
@@ -35,6 +37,7 @@ class tb_scoreboard extends uvm_scoreboard;
         end
 
         `uvm_info("TRIGGER", $sformatf("\nlatency = %0d", latency), UVM_DEBUG)
+        report.update(item);
         this.item = item;
     endfunction
 
@@ -47,6 +50,7 @@ class tb_scoreboard extends uvm_scoreboard;
             
             wait(item != null);
             `uvm_info("RECEIVED", $sformatf("\nwait(this.item != null);"), UVM_DEBUG)
+
             
             // format: rx msg err corrected uncorrectable
             status = $fscanf(   file_handle, "%b %b %b %b %b\n", model_output.rx_data   ,
@@ -86,5 +90,10 @@ class tb_scoreboard extends uvm_scoreboard;
 
         $fclose(file_handle);
     endtask
+
+    virtual function void report_phase(uvm_phase phase);
+        super.report_phase(phase);
+        report.print();
+    endfunction
 
 endclass
