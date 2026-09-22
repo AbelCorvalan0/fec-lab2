@@ -17,7 +17,7 @@ class tb_scoreboard extends uvm_scoreboard;
     virtual function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         $system("pwd");
-        file_handle = $fopen("../../../../decoder.uvm/sequences/codewords_testing_golay_code.txt", "r");
+        file_handle = $fopen(VECTOR_FILE0, "r");
         if (file_handle == 0) begin
             `uvm_fatal("FILE_OPEN_ERROR", "Failed to open file for reading!")
         end
@@ -51,7 +51,6 @@ class tb_scoreboard extends uvm_scoreboard;
             wait(item != null);
             `uvm_info("RECEIVED", $sformatf("\nwait(this.item != null);"), UVM_DEBUG)
 
-            
             // format: rx msg err corrected uncorrectable
             status = $fscanf(   file_handle, "%b %b %b %b %b\n", model_output.rx_data   ,
                                 model_output.msg_data, model_output.error_pattern       ,
@@ -62,6 +61,11 @@ class tb_scoreboard extends uvm_scoreboard;
 
             // we dont need rx_data for model
             model_output.rx_data = item.rx_data;
+
+            // TODO FIX THIS IN VECTOR GENERATION
+            if (model_output.uncorrectable) begin
+                model_output.error_pattern = 0;
+            end
             
             // insert random errors, for testing
             // item.msg_data ^= $urandom_range(0,1);

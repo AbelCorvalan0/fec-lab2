@@ -4,9 +4,10 @@ package tb_pkg;
 
     `timescale 1ns/1ps
 
-    parameter   NB_WORD     = 12;
-    parameter   NB_CODEWORD = 24;
-
+    parameter               NB_WORD         = 12;
+    parameter               NB_CODEWORD     = 24;
+    parameter   string      VECTOR_FILE0    = "../../../../decoder.uvm/sequences/codeword_with_errors.txt";
+    
     `include "sequences/seq_item.svh"
     `include "sequences/seq_lib.svh"
 
