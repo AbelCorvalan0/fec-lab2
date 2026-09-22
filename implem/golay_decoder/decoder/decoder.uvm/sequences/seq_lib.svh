@@ -3,7 +3,7 @@ class codewords_with_error_sequence extends uvm_sequence;
 
     function new(string name= "codewords_with_error_sequence");
         super.new(name);
-        file_handle = $fopen("../../../../decoder.uvm/sequences/codewords_testing_golay_code.txt", "r");
+        file_handle = $fopen(VECTOR_FILE0, "r");
         if (file_handle == 0) begin
             `uvm_fatal("FILE_OPEN_ERROR", "Failed to open file for reading!")
         end
