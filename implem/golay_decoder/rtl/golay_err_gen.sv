@@ -24,31 +24,50 @@ module golay_err_gen #(
 //localparam int NB_WORD = 12; 
 
 logic [23 : 0] prev_err;
+logic [NB_WORD - 1 : 0] ui_vector;
+logic                    case_1    ;
+logic                    case_2    ;
+logic                    case_3    ;
+logic                    case_4    ;
 
 localparam logic [3:0] COND_1 = 4'd3;
 localparam logic [3:0] COND_2 = 4'd2;
 
+always_comb begin
+     ui_vector = '0;
+     if (i_found_syn) begin
+          ui_vector = 'b1 << i_idx_syn  ;
+     end
+     else if (i_found_q) begin
+          ui_vector = 'b1 << i_idx_q    ;
+     end
+end
 
-// 1. w(s) <= 3
-// 2. found_syn && w(s^bi) <= 2
-// 3. w(q) <= 3
-// 4. found_q && w(q^bi) <= 2
-// 5. uncorrectable
+// case1. w(s)      <= 3
+// case2. w(s^bi)   <= 2
+// case3. w(q)      <= 3
+// case4. w(q^bi)   <= 2
+// case5. uncorrectable
+assign case_1  = (i_w_syn     <= COND_1)     ;
+assign case_2  = (i_w_res_syn <= COND_2)     ;
+assign case_3  = (i_w_q       <= COND_1)     ;
+assign case_4  = (i_w_res_q   <= COND_2)     ;
+
 always_comb begin
      prev_err        =   '0;
      o_uncorrectable = 1'b0;
 
-	if (i_w_syn <= COND_1) begin
+	if (case_1) begin
 		prev_err = {{NB_WORD{1'b0}}, i_syn};	
 	end
-	else if (i_found_syn && (i_w_res_syn <= COND_2)) begin 
-		prev_err = {(24'b1 << (i_idx_syn + NB_WORD)) | {12'b0 , i_res_syn}};
+	else if (case_2) begin 
+		prev_err = {ui_vector, i_res_syn};
      end
-	else if (i_w_q <= COND_1) begin
+	else if (case_3) begin
 		prev_err = {i_q, {NB_WORD{1'b0}}};
 	end
-	else if (i_found_q && (i_w_res_q <= COND_2)) begin
-		prev_err = {i_res_q, 12'b0} | (24'b1 << i_idx_q);
+	else if (case_4) begin
+		prev_err = {i_res_q, ui_vector};
      end
      else begin
           o_uncorrectable = 1'b1;

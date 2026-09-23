@@ -49,7 +49,7 @@ module decoder
     localparam                                  NB_WEIGHT               = $clog2(NB_WORD+1)     ;
     localparam                                  NB_PIPE_STAGE_2         = NB_CODEWORD
                                                                             +NB_WORD*4
-                                                                            +NB_WEIGHT*2
+                                                                            +NB_WEIGHT*4 
                                                                             +NB_ROW_INDEX*2
                                                                             + 2                 ;
     logic       [NB_WORD            - 1 : 0]    syndrome_d                                      ;
@@ -64,6 +64,8 @@ module decoder
     logic                                       row_search_q_found                              ;
     logic       [NB_WEIGHT          - 1 : 0]    weight_s                                        ;
     logic       [NB_WEIGHT          - 1 : 0]    weight_q                                        ;
+    logic       [NB_WEIGHT          - 1 : 0]    weight_sbi                                      ;
+    logic       [NB_WEIGHT          - 1 : 0]    weight_qbi                                      ;
     logic       [NB_PIPE_STAGE_2    - 1 : 0]    pipe_stage_2                                    ;
     
     assign {syndrome_d, syndrome_zero_d, rx_d}  = pipe_stage_1 ;
@@ -107,12 +109,29 @@ module decoder
     );
 
     popcount # (
+        .NB_DATA    ( NB_WORD          )
+    )
+    weight_sbi_inst (
+        .o_weight   ( weight_sbi       ),
+        .i_vec      ( row_search_s_res )
+    );
+
+    popcount # (
+        .NB_DATA    ( NB_WORD           )
+    )
+    weight_qbi_inst (
+        .o_weight   ( weight_qbi        ),
+        .i_vec      ( row_search_q_res  )
+    );
+
+    popcount # (
         .NB_DATA    ( NB_WORD       )
     )
     weight_q_inst (
         .o_weight   ( weight_q      ),
         .i_vec      ( q_vector      )
     );
+
     
     always_ff @(posedge i_clk) begin
         if (i_rst) begin
@@ -130,7 +149,9 @@ module decoder
                                     row_search_s_found      ,
                                     row_search_q_res        ,
                                     row_search_q_row_index  ,
-                                    row_search_q_found      
+                                    row_search_q_found      ,
+                                    weight_sbi              ,
+                                    weight_qbi
                                 };
         end
     end
@@ -151,6 +172,8 @@ module decoder
     logic       [NB_ROW_INDEX - 1 : 0]    row_search_q_row_index_d    ;
     logic                                 row_search_s_found_d        ;
     logic                                 row_search_q_found_d        ;
+    logic       [NB_WEIGHT    - 1 : 0]    weight_sbi_d                ;
+    logic       [NB_WEIGHT    - 1 : 0]    weight_qbi_d                ;
 
     assign { syndrome_dd             ,             
              q_vector_d              ,
@@ -162,7 +185,9 @@ module decoder
              row_search_s_found_d    ,
              row_search_q_res_d      ,
              row_search_q_row_index_d,
-             row_search_q_found_d      } = pipe_stage_2 ;
+             row_search_q_found_d    ,     
+             weight_sbi_d            , 
+             weight_qbi_d             } = pipe_stage_2 ;
 
     logic [NB_PIPE_STAGE_3 - 1 : 0] pipe_stage_3;
     logic [NB_CODEWORD     - 1 : 0] err_gen_err;
@@ -184,8 +209,8 @@ module decoder
         .i_idx_q            ( row_search_q_row_index_d      ),
         .i_found_syn        ( row_search_s_found_d          ),
         .i_found_q          ( row_search_q_found_d          ),
-        .i_w_res_syn        ( weight_s_d                    ),
-        .i_w_res_q          ( weight_q_d                    ),
+        .i_w_res_syn        ( weight_sbi_d                  ),
+        .i_w_res_q          ( weight_qbi_d                  ),
         .o_err              ( err_gen_err                   ),
         .o_uncorrectable    ( err_gen_uncorrectable         )
     );
