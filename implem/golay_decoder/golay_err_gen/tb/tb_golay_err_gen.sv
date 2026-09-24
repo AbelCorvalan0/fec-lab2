@@ -20,9 +20,8 @@
 //   10. i_found_q       ( 1 bit )
 //   11. o_err           (24 bits)  expected error mask
 //   12. o_uncorrectable ( 1 bit )  expected uncorrectable flag
-//
-// The file does not carry w(s^bi) / w(q^bi), so i_w_res_syn and
-// i_w_res_q are computed here as the popcount of i_res_syn / i_res_q.
+//   13. i_w_res_syn     ( 4 bits)  w(s ^ bi)
+//   14. i_w_res_q       ( 4 bits)  w(q ^ bi)
 //
 // The vector file can be overridden from the simulator command line, e.g.
 //   iverilog: vvp sim +VECTOR_FILE=<path>
@@ -35,7 +34,7 @@ module tb_golay_err_gen;
     localparam int NB_CNT  =  4;
 
     localparam string DEFAULT_VECTOR_FILE =
-        "/home/abel/Desktop/desktop/github_repos/fec-lab2/model/outputs/decoder/golay_err_gen_vectors.txt";
+        "/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/golay_err_gen/golay_error_gen_testing/golay_err_gen_vectors.txt";
 
     // Max number of mismatches printed in detail
     localparam int MAX_PRINT = 20;
@@ -83,10 +82,6 @@ module tb_golay_err_gen;
         .i_w_res_q       (i_w_res_q)
     );
 
-    // w(s^bi) / w(q^bi): not present in the vector file
-    assign i_w_res_syn = NB_CNT'($countones(i_res_syn));
-    assign i_w_res_q   = NB_CNT'($countones(i_res_q));
-
     int    fd;
     int    n_read;
     int    line_num   = 0;
@@ -111,14 +106,15 @@ module tb_golay_err_gen;
         $display("[INFO] Reading vectors from %s", vector_file);
 
         while (!$feof(fd)) begin
-            n_read = $fscanf(fd, "%b %b %b %b %b %b %b %b %b %b %b %b\n",
+            n_read = $fscanf(fd, "%b %b %b %b %b %b %b %b %b %b %b %b %b %b\n",
                              i_syn, i_q, i_res_syn, i_res_q,
                              i_w_syn, i_w_q, i_idx_syn, i_idx_q,
                              i_found_syn, i_found_q,
-                             exp_err, exp_uncorrectable);
+                             exp_err, exp_uncorrectable,
+                             i_w_res_syn, i_w_res_q);
             line_num++;
 
-            if (n_read != 12) begin
+            if (n_read != 14) begin
                 if (n_read > 0)
                     $display("[WARN] line %0d: malformed vector (%0d fields), skipped",
                              line_num, n_read);
