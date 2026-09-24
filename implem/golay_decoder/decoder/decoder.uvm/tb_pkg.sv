@@ -6,7 +6,8 @@ package tb_pkg;
 
     parameter               NB_WORD         = 12;
     parameter               NB_CODEWORD     = 24;
-    parameter   string      VECTOR_FILE0    = "../../../../decoder.uvm/sequences/codeword_with_errors.txt";
+    parameter   string      VECTOR_FILE0    = "../../../../decoder.uvm/sequences/one_codeword_full_errors_and_three_test_vectors.txt";
+    // parameter   string      VECTOR_FILE0    = "../../../../decoder.uvm/sequences/codeword_with_errors.txt";
     
     `include "sequences/seq_item.svh"
     `include "sequences/seq_lib.svh"
