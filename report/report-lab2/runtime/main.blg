@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: main-blx.bib
+Database file #2: bibliografia.bib
+Biblatex version: 3.21
+Warning--bcf version mismatch: biblatex.bst has 3.11, but biblatex.sty has 3.10
+         The bcf version need not be the same as the biblatex version.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 1 entry,
+            6402 wiz_defined-function locations,
+            1203 strings with 8979 characters,
+and the built_in function-call counts, 426 in all, are:
+= -- 28
+> -- 1
+< -- 1
++ -- 0
+- -- 0
+* -- 12
+:= -- 82
+add.period$ -- 0
+call.type$ -- 1
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 11
+empty$ -- 37
+format.name$ -- 0
+if$ -- 105
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 20
+num.names$ -- 0
+pop$ -- 26
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 33
+stack$ -- 0
+substring$ -- 20
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 2
+type$ -- 22
+warning$ -- 1
+while$ -- 1
+width$ -- 0
+write$ -- 20
+(There was 1 warning)

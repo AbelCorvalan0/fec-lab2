@@ -33,12 +33,26 @@ PARTE C
 * RTL DEL ENCODER
 
 * usando los modulos comunes se implementaron los modulos para el calculo del sindrome, q, busqueda de filas, y la busqueda de la mascara de error que implementa los casos del decoder y se validaron con un testbench sencillo. se agregaron los pipes correspondientes y armo el bloque del decoder
+![](img/decoder-stage1.png)
+![](img/decoder-stage2.png)
+![](img/decoder-stage3.png)
+![](img/decoder-theros1.png)
+![](img/decoder-theros2.png)
+
 * se valido mediante vector matching por archivos generados mediante el modelo, donde tenemos en cada linea la entrada rx y las salidas message, error_pattern y las flags corrected y uncorrectable
 * como primer verificacion funcional se enviaron las codewords sin errores observando que el sindrome y el patron de error sean nulos y las banderas corrected y uncorrectable en bajo para todo el test:
 ![ALGUN WAVEFORM](dec-wave-codeword-only.png)
+
 * en hexadecimal vemos los 3 digitos altos representan el mensaje 001h mas la correspondiente paridad, 3 ciclos despues tenemos decodificado el mismo mensaje, comprobamos los 3 ciclos de latencia del disenio
 
 * luego usando el modelo se generan vectores donde se le aplica todos los patrones de error posibles para pesos 0 a 4 a una codeword. en este test se obtuvieron:
-ALGUN WAVEFORM Y EL REPORTE CON LA TABLA DE PATRONES DE ERROR
+![](img/report-table.png)
+![](img/decoder-wave-full.png)
+![](img/decoder-wave-latency.png)
+
 * para finalizar decodificamos las codewords dadas en la PARTE A:
 ALGUN WAVEFORM CON LAS 3 CODEWORDS EN HEXA
+![](img/decoder-wave-3codeword.png)
+
+PARTEB (gf, decoder) - {E7}
+PARTEC (decoder)
