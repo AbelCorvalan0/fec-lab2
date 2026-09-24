@@ -132,7 +132,6 @@ module decoder
         .i_vec      ( q_vector      )
     );
 
-    
     always_ff @(posedge i_clk) begin
         if (i_rst) begin
             pipe_stage_2 <= '0; 
