@@ -15,12 +15,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="259.130001 us"></ZoomEndTime>
-      <Cursor1Time time="259.130000 us"></Cursor1Time>
+      <ZoomEndTime time="540.000001 us"></ZoomEndTime>
+      <Cursor1Time time="194.500000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="173"></NameColumnWidth>
-      <ValueColumnWidth column_width="195"></ValueColumnWidth>
+      <ValueColumnWidth column_width="190"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
    <wvobject type="logic" fp_name="/tb_top/vif/i_clock">

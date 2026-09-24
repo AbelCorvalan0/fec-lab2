@@ -33,13 +33,16 @@ logic                    case_4    ;
 localparam logic [3:0] COND_1 = 4'd3;
 localparam logic [3:0] COND_2 = 4'd2;
 
+localparam logic [23:0] ui_value = 24'h800000;
+
+
 always_comb begin
      ui_vector = '0;
      if (i_found_syn) begin
-          ui_vector = 'b1 << i_idx_syn  ;
+          ui_vector = 12'h800 >> i_idx_syn;
      end
      else if (i_found_q) begin
-          ui_vector = 'b1 << i_idx_q    ;
+          ui_vector = 12'h800 >> i_idx_q;
      end
 end
 
@@ -48,10 +51,10 @@ end
 // case3. w(q)      <= 3
 // case4. w(q^bi)   <= 2
 // case5. uncorrectable
-assign case_1  = (i_w_syn     <= COND_1)     ;
-assign case_2  = (i_w_res_syn <= COND_2)     ;
-assign case_3  = (i_w_q       <= COND_1)     ;
-assign case_4  = (i_w_res_q   <= COND_2)     ;
+assign case_1  = (i_w_syn     <= COND_1)                ;
+assign case_2  = (i_w_res_syn <= COND_2) && i_found_syn ;
+assign case_3  = (i_w_q       <= COND_1)                ;
+assign case_4  = (i_w_res_q   <= COND_2) && i_found_q   ;
 
 always_comb begin
      prev_err        =   '0;
