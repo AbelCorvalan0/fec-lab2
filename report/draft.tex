@@ -1,0 +1,44 @@
+PARTE A
+
+* considerando codificacion sistematica, obtenemos las matrice G y H, verificamos GHT = 0:
+* verificamos propiedades interesantes del codigo (B^2 = I)
+* se trata de un codigo extendido (n, k) = (24,12)
+* para comprobar codificamos el mensaje 0xA5C y comprobamos que es una codeword valida (vHT = 0)
+
+* para la distribucion de pesos dada y tomando el peso minimo como distancia minima, se trata de un codigo de dmin = 8, t = ceil(dmin-1/2) = 3 y capacidad de deteccion 4
+
+ME COLGUE XD..
+
+PARTE B
+
+* instanciamos la clase desarrollada del campo de galois para trabajar con gf2, no se tuvo que corregir la clase. agregamos los metodos auxiliares necesarios para modelar el encoder y decoder
+
+* con los nuevos metodos verificamos las propiedades importanted del codigo (B^2 = I, GHT = 0) y obtenemos la distribucion de pesos del codigo
+![](code-properties.png)
+![](model-weight-distribution.png)
+![](code-weight-distribution.png)
+
+* creamos el modelo del encoder, implementamos la codificacion sistematica en forma matricial, encapsulamos la logica en la clase GolayEncoder 
+* creamos el modelo del decoder, implementamos los casos de decodificacion, encapsulamos la logica en la clase GolayDecoder
+
+* caracterizamos el modelo del decoder, iteramos para todas las combinaciones con error de pesos 0 a 4 y todas las codewords, analizamos los casos corregidos y detectados obteniendo:
+ACA TAMBIEN ME COLGUE XD...
+
+PARTE C
+
+* la arquitectura propuesta tiene 3 etapas de pipe line y plantea calcular sindrome y el vector q en etapas distintas. data la propiedad del codigo (B*B=I) surgio la idea de una modificacion, en la cual aprovechando la propiedad se calcularian ambas en la primer etapa del pipeline a partir de el vector r (si sindrome = rh*B + rl, ademas q = s*B y B*B = I, entonces q = rh + rl*B). sin embargo al analizar la idea se entendio que no convenia, por logica agregada y potencia de switching. concretamente se agregaban 12 xors extra mas la logica para seleccionar el calculo del sindrome o q respectivamente. por tanto luego del analisis se descarto esta idea y opto por seguir la arquitectura propuesta
+
+* se desarrollaron los modulos comunes a los bloques, y se validaron con un testbench sencillo
+
+* RTL DEL ENCODER
+
+* usando los modulos comunes se implementaron los modulos para el calculo del sindrome, q, busqueda de filas, y la busqueda de la mascara de error que implementa los casos del decoder y se validaron con un testbench sencillo. se agregaron los pipes correspondientes y armo el bloque del decoder
+* se valido mediante vector matching por archivos generados mediante el modelo, donde tenemos en cada linea la entrada rx y las salidas message, error_pattern y las flags corrected y uncorrectable
+* como primer verificacion funcional se enviaron las codewords sin errores observando que el sindrome y el patron de error sean nulos y las banderas corrected y uncorrectable en bajo para todo el test:
+![ALGUN WAVEFORM](dec-wave-codeword-only.png)
+* en hexadecimal vemos los 3 digitos altos representan el mensaje 001h mas la correspondiente paridad, 3 ciclos despues tenemos decodificado el mismo mensaje, comprobamos los 3 ciclos de latencia del disenio
+
+* luego usando el modelo se generan vectores donde se le aplica todos los patrones de error posibles para pesos 0 a 4 a una codeword. en este test se obtuvieron:
+ALGUN WAVEFORM Y EL REPORTE CON LA TABLA DE PATRONES DE ERROR
+* para finalizar decodificamos las codewords dadas en la PARTE A:
+ALGUN WAVEFORM CON LAS 3 CODEWORDS EN HEXA
