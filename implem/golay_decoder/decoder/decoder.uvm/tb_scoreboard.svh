@@ -62,11 +62,6 @@ class tb_scoreboard extends uvm_scoreboard;
             // we dont need rx_data for model
             model_output.rx_data = item.rx_data;
 
-            // TODO FIX THIS IN VECTOR GENERATION
-            if (model_output.uncorrectable) begin
-                model_output.error_pattern = 0;
-            end
-            
             // insert random errors, for testing
             // item.msg_data ^= $urandom_range(0,1);
 

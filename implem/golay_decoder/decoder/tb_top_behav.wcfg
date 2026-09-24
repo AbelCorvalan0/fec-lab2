@@ -14,15 +14,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="540.000001 us"></ZoomEndTime>
-      <Cursor1Time time="194.500000 us"></Cursor1Time>
+      <ZoomStartTime time="259,068.900 ns"></ZoomStartTime>
+      <ZoomEndTime time="259,191.401 ns"></ZoomEndTime>
+      <Cursor1Time time="259,130.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="173"></NameColumnWidth>
-      <ValueColumnWidth column_width="190"></ValueColumnWidth>
+      <ValueColumnWidth column_width="182"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
+   <wave_markers>
+      <marker label="" time="259070000" />
+   </wave_markers>
    <wvobject type="logic" fp_name="/tb_top/vif/i_clock">
       <obj_property name="ElementShortName">i_clock</obj_property>
       <obj_property name="ObjectShortName">i_clock</obj_property>
