@@ -29,18 +29,20 @@ endfunction
 assign id_matrix = identity_matrix();
 
 always_comb begin : c_word_matrix_assignation
-    word_matrix[0]  = 12'h98F;
-    word_matrix[1]  = 12'h4E7;
-    word_matrix[2]  = 12'h357;
-    word_matrix[3]  = 12'hBE2;
-    word_matrix[4]  = 12'hDD1;
-    word_matrix[5]  = 12'h7CC;
-    word_matrix[6]  = 12'h53D;
-    word_matrix[7]  = 12'h2BE; 
-    word_matrix[8]  = 12'h87B;
-    word_matrix[9]  = 12'hE74;
-    word_matrix[10] = 12'hF1A;
-    word_matrix[11] = 12'hEA9;
+   
+   word_matrix[0]   = 12'hEA9;
+   word_matrix[1]   = 12'hF1A;
+   word_matrix[2]   = 12'hE74;
+   word_matrix[3]   = 12'h87B;
+   word_matrix[4]   = 12'h2BE; 
+   word_matrix[5]   = 12'h53D;
+   word_matrix[6]   = 12'h7CC;
+   word_matrix[7]   = 12'hDD1;
+   word_matrix[8]   = 12'hBE2;
+   word_matrix[9]   = 12'h357;
+   word_matrix[10]  = 12'h4E7;
+   word_matrix[11]  = 12'h98F;
+
 end
 
 always_comb begin
