@@ -12,7 +12,7 @@ module tb_top;
         .i_clock ( i_clock )
     );
 
-    decoder #(
+    golay_top #(
         .NB_WORD     ( NB_WORD     ),
         .NB_CODEWORD ( NB_CODEWORD )
     )
