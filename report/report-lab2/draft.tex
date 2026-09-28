@@ -1,287 +1,181 @@
 PROMPT: estoy haciendo un informe tecnico (para un curso de posgrado dedicado a disenio de RTL de codigos fec) y necesito dar formato a algunos pasos que realizamos en el trabajo. si te paso la idea general de los pasos realizados, podrias cambiar tiempos verbales y formatearlo como reporte tecnico?.
 Puedes darme el latex del los resultados?. No agregues modificaciones al tipo de letra en los textos, yo decido si agregar cosas como textit, textbf, etc
 
-PARTE A
+% PARTE A
 
-* considerando codificacion sistematica, obtenemos las matrice G y H, verificamos GHT = 0:
-* verificamos propiedades interesantes del codigo (B^2 = I)
-* se trata de un codigo extendido (n, k) = (24,12)
-* para comprobar codificamos el mensaje 0xA5C y comprobamos que es una codeword valida (vHT = 0)
+% * considerando codificacion sistematica, obtenemos las matrice G y H, verificamos GHT = 0:
+% * verificamos propiedades interesantes del codigo (B^2 = I)
+% * se trata de un codigo extendido (n, k) = (24,12)
+% * para comprobar codificamos el mensaje 0xA5C y comprobamos que es una codeword valida (vHT = 0)
 
-* para la distribucion de pesos dada y tomando el peso minimo como distancia minima, se trata de un codigo de dmin = 8, t = ceil(dmin-1/2) = 3 y capacidad de deteccion 4
+% * para la distribucion de pesos dada y tomando el peso minimo como distancia minima, se trata de un codigo de dmin = 8, t = ceil(dmin-1/2) = 3 y capacidad de deteccion 4
 
-ME COLGUE XD..
+% ME COLGUE XD..
 
 PARTE B
 
-
-```latex
-\subsection{Preparación del entorno GF(2)}
-
-En una primera etapa, se instanció la clase previamente desarrollada para la
-representación y manipulación de elementos del campo de Galois $GF(2)$. La
-implementación existente no requirió modificaciones, por lo que se procedió
-a verificar su correcto funcionamiento utilizando operaciones sobre $GF(2)$.
-
-Una vez verificado el funcionamiento de la clase, se incorporaron métodos
-auxiliares destinados a proporcionar las operaciones necesarias para realizar
-la codificación y decodificación del código FEC en etapas posteriores. Estos
-métodos fueron incorporados como parte de la clase de representación del campo
-de Galois, sin realizar en esta etapa la implementación del encoder ni del
-decoder.
-
-A partir de los métodos incorporados, se verificaron las operaciones
-necesarias para el posterior análisis de las propiedades del código. En
-particular, se comprobó la condición
-
-\begin{equation}
-    B^2 = I,
-\end{equation}
-
-y la condición de ortogonalidad entre las matrices $G$ y $H$,
-
-\begin{equation}
-    GH^T = 0.
-\end{equation}
-
-Finalmente, se obtuvo la distribución de pesos del código, que será utilizada
-como referencia en las etapas posteriores de análisis y verificación.
-```
+\subsection{Clase GaloisField en GF(2)}
+Para comenzar se instanció la clase previamente desarrollada para modelar campos de Galois con parametros m = 1 y P(x) = x + 1, para testear y corregir posibles issues. La implementación existente no requirió modificaciones y se validaron todas sus operaciones exitosamente:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/code-properties.png}
+    \includegraphics[scale=0.3]{img/gf2-test.png}
+    \caption{Verificacion de las operaciones en GF2.}
+    \label{fig:gf2-test}
+\end{figure}
+
+Una vez verificado el funcionamiento de la clase, se implementaron los metodos para realizar el producto vector-matriz,
+matriz-matriz, peso de Hamming y algunos metodos auxiliares que se usaron en los modelos del encoder y decoder.
+
+Usando estos nuevos metodos se verificaron las principales propiedades del codigo\\($GH^T = 0$ y $B^2 = I$) y se obtuvo la distribución de pesos esperada del código extendido Golay 24,12:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.5]{img/code-properties.png}
     \caption{Propiedades del código verificadas durante la implementación.}
     \label{fig:code-properties}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/code-weight-distribution.png}
+    \includegraphics[scale=0.5]{img/code-weight-distribution.png}
     \caption{Distribución de pesos del código.}
     \label{fig:code-weight-distribution}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/model-weight-distribution.png}
+    \includegraphics[scale=0.5]{img/model-weight-distribution.png}
     \caption{Distribución de pesos obtenida a partir del modelo.}
     \label{fig:model-weight-distribution}
 \end{figure}
 
 \subsection{Modelado del encoder y decoder}
+A partir de la clase desarrollada previamente para $GF(2)$, se implementaron los modelos correspondientes al encoder y al decoder.
 
-A partir de la lógica desarrollada previamente para la representación y
-manipulación de elementos del campo de Galois $GF(2)$, se implementaron los
-modelos correspondientes al encoder y al decoder del código.
+Se desarrolló el modelo del encoder implementando la codificación sistemática mediante producto matricial. La lógica correspondiente fue encapsulada en la clase GolayEncoder, y se verifico nuevamente la correcta distribución de pesos.
 
-En primer lugar, se desarrolló el modelo del encoder. Para ello, se
-implementó la codificación sistemática mediante una formulación matricial,
-utilizando las operaciones definidas sobre $GF(2)$. La lógica correspondiente
-fue encapsulada en la clase GolayEncoder, permitiendo separar la
-implementación del proceso de codificación de la lógica general de
-manipulación del campo de Galois.
-
-Posteriormente, se desarrolló el modelo del decoder. En esta etapa se
-implementaron los diferentes casos contemplados para el proceso de
-decodificación, utilizando las operaciones disponibles a partir de la clase
-de $GF(2)$. La lógica correspondiente fue encapsulada en la clase
-GolayDecoder.
+Posteriormente, se desarrolló el modelo del decoder implementando los diferentes casos del la decodificación. La lógica correspondiente fue encapsulada en la clase GolayDecoder.
 
 (Parte de AbeliyoPiyo vvvvvv)
 * caracterizamos el modelo del decoder, iteramos para todas las combinaciones con error de pesos 0 a 4 y todas las codewords, analizamos los casos corregidos y detectados obteniendo:
 ACA TAMBIEN ME COLGUE XD...
 
-PARTE C
+\subsection{Analisis: Posible modificacion del decoder}
 
-```latex id="83517"
-\subsection{Análisis de una variante arquitectónica}
+Para el decoder la arquitectura propuesta plantea el cálculo del síndrome y del vector $q$ en etapas diferentes del pipeline. A partir de las propiedades del código, en particular de la condición $B^2 = I$, se analizó una posible modificación de la arquitectura en la cual se calculan el syndrome y q en la primera  tapa del pipeline directamente usando el vector recibido $r$.
 
-La arquitectura propuesta contempla tres etapas de pipeline y plantea el
-cálculo del síndrome y del vector $q$ en etapas diferentes. A partir de las
-propiedades del código, en particular de la condición
+Considerando al vector $r$ por sus componentes $r_h$ (alta) y $r_l$ (baja), y como el síndrome:
 
-\begin{equation}
-    B^2 = I,
-\end{equation}
+\begin{align*}
+    s = r_h \cdot B + r_l
+\end{align*}
 
-se analizó una posible modificación de la arquitectura con el objetivo de
-calcular ambas cantidades durante la primera etapa del pipeline, utilizando
-como entrada el vector recibido $r$.
-
-Considerando la partición del vector recibido en sus componentes $r_h$ y
-$r_l$, el síndrome se calcula como
-
-\begin{equation}
-    s = r_h B + r_l.
-\end{equation}
-
-Por otro lado, dado que el vector $q$ se obtiene a partir del síndrome
-mediante
-
-\begin{equation}
-    q = sB,
-\end{equation}
-
-y utilizando la propiedad $B^2 = I$, se puede expresar $q$ directamente en
+Por otro lado, dado que el vector $q$ se obtiene a partir del síndrome si aprovechamos la propiedad $B^2 = I$, se puede expresar $q$ directamente en
 función de los componentes del vector recibido:
 
-\begin{equation}
-    q = (r_h B + r_l)B
-      = r_h B^2 + r_l B
-      = r_h + r_l B.
-\end{equation}
+\begin{align*}
+    q &= s\cdot B \\
+    &= (r_h\cdot B + r_l)\cdot B\\
+    &= r_h\cdot B^2 + r_l\cdot B \\
+    &= r_h\cdot I + r_l\cdot B \\
+    &= r_h + r_l\cdot B
+\end{align*}
 
-De esta manera, la propiedad $B^2 = I$ permite plantear una arquitectura
-alternativa en la cual tanto el síndrome como el vector $q$ serían calculados
-a partir de $r$ durante la primera etapa del pipeline.
+De esta manera se permite plantear una alternativa donde el síndrome y el vector $q$ serían calculados a partir de $r$ durante la primera etapa del pipeline.
 
-Sin embargo, el análisis de la implementación requerida para esta alternativa
-mostró que la modificación introducía una cantidad adicional de lógica que no
-resultaba conveniente para la arquitectura propuesta. En particular, se
-requerían 12 compuertas XOR adicionales, junto con la lógica necesaria para
-seleccionar el cálculo correspondiente al síndrome o al vector $q$.
+Sin embargo, el análisis de la implementación mostró que la modificación requiere una cantidad adicional de lógica que no resultaba conveniente para la arquitectura propuesta. En particular, se agregan 12 compuertas XOR adicionales, junto con la lógica necesaria para seleccionar el cálculo correspondiente al síndrome o al vector $q$.
 
-Considerando tanto el incremento de recursos lógicos como el aumento de la
-actividad de switching y, consecuentemente, de la potencia dinámica, se
-descartó esta alternativa. Por lo tanto, se mantuvo la arquitectura
-originalmente propuesta, conservando el cálculo del síndrome y del vector $q$
-en las etapas de pipeline inicialmente definidas.
-```
+Considerando tanto el incremento logica como un analisis basico de la actividad de switching de los modulos cuando cambia el vector r, se descartó esta alternativa. Por lo tanto, se mantuvo la arquitectura originalmente propuesta, conservando el cálculo del síndrome y del vector $q$ en las etapas de pipeline inicialmente definidas.
 
 \subsection{Desarrollo y verificación de módulos comunes}
+Se comenzo describiendo en Verilog los módulos comunes que serán utilizados posteriormente como parte de los bloques correspondientes al encoder y al decoder. 
 
-En esta etapa se desarrollaron en Verilog los módulos comunes que serán
-utilizados posteriormente como parte de los bloques correspondientes al
-encoder y al decoder. Estos módulos fueron implementados como bloques de
-soporte para la arquitectura definida, con el objetivo de reutilizar su
-funcionalidad en las diferentes etapas del diseño RTL.
-
-Una vez implementados, los módulos fueron verificados mediante un entorno de
-verificación basado en UVM. Para esta etapa se utilizó un testbench sencillo,
-con secuencias de estímulos básicas destinadas a comprobar el funcionamiento
-de las principales operaciones implementadas en cada módulo.
+Una vez implementados, los módulos fueron verificados mediante un testbench sencillo en UVM, con secuencias básicas para validar el funcionamiento de las cada módulo.
 
 (Parte de AbeliyoPiyo vvvvvv)
 * RTL DEL ENCODER
 
-```latex
 \subsection{Implementación RTL del decoder}
 
-A partir de los módulos comunes desarrollados previamente, se implementaron
-los módulos correspondientes a las diferentes etapas del decoder. En
-particular, se desarrollaron los módulos destinados al cálculo del síndrome,
-el cálculo del vector $q$, la búsqueda de filas y la búsqueda de la máscara de
-error, esta última encargada de implementar los diferentes casos contemplados
-por el proceso de decodificación.
+A partir de los módulos comunes, se describieron los módulos para el cálculo del síndrome, del vector $q$, la búsqueda por filas y la generacion de la máscara de error mediante los diferentes casos en la decodificación.
 
-Cada uno de estos módulos fue validado individualmente mediante un testbench
-sencillo, utilizando secuencias de estímulos destinadas a verificar su
-funcionamiento.
+Cada uno fue validado mediante el testbench UVM, utilizando secuencias de estímulos basicas para verificar su funcionamiento.
 
-Una vez validados los módulos individuales, se incorporaron los registros de
-pipeline correspondientes y se realizó su integración para conformar el
-bloque completo del decoder. La implementación resultante se organizó en las
-tres etapas de pipeline definidas para la arquitectura.
+Una vez validados los módulos, se incorporaron los registros de pipeline correspondientes para integrar el top del decoder. Quedando el arquitectura final y cada etapa logica:
 
-Las Figuras~\ref{fig:decoder-stage1}, \ref{fig:decoder-stage2} y
-\ref{fig:decoder-stage3} muestran las diferentes etapas del pipeline del
-decoder. Las Figuras~\ref{fig:decoder-theros1} y
-\ref{fig:decoder-theros2} presentan otros detalles de la implementación
-resultante.
+\includepdf[pages=-]{inc/decoder.pdf}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-stage1.png}
+    \includegraphics[scale=0.5]{img/decoder-stage1.png}
     \caption{Primera etapa del pipeline del decoder.}
     \label{fig:decoder-stage1}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-stage2.png}
+    \includegraphics[scale=0.5]{img/decoder-stage2.png}
     \caption{Segunda etapa del pipeline del decoder.}
     \label{fig:decoder-stage2}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-stage3.png}
+    \includegraphics[scale=0.5]{img/decoder-stage3.png}
     \caption{Tercera etapa del pipeline del decoder.}
     \label{fig:decoder-stage3}
 \end{figure}
 
+\subsection{Resumen del decoder}
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-theros1.png}
+    \includegraphics[scale=0.5]{img/decoder-theros1.png}
     \caption{Implementación RTL del decoder.}
     \label{fig:decoder-theros1}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-theros2.png}
+    \includegraphics[scale=0.5]{img/decoder-theros2.png}
     \caption{Detalle de la implementación RTL del decoder.}
     \label{fig:decoder-theros2}
 \end{figure}
-```
 
-```latex id="31864"
-\subsection{Verificación funcional del decoder}
+\subsection{Validacion del decoder}
+Se realizó su verificación funcional usando el entorno UVM mediante vector matching, utilizando archivos de referencia generados a partir del modelo  desarrollado previamente. En los vectores cada línea contiene el vector de entrada $rx$ y las salidas esperadas correspondientes al mensaje decodificado, el patrón de error y las flags corrected y uncorrectable.
 
-Una vez integrado el bloque RTL del decoder, se realizó su verificación
-funcional mediante un entorno de verificación basado en UVM. La validación se
-realizó mediante vector matching, utilizando archivos de referencia generados
-a partir del modelo desarrollado previamente. Cada línea de los archivos
-contiene el vector de entrada $rx$ y las salidas esperadas correspondientes al
-mensaje decodificado, el patrón de error y las señales de estado corrected y
-uncorrectable.
-
-Como primera verificación funcional, se utilizaron codewords sin errores. En
-este caso se verificó que el síndrome y el patrón de error fueran nulos, y que
-las señales corrected y uncorrectable permanecieran en bajo durante todo el
-test. La Figura~\ref{fig:decoder-wave-codeword-only} muestra los resultados
-obtenidos durante esta prueba.
+Como primera verificación funcional, se utilizaron codewords sin errores. En este caso se verificó que a nivel del decoder el patrón de error sea nulo, y que las señales corrected y uncorrectable permanecieran en bajo durante todo el test. La Figura~\ref{fig:decoder-wave-codeword-only} muestra los resultados obtenidos durante el test:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{dec-wave-codeword-only.png}
+    \includegraphics[scale=0.5]{img/dec-wave-codeword-only.png}
     \caption{Verificación del decoder utilizando codewords sin errores.}
     \label{fig:decoder-wave-codeword-only}
 \end{figure}
 
-En la representación hexadecimal de las señales se observa que los tres
-dígitos superiores corresponden al mensaje $001_h$, junto con los bits de
-paridad correspondientes. Luego de tres ciclos, se obtiene a la salida el
-mismo mensaje decodificado. De esta manera, se verificó la latencia de tres
-ciclos correspondiente a la arquitectura implementada.
+En esta ventana se observa tambien la latencia de tres ciclos esperada. En hexadecimal los tres dígitos superiores de rx corresponden al mensaje $001_h$, junto con los bits de paridad correspondientes. Luego de tres ciclos, se obtiene a la salida el mismo mensaje decodificado.
 
-A continuación, se realizó una segunda prueba utilizando vectores generados a
-partir del modelo de referencia. Para cada codeword se aplicaron todos los
-patrones de error posibles correspondientes a pesos de error entre cero y
-cuatro. Los resultados obtenidos se resumen en la
-Tabla~\ref{fig:decoder-report-table}, mientras que las
-Figuras~\ref{fig:decoder-wave-full} y
-\ref{fig:decoder-wave-latency} muestran las señales correspondientes a la
-simulación y la verificación de la latencia.
+A continuación, se realizó una segunda prueba aplicando en cada codeword se aplicaron todos los patrones de error posibles correspondientes a pesos de error entre cero y cuatro. Los resultados obtenidos se resumen en la Tabla~\ref{fig:decoder-report-table}, mientras que las Figuras~\ref{fig:decoder-wave-full} y \ref{fig:decoder-wave-latency} muestran las señales correspondientes a la simulación y la verificación de la latencia.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/report-table.png}
+    \includegraphics[scale=0.5]{img/report-table.png}
     \caption{Resultados de la verificación para los diferentes patrones de error.}
     \label{fig:decoder-report-table}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-wave-full.png}
+    \includegraphics[scale=0.5]{img/decoder-wave-full.png}
     \caption{Simulación del decoder para los patrones de error evaluados.}
     \label{fig:decoder-wave-full}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-wave-latency.png}
+    \includegraphics[scale=0.5]{img/decoder-wave-latency.png}
     \caption{Verificación de la latencia del decoder.}
     \label{fig:decoder-wave-latency}
 \end{figure}
@@ -294,11 +188,10 @@ esta prueba.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/decoder-wave-3codeword.png}
+    \includegraphics[scale=0.5]{img/decoder-wave-3codeword.png}
     \caption{Decodificación de las tres codewords correspondientes a la PARTE A.}
     \label{fig:decoder-wave-3codeword}
 \end{figure}
-```
 
 PARTEB (gf, decoder) - {E7}
 PARTEC (decoder)
