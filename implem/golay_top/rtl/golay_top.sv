@@ -2,17 +2,17 @@
 
 module golay_top #(
 	parameter int NB_WORD     = 12,
-	parameter int NB_CODEWORD = 12,
+	parameter int NB_CODEWORD = 24,
 	parameter int I_DIM       = NB_WORD
 )(
-	input   logic [NB_WORD     - 1 : 0] i_word       ,
-	input   logic [NB_CODEWORD - 1 : 0] i_error      ,	
-	input   logic                       i_rst        ,
-	input   logic                       i_clk        ,
-	output  logic [NB_WORD     - 1 : 0] o_msg        ,
-	output  logic [NB_CODEWORD - 1 : 0] o_err        ,
-	output  logic 			    o_corrected  ,
-	output  logic [NB_WORD     - 1 : 0] o_uncorrected	
+	input   logic [NB_WORD     - 1 : 0] i_word         ,
+	input   logic [NB_CODEWORD - 1 : 0] i_error        ,	
+	input   logic                       i_rst          ,
+	input   logic                       i_clk          ,
+	output  logic [NB_WORD     - 1 : 0] o_msg          ,
+	output  logic [NB_CODEWORD - 1 : 0] o_err          ,
+	output  logic 			    o_corrected    ,
+	output  logic                       o_uncorrectable
 );
 
 logic [NB_CODEWORD - 1 : 0] cw;
