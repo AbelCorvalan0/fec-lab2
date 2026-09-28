@@ -4,15 +4,14 @@ package tb_pkg;
 
     `timescale 1ns/1ps
 
-    parameter   NB_WORD     = 12;
-    parameter   NB_CODEWORD = 24;
-
-    // Datos golden: golay_code, decoded_data, msg, err, corrected_data, uncorrectable
-    `include "sequences/decoder_testing/codewords/codewords_testing_golay_code.svh"
-
+    parameter               NB_WORD         = 12;
+    parameter               NB_CODEWORD     = 24;
+    parameter   string      VECTOR_FILE0    = "../../../../golay_top.uvm/sequences/top_testing_vectors.txt";
+    
     `include "sequences/seq_item.svh"
     `include "sequences/seq_lib.svh"
 
+    `include "tb_report.svh"
     `include "tb_scoreboard.svh"
     `include "tb_driver.svh"
     `include "tb_monitor.svh"
