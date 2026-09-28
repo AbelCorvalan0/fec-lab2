@@ -29,11 +29,12 @@ class tb_monitor extends uvm_monitor;
                 continue;
             end
 
+            item.word           = vif.i_word;
+            item.input_error    = vif.i_error;
             item.msg_data       = vif.o_msg;
             item.error_pattern  = vif.o_err;
             item.corrected      = vif.o_corrected;
             item.uncorrectable  = vif.o_uncorrectable;
-            item.rx_data        = vif.i_rx;
 
             mon_analysis_port.write(item);
         end

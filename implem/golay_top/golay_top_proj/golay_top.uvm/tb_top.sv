@@ -12,18 +12,19 @@ module tb_top;
         .i_clock ( i_clock )
     );
 
-    golay_top #(
-        .NB_WORD     ( NB_WORD     ),
-        .NB_CODEWORD ( NB_CODEWORD )
+    golay_top # (
+        .NB_WORD            ( NB_WORD               ),
+        .NB_CODEWORD        ( NB_CODEWORD           )
     )
-      dut (
-        .o_msg           ( vif.o_msg           ),
-        .o_err           ( vif.o_err           ),
-        .o_corrected     ( vif.o_corrected     ),
-        .o_uncorrectable ( vif.o_uncorrectable ),
-        .i_rx            ( vif.i_rx            ),
-        .i_rst           ( vif.i_rst           ),
-        .i_clk           ( vif.i_clock         )
+    dut (
+        .i_word             ( vif.i_word            ),
+        .i_error            ( vif.i_error           ),
+        .i_rst              ( vif.i_rst             ),
+        .i_clk              ( vif.i_clock           ),
+        .o_msg              ( vif.o_msg             ),
+        .o_err              ( vif.o_err             ),
+        .o_corrected        ( vif.o_corrected       ),
+        .o_uncorrectable    ( vif.o_uncorrectable   )
     );
 
     initial begin
