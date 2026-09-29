@@ -4,7 +4,7 @@ Se comenzo describiendo en Verilog los módulos comunes que serán utilizados po
 Una vez implementados, los módulos fueron verificados mediante un testbench sencillo en UVM, con secuencias básicas para validar el funcionamiento de cada uno.
 
 \subsection{Analisis: Posible modificacion del decoder}
-Para el decoder la arquitectura propuesta plantea el cálculo del síndrome y del vector $q$ en etapas diferentes del pipeline. A partir de las propiedades del código, en particular de la condición $B^2 = I$, se analizó una posible modificación de la arquitectura en la cual se calculan el syndrome y q en la primera  tapa del pipeline directamente usando el vector recibido $r$.\\
+Para el decoder la arquitectura propuesta plantea el cálculo del síndrome y del vector $q$ en etapas diferentes del pipeline. A partir de las propiedades del código, en particular de la condición $B^2 = I$, se analizó una posible modificación de la arquitectura en la cual se calculan el syndrome y $q$ en la primera  tapa del pipeline directamente usando el vector recibido $r$.\\
 
 Considerando al vector $r$ por sus componentes $r_h$ (alta) y $r_l$ (baja), y como el síndrome:
 \begin{align*}
@@ -30,6 +30,21 @@ Considerando tanto el incremento logica como un analisis basico de la actividad 
 \subsection{Implementación RTL del encoder}
 (Parte de AbeliyoPiyo vvvvvv)
 * RTL DEL ENCODER
+
+\subsection{Resumen del encoder}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{encoder-theros1.png}
+    % \caption{Implementación RTL del encoder.}
+    \label{fig:encoder-theros1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{encoder-theros2.png}
+    \caption{Resumen de la implementación RTL del encoder.}
+    \label{fig:encoder-theros2}
+\end{figure}
 
 \subsection{Implementación RTL del decoder}
 
@@ -63,18 +78,17 @@ Una vez validados los módulos, se incorporaron los registros de pipeline corres
 \end{figure}
 
 \subsection{Resumen del decoder}
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{decoder-theros1.png}
-    \caption{Implementación RTL del decoder.}
+    % \caption{Implementación RTL del decoder.}
     \label{fig:decoder-theros1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{decoder-theros2.png}
-    \caption{Detalle de la implementación RTL del decoder.}
+    \caption{Resumen de la implementación RTL del decoder.}
     \label{fig:decoder-theros2}
 \end{figure}
 
@@ -90,7 +104,7 @@ Como primera verificación funcional, se utilizaron codewords sin errores. En es
     \label{fig:decoder-wave-codeword-only}
 \end{figure}
 
-En esta ventana se observa tambien la latencia de tres ciclos esperada. En hexadecimal los tres dígitos superiores de rx corresponden al mensaje 001h, junto con los bits de paridad correspondientes. Luego de tres ciclos, se obtiene a la salida el mismo mensaje decodificado.
+En esta ventana se observa tambien la latencia de tres ciclos esperada. Sobre el primer cursor, en hexadecimal los tres dígitos superiores de rx corresponden al mensaje 001h junto con los bits de paridad correspondientes EA9h. Luego de tres ciclos, se obtiene a la salida el mismo mensaje decodificado.
 
 \subsection{Correcciónes en el decoder}
 A continuación, se realizó una segunda prueba aplicando en cada codeword todos los patrones de error posibles correspondientes a pesos de error entre cero y cuatro.\\
@@ -112,15 +126,24 @@ Se puede ver un waveform general del test donde, muy resumidamente, luego de sal
     \label{fig:decoder-wave-full}
 \end{figure}
 
+Y tambien se agrego un objeto en el testbench para reportar la cantidad de patrones de error por peso (en formato de array error\_weight[weight]) y la cantidad de casos corregidos y detectados. Se obtuvieron los valores de la tabla verificada en la PARTE B (Ejercicio 7 Caracterización del decodificador): 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{decoder-error-table.png}
+    \caption{Tabla de casos de decodificacion segun peso de error (modelo).}
+    \label{fig:decoder-error-table}
+\end{figure}
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{report-table.png}
-    \caption{Tabla de casos de decodificacion segun peso de error.}
+    \caption{Tabla de casos de decodificacion segun peso de error (RTL).}
     \label{fig:decoder-report-table}
 \end{figure}
 
 Finalmente, se verificó el funcionamiento del decoder utilizando las
-codewords correspondientes a la PARTE A (Ejercicio 3 Decodificación manual) . Las tres codewords fueron aplicadas
+codewords correspondientes a la PARTE A (Ejercicio 3 Decodificación manual). Las tres codewords fueron aplicadas
 como vectores de entrada y se verificó su correspondiente decodificación. La
 Figura~\ref{fig:decoder-wave-3codeword} muestra las señales obtenidas durante
 esta prueba.
@@ -134,13 +157,10 @@ esta prueba.
 
 \subsection{Integración del top level}
 En esta etapa se realizó la integración de los módulos desarrollados
-previamente para conformar el top level del diseño. Para ello, se
-instanciaron los módulos correspondientes al encoder, decoder e inyector de
+previamente obteniendo el top level del diseño. Para ello, se
+instanciaron los módulos encoder, decoder e inyector de
 errores, estableciendo las conexiones necesarias entre ellos de acuerdo con
 la arquitectura definida.
-
-La integración de estos módulos permitió conformar el bloque completo del
-sistema y representar la arquitectura final del diseño RTL:
 
 \includepdf[pages=-]{inc/top.pdf}
 
@@ -156,59 +176,48 @@ La validación se realizó mediante el entorno UVM,
 utilizando vector matching entre los resultados obtenidos por el diseño RTL
 y los valores generados previamente a partir del modelo de referencia. La
 Figura~\ref{fig:top-wave-general} muestra una vista general de la simulación
-correspondiente al test.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{top-wave-general.png}
-    \caption{Waveform general correspondiente a la verificación del top level.}
-    \label{fig:top-wave-general}
-\end{figure}
-
-En la Figura~\ref{fig:top-wave-error-w0} se muestra una parte de la
-simulación correspondiente a la aplicación de patrones de error de peso
+correspondiente al test, donde se aplican patrones de error de peso
 menor o igual a tres, seguida por una región en la que se aplican patrones de
 error incorregibles.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{top-wave-error-w0.png}
-    \caption{Transición entre patrones de error corregibles e incorregibles.}
-    \label{fig:top-wave-error-w0}
+    \includegraphics[scale=0.3]{top-wave-general.png}
+    \caption{Waveform general correspondiente a la verificación del top level.}
+    \label{fig:top-wave-general}
 \end{figure}
 
-Luego de salir del estado de reset, se aplica la palabra EFEh sin ningún
-patrón de error. Luego de tres ciclos, correspondientes a la latencia del
-diseño, se obtiene el mensaje decodificado y el patrón de error detectado es
+Al salir del reset se aplica la palabra EFEh sin ningún
+patrón de error, luego de tres ciclos se obtiene el mensaje decodificado y el patrón de error detectado es
 nulo. Este comportamiento se muestra en la
-Figura~\ref{fig:top-wave-error-w1w2}.
+Figura~\ref{fig:top-wave-error-w0}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{top-wave-error-w1w2.png}
+    \includegraphics[scale=0.34]{top-wave-error-w0.png}
     \caption{Decodificación sin errores y verificación de la latencia.}
-    \label{fig:top-wave-error-w1w2}
+    \label{fig:top-wave-error-w0}
 \end{figure}
 
 A continuación, se incrementó el peso del patrón de error aplicado. En la
-Figura~\ref{fig:top-wave-error-w2w3} se muestra la transición desde un patrón
+Figura~\ref{fig:top-wave-error-w1w2} se muestra la transición desde un patrón
 de error de peso uno hacia uno de peso dos.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{top-wave-error-w2w3.png}
+    \includegraphics[scale=0.36]{top-wave-error-w1w2.png}
     \caption{Transición entre patrones de error de peso uno y dos.}
-    \label{fig:top-wave-error-w2w3}
+    \label{fig:top-wave-error-w1w2}
 \end{figure}
 
-La Figura~\ref{fig:top-wave-error-w3w4} muestra la transición desde un patrón
+La Figura~\ref{fig:top-wave-error-w2w3} muestra la transición desde un patrón
 de error de peso dos hacia uno de peso tres.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{top-wave-error-w3w4.png}
+    \includegraphics[scale=0.34]{top-wave-error-w2w3.png}
     \caption{Transición entre patrones de error de peso dos y tres.}
-    \label{fig:top-wave-error-w3w4}
+    \label{fig:top-wave-error-w2w3}
 \end{figure}
 
 Finalmente, en la Figura~\ref{fig:top-wave-error-w3w4} se observa la
@@ -217,3 +226,11 @@ la señal uncorrectable permanece en alto, indicando que el patrón de error
 aplicado no puede ser corregido por el decoder. En esta condición, las
 salidas correspondientes al mensaje y al patrón de error detectado se
 consideran inválidas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.33]{top-wave-error-w3w4.png}
+    \caption{Transición entre patrones de error corregibles e incorregibles.}
+    \label{fig:top-wave-error-w3w4}
+\end{figure}
+
