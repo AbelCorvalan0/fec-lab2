@@ -7,7 +7,9 @@
 \usepackage[spanish,es-tabla]{babel}
 
 % Matemática
-\usepackage{amsmath, amssymb, mathtools}
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{15pt}
+\usepackage{amssymb, mathtools}
 
 % Gráficos
 \usepackage{graphicx}
@@ -30,6 +32,13 @@
 \usepackage{gensymb}
 
 \usepackage{pdfpages}
+
+% allows \begin{figure}[H] to force img in-place
+\usepackage{float}
+
+% let latex find images directory automatically
+\usepackage{graphicx}
+\graphicspath{{img/}}
 
 % =========================
 % CONFIGURACIÓN VERILOG
@@ -88,12 +97,11 @@
 \section{}
 
 \section{Parte A — Propiedades del código}
-% \input{sections/introduction.tex}
+\input{sections/parta.tex}
 \section{Parte B — Modelo de referencia en software}
-\input{draft.tex}
-% \input{sections/partb.tex}
+\input{sections/partb.tex}
 \section{Parte C — Implementación RTL}
-% \input{sections/introduction.tex}
+\input{sections/partc.tex}
 
 \printbibliography
 \end{document}
