@@ -1,0 +1,43 @@
+\subsection{Clase GaloisField en GF(2)}
+Para comenzar se instanció la clase previamente desarrollada para modelar campos de Galois con parametros m = 1 y P(x) = x + 1, para testear y corregir posibles issues. La implementación existente no requirió modificaciones y se validaron todas sus operaciones exitosamente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{gf2-test.png}
+    \caption{Verificacion de las operaciones en GF2.}
+    \label{fig:gf2-test}
+\end{figure}
+
+Una vez verificado el funcionamiento de la clase, se implementaron los metodos para realizar el producto vector-matriz,
+matriz-matriz, peso de Hamming y algunos metodos auxiliares que se usaron en los modelos del encoder y decoder.
+
+Usando estos nuevos metodos se verificaron las principales propiedades para las matrices del codigo ($GH^T = 0$ y $B^2 = I$):
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{code-matrices.png}
+    \hfill
+    \includegraphics[scale=0.4]{code-properties.png}
+    \caption{Matrices y propiedades del código verificadas.}
+    \label{fig:code-matrices-properties}
+\end{figure}
+
+\subsection{Modelado del encoder y decoder}
+A partir de la clase desarrollada previamente para $GF(2)$, se implementaron los modelos correspondientes al encoder y al decoder.\\
+
+Se desarrolló el modelo del encoder implementando la codificación sistemática mediante producto matricial. La lógica correspondiente fue encapsulada en la clase GolayEncoder, y se verifico la distribución de pesos esperada del código extendido Golay 24,12:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{code-weight-distribution.png}
+    \hfill
+    \includegraphics[scale=0.5]{model-weight-distribution.png}
+    \caption{Distribución de pesos del código y modelo.}
+    \label{fig:code-model-weight-distribution}
+\end{figure}
+
+Posteriormente, se desarrolló el modelo del decoder implementando los diferentes casos de la decodificación. La lógica correspondiente fue encapsulada en la clase GolayDecoder.\\
+
+(Parte de AbeliyoPiyo vvvvvv)
+* caracterizamos el modelo del decoder, iteramos para todas las combinaciones con error de pesos 0 a 4 y todas las codewords, analizamos los casos corregidos y detectados obteniendo:
+ACA TAMBIEN ME COLGUE XD...
