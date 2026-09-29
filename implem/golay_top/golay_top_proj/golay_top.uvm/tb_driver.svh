@@ -26,8 +26,7 @@ class tb_driver extends uvm_driver#(seq_item);
             seq_item_port.get_next_item(item);
 
             @(posedge vif.i_clock);
-            vif.i_word  <= item.word;
-            vif.i_error <= item.input_error;
+            vif.i_rx <= item.rx_data;
 
             seq_item_port.item_done();
         end

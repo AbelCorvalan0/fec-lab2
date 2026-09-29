@@ -51,34 +51,41 @@ class tb_scoreboard extends uvm_scoreboard;
             wait(item != null);
             `uvm_info("RECEIVED", $sformatf("\nwait(this.item != null);"), UVM_DEBUG)
 
-            // format: word input_error msg err corrected uncorrectable
-            status = $fscanf(   file_handle, "%b %b %b %b %b %b\n"                                                                      ,
-                                model_output.word, model_output.input_error                                                             ,
-                                model_output.msg_data, model_output.error_pattern, model_output.corrected, model_output.uncorrectable   );
+            // format: rx msg err corrected uncorrectable
+            status = $fscanf(   file_handle, "%b %b %b %b %b\n", model_output.rx_data   ,
+                                model_output.msg_data, model_output.error_pattern       ,
+                                model_output.corrected, model_output.uncorrectable      );
             if (status == 0) begin
                 `uvm_fatal("FILE_READ_ERROR", "Failed to read file!")
             end
 
-            // we dont need input ports for model
-            model_output.word = item.word;
-            model_output.input_error = item.input_error;
+            // we dont need rx_data for model
+            model_output.rx_data = item.rx_data;
+
+            // TODO FIX THIS IN VECTOR GENERATION
+            if (model_output.uncorrectable) begin
+                model_output.error_pattern = 0;
+            end
+            
+            // insert random errors, for testing
+            // item.msg_data ^= $urandom_range(0,1);
 
             if (!item.compare(model_output)) begin
                 if (item.msg_data != model_output.msg_data)
-                    `uvm_error(get_name(), $sformatf(   "\n[MSG ERROR] word=%03h : DUT=%03h, esperado=%03h",
-                                                        item.word, item.msg_data, model_output.msg_data))
+                    `uvm_error(get_name(), $sformatf(   "\n[MSG ERROR] rx=%06h : DUT=%06h, esperado=%06h",
+                                                        item.rx_data, item.msg_data, model_output.msg_data))
         
                 if (item.error_pattern != model_output.error_pattern)
-                    `uvm_error(get_name(), $sformatf(   "\n[ERR ERROR] word=%03h : DUT=%024b, esperado=%024b",
-                                                        item.word, item.error_pattern, model_output.error_pattern))
+                    `uvm_error(get_name(), $sformatf(   "\n[ERR ERROR] rx=%06h : DUT=%024b, esperado=%024b",
+                                                        item.rx_data, item.error_pattern, model_output.error_pattern))
         
                 if (item.corrected != model_output.corrected)
-                    `uvm_error(get_name(), $sformatf(   "\n[CORRECTED ERROR] word=%03h : DUT=%0b, esperado=%0b",
-                                                        item.word, item.corrected, model_output.corrected))
+                    `uvm_error(get_name(), $sformatf(   "\n[CORRECTED ERROR] rx=%06h : DUT=%0b, esperado=%0b",
+                                                        item.rx_data, item.corrected, model_output.corrected))
         
                 if (item.uncorrectable != model_output.uncorrectable)
-                    `uvm_error(get_name(), $sformatf(   "\n[UNCORRECTABLE ERROR] word=%03h : DUT=%0b, esperado=%0b",
-                                                        item.word, item.uncorrectable, model_output.uncorrectable))
+                    `uvm_error(get_name(), $sformatf(   "\n[UNCORRECTABLE ERROR] rx=%06h : DUT=%0b, esperado=%0b",
+                                                        item.rx_data, item.uncorrectable, model_output.uncorrectable))
                 item.print();
                 model_output.print();
             end

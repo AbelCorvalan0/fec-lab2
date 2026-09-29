@@ -6,7 +6,7 @@ package tb_pkg;
 
     parameter               NB_WORD         = 12;
     parameter               NB_CODEWORD     = 24;
-    parameter   string      VECTOR_FILE0    = "../../../../golay_top.uvm/sequences/top_testing_vectors.txt";
+    parameter   string      VECTOR_FILE0    = "../../../../golay_top.uvm/sequences/codeword_with_errors.txt";
     
     `include "sequences/seq_item.svh"
     `include "sequences/seq_lib.svh"
