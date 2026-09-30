@@ -1,0 +1,72 @@
+Se diseñó el módulo de codificación de codewords para realizar la multiplicación de la información recibida con la matriz $\textbf{G}= {I | B}$. 
+
+Se presenta la implementación del codificador. En la siguiente figura se muestra la primer estapa de buffers y las primeras 6 LUTs del circuito.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{encoder-stage1.png}
+    % \caption{Implementación RTL del encoder.}
+    \label{fig:encoder-theros1}
+\end{figure}
+
+\newpage
+
+Luego se presentan las siguientes 12 LUTs con los buffers de salidas del módulo.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{encoder-stage2-a.png}
+    % \caption{Implementación RTL del encoder.}
+    \label{fig:encoder-theros1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{encoder-stage2-b.png}
+    % \caption{Implementación RTL del encoder.}
+    \label{fig:encoder-theros1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{encoder-stage2-c.png}
+    % \caption{Implementación RTL del encoder.}
+    \label{fig:encoder-theros1}
+\end{figure}
+
+\subsection{Validación del encoder}
+
+Se realiza la simulación con el objetivo de verificar la generación de las codewords a partir de las 4096 combinaciones posibles de la palabra de 24-bits a codificar.
+Las posibles combinaciones y las codewords resultantes se obtienen del golden model realizado en software.
+El formato del archivo es el siguiente: 
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{cc}
+        \hline
+        \textbf{Columna 1} & \textbf{Columna 2} \\
+        \hline
+        Información & Codeword \\
+        \hline
+    \end{tabular}
+    %\caption{Información y codeword}
+    \label{tab:info-codeword}
+\end{table}
+
+Se muestra la simulación realizada en Vivado:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{wave-encoder-1.png}
+    \caption{Verificación del encoder}
+    \label{fig:encoder-theros1}
+\end{figure}
+
+Mediante la consola de TCL podemos ver que la implementación en RTL procesa la información correctamente.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{verification-encoder.png}
+    % \caption{Implementación RTL del encoder.}
+    \label{fig:encoder-theros1}
+\end{figure}

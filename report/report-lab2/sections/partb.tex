@@ -1,0 +1,26 @@
+\subsection{Clase GaloisField en GF(2)}
+Para comenzar se instanció la clase previamente desarrollada para modelar campos de Galois con parametros $m = 1$ y $P(x) = x + 1$, para testear y corregir posibles issues. La implementación existente no requirió modificaciones y se validaron todas sus operaciones exitosamente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{gf2-test.png}
+    \caption{Verificacion de las operaciones en GF2.}
+    \label{fig:gf2-test}
+\end{figure}
+
+Una vez verificado el funcionamiento de la clase, se implementaron los metodos para realizar el producto vector-matriz,
+matriz-matriz, peso de Hamming y algunos metodos auxiliares que se usaron en los modelos del encoder y decoder.
+
+Usando estos nuevos metodos se verificaron las principales propiedades para las matrices del codigo ($GH^T = 0$ y $B^2 = I$):
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{code-matrices.png}
+    \hfill
+    \includegraphics[scale=0.4]{code-properties.png}
+    \caption{Matrices y propiedades del código verificadas.}
+    \label{fig:code-matrices-properties}
+\end{figure}
+
+\input{sections/Parte B/Ejercicio_6.tex}
+\input{sections/Parte B/Ejercicio_7.tex}
