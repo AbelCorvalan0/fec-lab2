@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Parte A — Propiedades del código}{2}{section.1}%
+\contentsline {section}{\numberline {2}Parte B — Modelo de referencia en software}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Caracterización del decodificador}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Clase GaloisField en GF(2)}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Modelado del encoder y decoder}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Parte C — Implementación RTL}{6}{section.3}%
+\contentsline {section}{\numberline {4}Codificador}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Validación del encoder}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Desarrollo y verificación de módulos comunes}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Analisis: Posible modificacion del decoder}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Implementación RTL del encoder}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Resumen del encoder}{9}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Implementación RTL del decoder}{9}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Resumen del decoder}{12}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Validacion del decoder}{12}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Correcciónes en el decoder}{13}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Integración del top level}{14}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Verificación del top level}{16}{subsection.4.11}%

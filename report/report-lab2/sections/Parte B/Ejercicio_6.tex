@@ -4,10 +4,23 @@ Se implementa el codificador matricial y el decodificador en los archivos
 \texttt{GolayEncoder.py} y \texttt{GolayDecoder.py}, respectivamente.
 
 La tabla de síndromes se encuentra en el archivo
-\texttt{error\_syndromes.txt}.
+\texttt{fec-lab2/model/outputs/syndromes/error\_syndromes.txt}. Estos son generados con los scripts del golden model.
+Los vectores se presentan de la siguiente forma:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        1. Palabra recibida     &
+        2. Palabra incorregible \\
+        \hline
+    \end{tabular}
+    \caption{Descripción de las columnas de salida del decodificador.}
+    \label{tab:decoder_output}
+\end{table}
 
 La totalidad de los errores que se pueden producir dentro de los 24 bits
-de la palabra recibida en el decoder son generados de la siguiente forma:
+de una palabra recibida en el decoder son generados de la siguiente forma:
 
 El orden en que se encuentran las variables es el siguiente:
 
