@@ -9,7 +9,6 @@ obtener el archivo de vectores
 \texttt{outputs/decoder/decoder\_top\_testing/codeword\_with\_errors.txt}.
 
 Este archivo tiene la siguiente convención de vectores.
-
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
@@ -21,7 +20,7 @@ Este archivo tiene la siguiente convención de vectores.
         5. Palabra incorregible \\
         \hline
     \end{tabular}
-    \caption{Descripción de las columnas de salida del decodificador.}
+    %\caption{Descripción de las columnas de salida del decodificador.}
     \label{tab:decoder_output}
 \end{table}
 
@@ -68,3 +67,5 @@ El script con el cual se genera el conjunto de vectores es el siguiente:
     print(f"{n_lines} codewords written to {uvm_codeword_with_errors}")
     len(received_word_array_with_errors)
 \end{lstlisting}
+
+Además se genera un conjunto de vectores por cada submódulo. Los archivos de los vectores generados se encuentran en $"path: /home/abel/Desktop/desktop/github_repos/fec-lab2/model/outputs/decoder y encoder"$

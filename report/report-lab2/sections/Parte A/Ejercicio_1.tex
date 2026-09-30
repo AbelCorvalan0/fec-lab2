@@ -1,3 +1,111 @@
-\section{Matrices y parámetros}
+\subsection{Matrices y parámetros}
 
+Se tiene en principio, la matriz \textbf{B} para luego armar las matrices \textbf{G} y \textbf{H}.
 
+%% Matriz B
+
+A continuación se muestran las matrices \textbf{G} y \textbf{H}.
+
+\[
+\mathbf{G} =
+\left[
+\begin{array}{cccccccccccc|cccccccccccc}
+1&0&0&0&0&0&0&0&0&0&0&0&
+1&0&0&1&1&0&0&0&1&1&1&1\\
+0&1&0&0&0&0&0&0&0&0&0&0&
+0&1&0&0&1&1&1&0&0&1&1&1\\
+0&0&1&0&0&0&0&0&0&0&0&0&
+0&0&1&1&0&1&0&1&0&1&1&1\\
+0&0&0&1&0&0&0&0&0&0&0&0&
+1&0&1&1&1&1&1&0&0&0&1&0\\
+0&0&0&0&1&0&0&0&0&0&0&0&
+1&1&0&1&1&1&0&1&0&0&0&1\\
+0&0&0&0&0&1&0&0&0&0&0&0&
+0&1&1&1&1&1&0&0&1&1&0&0\\
+0&0&0&0&0&0&1&0&0&0&0&0&
+0&1&0&1&0&0&1&1&1&1&0&1\\
+0&0&0&0&0&0&0&1&0&0&0&0&
+0&0&1&0&1&0&1&1&1&1&1&0\\
+0&0&0&0&0&0&0&0&1&0&0&0&
+1&0&0&0&0&1&1&1&1&0&1&1\\
+0&0&0&0&0&0&0&0&0&1&0&0&
+1&1&1&0&0&1&1&1&0&1&0&0\\
+0&0&0&0&0&0&0&0&0&0&1&0&
+1&1&1&1&0&0&0&1&1&0&1&0\\
+0&0&0&0&0&0&0&0&0&0&0&1&
+1&1&1&0&1&0&1&0&1&0&0&1
+\end{array}
+\right]
+\]
+
+\[
+\mathbf{H} =
+\left[
+\begin{array}{cccccccccccc|cccccccccccc}
+1&0&0&1&1&0&0&0&1&1&1&1&
+1&0&0&0&0&0&0&0&0&0&0&0\\
+0&1&0&0&1&1&1&0&0&1&1&1&
+0&1&0&0&0&0&0&0&0&0&0&0\\
+0&0&1&1&0&1&0&1&0&1&1&1&
+0&0&1&0&0&0&0&0&0&0&0&0\\
+1&0&1&1&1&1&1&0&0&0&1&0&
+0&0&0&1&0&0&0&0&0&0&0&0\\
+1&1&0&1&1&1&0&1&0&0&0&1&
+0&0&0&0&1&0&0&0&0&0&0&0\\
+0&1&1&1&1&1&0&0&1&1&0&0&
+0&0&0&0&0&1&0&0&0&0&0&0\\
+0&1&0&1&0&0&1&1&1&1&0&1&
+0&0&0&0&0&0&1&0&0&0&0&0\\
+0&0&1&0&1&0&1&1&1&1&1&0&
+0&0&0&0&0&0&0&1&0&0&0&0\\
+1&0&0&0&0&1&1&1&1&0&1&1&
+0&0&0&0&0&0&0&0&1&0&0&0\\
+1&1&1&0&0&1&1&1&0&1&0&0&
+0&0&0&0&0&0&0&0&0&1&0&0\\
+1&1&1&1&0&0&0&1&1&0&1&0&
+0&0&0&0&0&0&0&0&0&0&1&0\\
+1&1&1&0&1&0&1&0&1&0&0&1&
+0&0&0&0&0&0&0&0&0&0&0&1
+\end{array}
+\right]
+\]
+
+En el archivo "reference.ods", se verifican las operaciones $G \cdot H^{T} = 0$ y $B^{2}=I$
+
+\subsection{Dimensión y tasa}
+
+Respecto a la dimensión tenemos que la matriz \textbf{G} pertenece al campo de Galois $GF(2)^{12x24}$. De esta forma tenemos $ k = 12 $ bits de información y $ n = 24 $ bits totales, incluyendo redundancia.
+El código Golay en este caso resulta ($n, k, d_{min}$)=(24,12,8).
+
+La tasa se calcula como el cociente entre la cantidad de bits de información y los bits totales.
+
+$$ R= \frac{k}{n} = \frac{12}{24} $$
+
+$$ \boxed{R= 0.5} $$
+
+Es decir que se tiene la misma cantidad de bits de información como de redundancia.
+
+\subsection{Overhead}
+
+La cantidad de bits adiciones que se agregan para poder realizar la codificación en relación con la información original es la siguiente.
+Se tienen los bits de información ($k$) y los bits en la palabra codificada ($n$). Para el código de Golay, en este caso se tiene:
+
+$$ overhead = n - k = 24 \, bits - 12 \, bits $$
+
+$$ \boxed{overhead = 12 \, bits} $$
+
+\subsection{Codificación de información de prueba}
+
+Se hace la codificación de la siguiente palabra:
+
+$$ m = 0xA5C $$
+
+La palabra codificada resulta en:
+
+$$ \boxed{v = 0xA5C9A5} $$
+
+Luego multiplicando la palabra codificada $v$ por $\textbf{H}^{T}$ se tiene:
+
+$$ v \cdot \textbf{H}^{T} = 0 $$
+
+Todo el procedimiento de cálculo manual se muestra en el archivo $reference.ods$.

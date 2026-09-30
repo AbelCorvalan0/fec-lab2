@@ -1,19 +1,43 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Parte A — Propiedades del código}{2}{section.1}%
-\contentsline {section}{\numberline {2}Parte B — Modelo de referencia en software}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Caracterización del decodificador}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Clase GaloisField en GF(2)}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Modelado del encoder y decoder}{5}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Parte C — Implementación RTL}{6}{section.3}%
-\contentsline {section}{\numberline {4}Codificador}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Validación del encoder}{8}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Desarrollo y verificación de módulos comunes}{8}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Analisis: Posible modificacion del decoder}{8}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Implementación RTL del encoder}{9}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Resumen del encoder}{9}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Implementación RTL del decoder}{9}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Resumen del decoder}{12}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Validacion del decoder}{12}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Correcciónes en el decoder}{13}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}Integración del top level}{14}{subsection.4.10}%
-\contentsline {subsection}{\numberline {4.11}Verificación del top level}{16}{subsection.4.11}%
+\contentsline {subsection}{\numberline {1.1}Matrices y parámetros}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Dimensión y tasa}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Overhead}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Codificación de información de prueba}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Distancia mínima y capacidad de corrección}{3}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Distancia mínima}{3}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Capacidad de detección}{3}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}Detalles del código}{3}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Miscorrection}{3}{subsubsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.7}Decodificación manual}{4}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Palabra recibida 1: $0xA5D9A6$}{4}{subsection.1.8}%
+\contentsline {subsubsection}{\numberline {1.8.1}Caso 1}{4}{subsubsection.1.8.1}%
+\contentsline {subsubsection}{\numberline {1.8.2}Caso 2}{5}{subsubsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.9}Palabra recibida 2: $0xA5F9A4$}{5}{subsection.1.9}%
+\contentsline {subsubsection}{\numberline {1.9.1}Caso 1}{5}{subsubsection.1.9.1}%
+\contentsline {subsubsection}{\numberline {1.9.2}Caso 2}{5}{subsubsection.1.9.2}%
+\contentsline {subsubsection}{\numberline {1.9.3}Caso 3}{5}{subsubsection.1.9.3}%
+\contentsline {subsubsection}{\numberline {1.9.4}Caso 4}{6}{subsubsection.1.9.4}%
+\contentsline {subsection}{\numberline {1.10}Palabra recibida 3: $0xA5C9AA$}{6}{subsection.1.10}%
+\contentsline {subsubsection}{\numberline {1.10.1}Caso 1}{6}{subsubsection.1.10.1}%
+\contentsline {subsubsection}{\numberline {1.10.2}Caso 2}{7}{subsubsection.1.10.2}%
+\contentsline {subsubsection}{\numberline {1.10.3}Caso 3}{7}{subsubsection.1.10.3}%
+\contentsline {subsubsection}{\numberline {1.10.4}Caso 4}{7}{subsubsection.1.10.4}%
+\contentsline {section}{\numberline {2}Parte B — Modelo de referencia en software}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Codificador y decodificador de referencia}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Caracterización del decodificador}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Clase GaloisField en GF(2)}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Codificador y decodificador de referencia}{10}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Caracterización del decodificador}{10}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Parte C — Implementación RTL}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Desarrollo y verificación de módulos comunes}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Analisis: Posible modificacion del decoder}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Implementación RTL del encoder}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Resumen del encoder}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Validación del encoder}{15}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Implementación RTL del decoder}{15}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Resumen del decoder}{18}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Validacion del decoder}{18}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Correcciónes en el decoder}{19}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Integración del top level}{20}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Verificación del top level}{22}{subsection.3.11}%

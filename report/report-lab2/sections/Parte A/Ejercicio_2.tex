@@ -1,50 +1,40 @@
-\section{Ejercicio 2}
+\subsection{Distancia mínima y capacidad de corrección}
 
-Distancia mínima y capacidad de corrección
+Se tiene la distribución de pesos para el total de las palabras del código. La talba se muestra en la siguiente figura:
 
-Se tiene la distribución de pesos para el total de las palabras del código. La tabla se muestra en la siguiente figura:
-
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{img/code-weight-distribution.png}
+    \includegraphics[scale=0.4]{code-weight-distribution.png}
     \caption{Tabla de distribución de pesos}
-    \label{fig:code-weight-distribution}
+    \label{fig:gf2-test}
 \end{figure}
 
-\subsection{Distancia mínima}
+\subsubsection{Distancia mínima}
 
-El código Golay es un código lineal, por lo que la distancia mínima es igual al menor peso no nulo de una palabra del código. Los pesos no nulos section 8, 12, 16 y 24. Por lo tanto se tiene que la distancia mínima es:
+El código Golay es un código lineal, por lo que la distancia mínima es igual al menor peso no nulo de una palabra del código. Los pesos no nulos son 8, 12, 16 y 24. Por lo tanto se tiene que la distancia mínima es:
 
-$$ \boxed{ d_{min} = 8 } $$
+$$ \boxed{d_{min}= 8} $$
 
-\subsection{Capacidad de correción}
+\subsubsection{Capacidad de detección}
 
-La fórmula para el cálculo de la cantidad de errores que puede corregir el código es la siguiente:
+Respecto a la capacidad de detección se tiene que el cálculo para el mismo es el siguiente:
 
-$$ t = \frac{d_{min} - 1}{2} $$
+$$ d_{min} - 1= 8 - 1= 7$$
 
-Como se tiene que la distancia mínima $d_{min}= 8$, entonces se tiene:
-
-$$ t = \frac{8-1}{2} = 3 $$
-
-$$ \boxed{t = 3} $$
-
-El código puede corregir hasta 3 errores por palabra recibida.
-
-\subsection{Capacidad de detección}
-
-Respecto a la capacidad de detección se tiene que el cálculo es el siguiente:
-
-$$ d_{min} - 1 = 8 - 1 = 7 $$
-
-$$ \boxed{ capacidad \, de \, detección = 7 } $$
+$$ capacidad \, de \, detección = 7 $$
 
 El código Golay puede detectar hasta 7 errores.
 
 \subsection{Detalles del código}
 
-El algoritmo decodificador está diseñado para corregir patrones de hasta 3 errores. 
-A raíz de esto puede ocurrir que se transmita una codeword $c_{1}$. La misma llega al decodificador con 5 errores.
-Entonces se tiene que la palabra recibida es:
+\subsubsection{Miscorrection}
 
-$$ r = c_{1} \xor e_{5}$$
+El algoritmo decodificador está diseñado para corregir patrones de hasta 3 errores. A raíz de esto puede ocurrir que se transmita una codeword $c_{1}$. La misma llega al decodificador con 5 errores. Entonces se tiene que la palabra recibida es:
+
+$$ r_{1} = c_{1} \oplus e_{5} $$
+
+Puede existir otra codeword $c_{2}$ a distancia $d(c_{1}, c_{2})= 8$ de $c_{1}$.
+El error introducido puede acortar esta distancia de hamming entre la palabra recibida $r$ y la codeword $c_{2}$. Obteniendo en el caso más desfavorable resultante con $d(r, c_{2})=3$.
+El decodificador en estas condiciones corrige 3 errores, pero no se corrige considerando que se quiso recibir $r$. Se obtine a la salida del decodificador una codeword erronea ($c_{2} \neq c_{1}$).
+En el proceso entonces, se recibe una palabra con errores que excede la capacidad de corrección del decodificador. Se encuentra un patrón de error que parece válido. Se aplica la correción y se obtiene otra codeword válida, pero no la que corresponde a la palabra que en realidad se quiso recibir.
+

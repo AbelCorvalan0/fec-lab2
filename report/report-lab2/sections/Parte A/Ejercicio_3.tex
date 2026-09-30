@@ -1,6 +1,6 @@
 \graphicspath{{img/}}
 
-\section{Decodificación manual}
+\subsection{Decodificación manual}
 
 Se codifican palabras recibidas propuestas siguiendo el algoritmo de cuatro casos. Se hace el desarrollo en hoja cálculo adjunta en repositorio. En la siguiente figura se presentan los casos de obtención de la máscara de error:
 
@@ -76,7 +76,7 @@ Se obtienen los siguientes conjuntos de vectores $s$ y $q$ para las palabras a d
 
 \subsection{Palabra recibida 1: $0xA5D9A6$}
 
-\subsection{Caso 1}
+\subsubsection{Caso 1}
 
 Luego se evalúa el peso del vector $s$ y la condición correspondiente al primer caso:
 
@@ -84,7 +84,7 @@ $$ weight(s) \leq 3 = 7 \leq 3 = FALSE $$
 
 Por lo que no se cumple con la primera condición.
 
-\subsection{Caso 2}
+\subsubsection{Caso 2}
 
 Se evalúa si algún peso de las operaciones $s \oplus b_{i}$ es menor a 2. Esto es:
 
@@ -129,7 +129,7 @@ $$ \boxed{\textbf{e} = 0x000001}$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Palabra recibida 2: $0xA5F9A4$}
 
-\subsection{Caso 1}
+\subsubsection{Caso 1}
 
 Luego se evalúa el peso del vector $s$ y la condición correspondiente al primer caso:
 
@@ -137,7 +137,7 @@ $$ weight(s) \leq 3 = 5 \leq 3 = FALSE $$
 
 Por lo que no se cumple con la primera condición.
 
-\subsection{Caso 2}
+\subsubsection{Caso 2}
 
 Se evalúa si algún peso de las operaciones $s \oplus b_{i}$ es menor a 2. Esto es:
 
@@ -167,7 +167,7 @@ $$ weight(S \oplus b_{i}) \leq 2 $$
 
 Ninguna de las operaciones cumple con la condición.
 
-\subsection{Caso 3}
+\subsubsection{Caso 3}
 
 Se calcula el peso del vector $q$. Se tiene:
 
@@ -177,7 +177,7 @@ $$ weight(q) \leq 3 = 7 \leq 3 = FALSE $$
 
 Por lo que no se cumple la condición.
 
-\subsection{Caso 4}
+\subsubsection{Caso 4}
 
 Se evalúa si algún peso de las operaciones $q \oplus b_{i}$ es menor a 2. Esto es:
 
@@ -222,7 +222,7 @@ $$ \boxed{\textbf{e} = 0x003001}$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Palabra recibida 3: $0xA5C9AA$}
 
-\subsection{Caso 1}
+\subsubsection{Caso 1}
 
 Se evalúa el peso del vector $s$ y la condición correspondiente al primer caso:
 
@@ -230,7 +230,7 @@ $$ weight(s) \leq 3 = 4 \leq 3 = FALSE $$
 
 Por lo que no se cumple con la primera condición.
 
-\subsection{Caso 2}
+\subsubsection{Caso 2}
 
 Se evalúa si algún peso de las operaciones $s \oplus b_{i}$ es menor a 2. Esto es:
 
@@ -260,7 +260,7 @@ $$ weight(S \oplus b_{i}) \leq 2 $$
 
 Ninguna de las operaciones cumple con la condición.
 
-\subsection{Caso 3}
+\subsubsection{Caso 3}
 
 Se calcula el peso del vector $q$. Se tiene:
 
@@ -270,7 +270,7 @@ $$ weight(q) \leq 3 = 8 \leq 3 = FALSE $$
 
 Por lo que no se cumple la condición.
 
-\subsection{Caso 4}
+\subsubsection{Caso 4}
 
 Se evalúa si algún peso de las operaciones $q \oplus b_{i}$ es menor a 2. Esto es:
 

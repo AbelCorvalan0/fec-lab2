@@ -274,17 +274,65 @@ INPUT ./main.toc
 INPUT main.toc
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx1000.tfm
 OUTPUT main.toc
-INPUT ./sections/parta.tex
-INPUT ./sections/parta.tex
-INPUT sections/parta.tex
-INPUT ./sections/Parte B/Ejercicio 7.tex
-INPUT ./sections/Parte B/Ejercicio 7.tex
-INPUT sections/Parte B/Ejercicio 7.tex
+INPUT ./sections/Parte A/Ejercicio_1.tex
+INPUT ./sections/Parte A/Ejercicio_1.tex
+INPUT sections/Parte A/Ejercicio_1.tex
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0700.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx0700.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0500.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx0500.tfm
+INPUT ./sections/Parte A/Ejercicio_2.tex
+INPUT ./sections/Parte A/Ejercicio_2.tex
+INPUT sections/Parte A/Ejercicio_2.tex
+INPUT ./img/code-weight-distribution.png
+INPUT ./img/code-weight-distribution.png
+INPUT ./img/code-weight-distribution.png
+INPUT ./img/code-weight-distribution.png
+INPUT ./img/code-weight-distribution.png
+INPUT ./img/code-weight-distribution.png
+INPUT ./sections/Parte A/Ejercicio_3.tex
+INPUT ./sections/Parte A/Ejercicio_3.tex
+INPUT sections/Parte A/Ejercicio_3.tex
+INPUT ./img/correction-cases.png
+INPUT ./img/correction-cases.png
+INPUT ./img/correction-cases.png
+INPUT ./img/correction-cases.png
+INPUT ./img/correction-cases.png
+INPUT ./img/correction-cases.png
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ectt1000.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmr8.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmr6.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmex10.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT ./sections/Parte B/Ejercicio_6.tex
+INPUT ./sections/Parte B/Ejercicio_6.tex
+INPUT sections/Parte B/Ejercicio_6.tex
+INPUT ./sections/Parte B/Ejercicio_7.tex
+INPUT ./sections/Parte B/Ejercicio_7.tex
+INPUT sections/Parte B/Ejercicio_7.tex
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ectt0900.tfm
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0900.tfm
-INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0500.tfm
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecit0900.tfm
 INPUT ./sections/partb.tex
 INPUT ./sections/partb.tex
@@ -307,60 +355,8 @@ INPUT ./img/code-properties.png
 INPUT ./img/code-properties.png
 INPUT ./img/code-properties.png
 INPUT ./img/code-properties.png
-INPUT ./img/code-weight-distribution.png
-INPUT ./img/code-weight-distribution.png
-INPUT ./img/code-weight-distribution.png
-INPUT ./img/code-weight-distribution.png
-INPUT ./img/code-weight-distribution.png
-INPUT ./img/code-weight-distribution.png
-INPUT ./img/model-weight-distribution.png
-INPUT ./img/model-weight-distribution.png
-INPUT ./img/model-weight-distribution.png
-INPUT ./img/model-weight-distribution.png
-INPUT ./img/model-weight-distribution.png
-INPUT ./img/model-weight-distribution.png
-INPUT ./sections/Parte C/Ejercicio 8.tex
-INPUT ./sections/Parte C/Ejercicio 8.tex
-INPUT sections/Parte C/Ejercicio 8.tex
-INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0700.tfm
-INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx0700.tfm
-INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx0500.tfm
-INPUT ./img/encoder-stage1.png
-INPUT ./img/encoder-stage1.png
-INPUT ./img/encoder-stage1.png
-INPUT ./img/encoder-stage1.png
-INPUT ./img/encoder-stage1.png
-INPUT ./img/encoder-stage1.png
-INPUT ./img/encoder-stage2-a.png
-INPUT ./img/encoder-stage2-a.png
-INPUT ./img/encoder-stage2-a.png
-INPUT ./img/encoder-stage2-a.png
-INPUT ./img/encoder-stage2-a.png
-INPUT ./img/encoder-stage2-a.png
-INPUT ./img/encoder-stage2-b.png
-INPUT ./img/encoder-stage2-b.png
-INPUT ./img/encoder-stage2-b.png
-INPUT ./img/encoder-stage2-b.png
-INPUT ./img/encoder-stage2-b.png
-INPUT ./img/encoder-stage2-b.png
-INPUT ./img/encoder-stage2-c.png
-INPUT ./img/encoder-stage2-c.png
-INPUT ./img/encoder-stage2-c.png
-INPUT ./img/encoder-stage2-c.png
-INPUT ./img/encoder-stage2-c.png
-INPUT ./img/encoder-stage2-c.png
-INPUT ./img/wave-encoder-1.png
-INPUT ./img/wave-encoder-1.png
-INPUT ./img/wave-encoder-1.png
-INPUT ./img/wave-encoder-1.png
-INPUT ./img/wave-encoder-1.png
-INPUT ./img/wave-encoder-1.png
-INPUT ./img/verification-encoder.png
-INPUT ./img/verification-encoder.png
-INPUT ./img/verification-encoder.png
-INPUT ./img/verification-encoder.png
-INPUT ./img/verification-encoder.png
-INPUT ./img/verification-encoder.png
+INPUT sections/Parte B/Ejercicio_6.tex
+INPUT sections/Parte B/Ejercicio_7.tex
 INPUT ./sections/partc.tex
 INPUT ./sections/partc.tex
 INPUT sections/partc.tex
@@ -376,6 +372,45 @@ INPUT ./img/encoder-theros2.png
 INPUT ./img/encoder-theros2.png
 INPUT ./img/encoder-theros2.png
 INPUT ./img/encoder-theros2.png
+INPUT ./sections/Parte C/Ejercicio_8.tex
+INPUT ./sections/Parte C/Ejercicio_8.tex
+INPUT sections/Parte C/Ejercicio_8.tex
+INPUT ./img/encoder-stage1.png
+INPUT ./img/encoder-stage1.png
+INPUT ./img/encoder-stage1.png
+INPUT ./img/encoder-stage1.png
+INPUT ./img/encoder-stage1.png
+INPUT ./img/encoder-stage1.png
+INPUT ./img/encoder-stage2-a.png
+INPUT ./img/encoder-stage2-a.png
+INPUT ./img/encoder-stage2-a.png
+INPUT ./img/encoder-stage2-a.png
+INPUT ./img/encoder-stage2-a.png
+INPUT ./img/encoder-stage2-a.png
+INPUT ./img/encoder-stage2-b.png
+INPUT ./img/encoder-stage2-b.png
+INPUT ./img/encoder-stage2-b.png
+INPUT ./img/encoder-stage2-b.png
+INPUT ./img/encoder-stage2-b.png
+INPUT ./img/encoder-stage2-b.png
+INPUT ./img/encoder-stage2-c.png
+INPUT ./img/encoder-stage2-c.png
+INPUT ./img/encoder-stage2-c.png
+INPUT ./img/encoder-stage2-c.png
+INPUT ./img/encoder-stage2-c.png
+INPUT ./img/encoder-stage2-c.png
+INPUT ./img/wave-encoder-1.png
+INPUT ./img/wave-encoder-1.png
+INPUT ./img/wave-encoder-1.png
+INPUT ./img/wave-encoder-1.png
+INPUT ./img/wave-encoder-1.png
+INPUT ./img/wave-encoder-1.png
+INPUT ./img/verification-encoder.png
+INPUT ./img/verification-encoder.png
+INPUT ./img/verification-encoder.png
+INPUT ./img/verification-encoder.png
+INPUT ./img/verification-encoder.png
+INPUT ./img/verification-encoder.png
 INPUT ./inc/decoder.pdf
 INPUT ./inc/decoder.pdf
 INPUT ./inc/decoder.pdf
@@ -519,12 +554,20 @@ INPUT /home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200
 INPUT /home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk
 INPUT /home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1728.pk
 INPUT /home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1728.pk
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb

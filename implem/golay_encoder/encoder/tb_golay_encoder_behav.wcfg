@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_golay_encoder_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_golay_encoder" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="114.901 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject type="array" fp_name="/tb_golay_encoder/i_word">
+      <obj_property name="ElementShortName">i_word[11:0]</obj_property>
+      <obj_property name="ObjectShortName">i_word[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/cw">
+      <obj_property name="ElementShortName">cw[23:0]</obj_property>
+      <obj_property name="ObjectShortName">cw[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/exp_cw">
+      <obj_property name="ElementShortName">exp_cw[23:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_cw[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/line_num">
+      <obj_property name="ElementShortName">line_num[31:0]</obj_property>
+      <obj_property name="ObjectShortName">line_num[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/n_vectors">
+      <obj_property name="ElementShortName">n_vectors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">n_vectors[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/fd">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/fails">
+      <obj_property name="ElementShortName">fails[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fails[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/NB_WORD">
+      <obj_property name="ElementShortName">NB_WORD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NB_WORD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/n_read">
+      <obj_property name="ElementShortName">n_read[31:0]</obj_property>
+      <obj_property name="ObjectShortName">n_read[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/NB_CODEWORD">
+      <obj_property name="ElementShortName">NB_CODEWORD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NB_CODEWORD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_golay_encoder/MAX_PRINT">
+      <obj_property name="ElementShortName">MAX_PRINT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_PRINT[31:0]</obj_property>
+   </wvobject>
+</wave_config>

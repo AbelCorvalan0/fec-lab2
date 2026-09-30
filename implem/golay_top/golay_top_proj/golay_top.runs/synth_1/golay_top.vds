@@ -1,0 +1,247 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Sep 28 11:31:32 2026
+# Process ID         : 6710
+# Current directory  : /home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_top/golay_top_proj/golay_top.runs/synth_1
+# Command line       : vivado -log golay_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source golay_top.tcl
+# Log file           : /home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_top/golay_top_proj/golay_top.runs/synth_1/golay_top.vds
+# Journal file       : /home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_top/golay_top_proj/golay_top.runs/synth_1/vivado.jou
+# Running On         : asus
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency      : 3186.898 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8006 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 12301 MB
+# Available Virtual  : 7299 MB
+#-----------------------------------------------------------
+source golay_top.tcl -notrace
+Command: synth_design -top golay_top -part xc7a35ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6762
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.590 ; gain = 409.672 ; free physical = 206 ; free virtual = 5821
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'golay_top' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_top/rtl/golay_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'golay_encoder' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_encoder/rtl/golay_encoder.sv:3]
+	Parameter NB_WORD bound to: 32'sb00000000000000000000000000001100 
+	Parameter NB_CODEWORD bound to: 32'sb00000000000000000000000000011000 
+	Parameter I_DIM bound to: 32'sb00000000000000000000000000001100 
+INFO: [Synth 8-6155] done synthesizing module 'golay_encoder' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_encoder/rtl/golay_encoder.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'error_injection' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/error_injection/rtl/error_injection.sv:3]
+	Parameter NB_CODEWORD bound to: 32'sb00000000000000000000000000011000 
+INFO: [Synth 8-6155] done synthesizing module 'error_injection' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/error_injection/rtl/error_injection.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/decoder.sv:3]
+	Parameter NB_WORD bound to: 12 - type: integer 
+	Parameter NB_CODEWORD bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'golay_syndrome' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_syndrome.sv:3]
+	Parameter NB_WORD bound to: 12 - type: integer 
+	Parameter NB_CODEWORD bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'golay_mult_b' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_mult_b.sv:3]
+	Parameter NB_VECTOR bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'golay_mult_b' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_mult_b.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'golay_syndrome' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_syndrome.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'golay_row_search' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_row_search.sv:3]
+	Parameter NB_WORD bound to: 12 - type: integer 
+	Parameter NB_CODEWORD bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'popcount' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/popcount.sv:3]
+	Parameter NB_DATA bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'popcount' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/popcount.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'golay_row_search' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_row_search.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'golay_err_gen' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_err_gen.sv:3]
+	Parameter NB_WORD bound to: 12 - type: integer 
+	Parameter NB_ERR bound to: 24 - type: integer 
+	Parameter NB_CNT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'golay_err_gen' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_err_gen.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'golay_correct' [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_correct.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'golay_correct' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/golay_correct.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_decoder/rtl/decoder.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'golay_top' (0#1) [/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_top/rtl/golay_top.sv:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2129.559 ; gain = 497.641 ; free physical = 146 ; free virtual = 5748
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2141.434 ; gain = 509.516 ; free physical = 144 ; free virtual = 5747
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2141.434 ; gain = 509.516 ; free physical = 143 ; free virtual = 5747
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2158.348 ; gain = 526.430 ; free physical = 207 ; free virtual = 5777
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  12 Input    4 Bit       Adders := 28    
++---XORs : 
+	   2 Input     24 Bit         XORs := 2     
+	   2 Input     12 Bit         XORs := 47    
+	   2 Input      1 Bit         XORs := 21    
+	   4 Input      1 Bit         XORs := 2     
+	   3 Input      1 Bit         XORs := 1     
+	   8 Input      1 Bit         XORs := 1     
+	   5 Input      1 Bit         XORs := 6     
+	   7 Input      1 Bit         XORs := 2     
+	   6 Input      1 Bit         XORs := 1     
++---Registers : 
+	               98 Bit    Registers := 1     
+	               38 Bit    Registers := 1     
+	               37 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   12 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 187 ; free virtual = 5234
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 184 ; free virtual = 5232
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 183 ; free virtual = 5231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     7|
+|3     |LUT2 |    73|
+|4     |LUT3 |    82|
+|5     |LUT4 |    54|
+|6     |LUT5 |    59|
+|7     |LUT6 |   183|
+|8     |FDRE |   142|
+|9     |IBUF |    38|
+|10    |OBUF |    38|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------+--------+------+
+|      |Instance    |Module  |Cells |
++------+------------+--------+------+
+|1     |top         |        |   677|
+|2     |  u_decoder |decoder |   600|
++------+------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.402 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2532.410 ; gain = 900.484 ; free physical = 206 ; free virtual = 5200
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2532.410 ; gain = 0.000 ; free physical = 197 ; free virtual = 5203
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.234 ; gain = 0.000 ; free physical = 244 ; free virtual = 5275
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4576c149
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 2646.270 ; gain = 1014.352 ; free physical = 225 ; free virtual = 5272
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1922.543; main = 1776.098; forked = 286.245
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3510.598; main = 2646.238; forked = 994.207
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2670.246 ; gain = 0.000 ; free physical = 230 ; free virtual = 5277
+INFO: [Common 17-1381] The checkpoint '/home/abel/Desktop/desktop/github_repos/fec-lab2/implem/golay_top/golay_top_proj/golay_top.runs/synth_1/golay_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file golay_top_utilization_synth.rpt -pb golay_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 28 11:32:09 2026...

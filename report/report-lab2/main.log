@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.12)  30 SEP 2026 08:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.12)  30 SEP 2026 10:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -692,6 +692,24 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 15.
 
 
+LaTeX Warning: Label `tab:decoder_output' multiply defined.
+
+
+LaTeX Warning: Label `tab:decoder_output' multiply defined.
+
+
+LaTeX Warning: Label `fig:gf2-test' multiply defined.
+
+
+LaTeX Warning: Label `tab:decoder_output' multiply defined.
+
+
+LaTeX Warning: Label `tab:decoder_output' multiply defined.
+
+
+LaTeX Warning: Label `tab:decoder_output' multiply defined.
+
+
 LaTeX Warning: Label `fig:encoder-theros1' multiply defined.
 
 
@@ -857,99 +875,159 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.102 \newpage
-               [1] (sections/parta.tex) [2] (sections/Parte B/Ejercicio 7.tex
-Overfull \hbox (11.86157pt too wide) in paragraph at lines 15--24
+               [1] (sections/Parte A/Ejercicio_1.tex [2]) (sections/Parte A/Ejercicio_2.tex
+<img/code-weight-distribution.png, id=241, 505.89pt x 94.3525pt>
+File: img/code-weight-distribution.png Graphic file (type png)
+<use img/code-weight-distribution.png>
+Package pdftex.def Info: img/code-weight-distribution.png  used on input line 7.
+(pdftex.def)             Requested size: 202.3524pt x 37.74031pt.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 24.
+
+Missing character: There is no ó in font cmr10!
+) (sections/Parte A/Ejercicio_3.tex [3 <./img/code-weight-distribution.png (PNG copy)>]
+<img/correction-cases.png, id=247, 669.50125pt x 268.00125pt>
+File: img/correction-cases.png Graphic file (type png)
+<use img/correction-cases.png>
+Package pdftex.def Info: img/correction-cases.png  used on input line 10.
+(pdftex.def)             Requested size: 226.48395pt x 90.6612pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 77.
+
+[4 <./img/correction-cases.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 130.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 130.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 223.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 223.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6]) [7] (sections/Parte B/Ejercicio_6.tex
+Overfull \hbox (38.11029pt too wide) in paragraph at lines 3--5
+[]\T1/cmr/m/n/10 Se implementa el codificador matricial y el decodificador en los archivos \T1/cmtt/m/n/10 GolayEncoder.py \T1/cmr/m/n/10 y \T1/cmtt/m/n/10 GolayDecoder.py\T1/cmr/m/n/10 ,
+ []
+
+
+Overfull \hbox (44.19214pt too wide) in paragraph at lines 6--9
+[]\T1/cmr/m/n/10 La tabla de síndromes se encuentra en el archivo \T1/cmtt/m/n/10 fec-lab2/model/outputs/syndromes/error_syndromes.txt\T1/cmr/m/n/10 .
+ []
+
+
+Overfull \hbox (11.86157pt too wide) in paragraph at lines 29--38
  [][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 30.
+) (sections/Parte B/Ejercicio_7.tex
+Overfull \hbox (115.61914pt too wide) in paragraph at lines 42--1
+[]\T1/cmr/m/n/10 Los valores decodificados se encuentran en el archivo \T1/cmtt/m/n/10 ../outputs/decoder/decoder_top_testing/codeword_with_erros.txt\T1/cmr/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--1
+
+ []
+
+
+Overfull \hbox (11.86157pt too wide) in paragraph at lines 14--25
+ [][] 
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 29.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 31.
-[3]) (sections/partb.tex
-<img/gf2-test.png, id=162, 485.815pt x 810.02625pt>
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 30.
+[8]) (sections/partb.tex
+Overfull \hbox (40.54955pt too wide) in paragraph at lines 71--1
+\T1/cmr/m/n/10 se encuentran en $\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 path \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 =home=abel=Desktop=desktop=github[]epos=fec \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 lab\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 =model=outputs=decoderyencoder\OT1/cmr/m/n/10 "$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--1
+
+ []
+
+<img/gf2-test.png, id=310, 485.815pt x 810.02625pt>
 File: img/gf2-test.png Graphic file (type png)
 <use img/gf2-test.png>
 Package pdftex.def Info: img/gf2-test.png  used on input line 6.
 (pdftex.def)             Requested size: 145.74562pt x 243.00975pt.
-<img/code-matrices.png, id=163, 530.98375pt x 669.50125pt>
+[9 <./img/gf2-test.png (PNG copy)>]
+<img/code-matrices.png, id=334, 530.98375pt x 669.50125pt>
 File: img/code-matrices.png Graphic file (type png)
 <use img/code-matrices.png>
 Package pdftex.def Info: img/code-matrices.png  used on input line 18.
 (pdftex.def)             Requested size: 212.38972pt x 267.79576pt.
-<img/code-properties.png, id=164, 336.25626pt x 667.49374pt>
+<img/code-properties.png, id=335, 336.25626pt x 667.49374pt>
 File: img/code-properties.png Graphic file (type png)
 <use img/code-properties.png>
 Package pdftex.def Info: img/code-properties.png  used on input line 20.
 (pdftex.def)             Requested size: 134.5001pt x 266.99277pt.
- [4 <./img/gf2-test.png (PNG copy)>]
-Overfull \hbox (11.8612pt too wide) in paragraph at lines 26--27
-[]\T1/cmr/m/n/10 A partir de la clase desarrollada previamente para $\OML/cmm/m/it/10 GF\OT1/cmr/m/n/10 (2)$\T1/cmr/m/n/10 , se implementaron los modelos correspondientes
+ (sections/Parte B/Ejercicio_6.tex
+Overfull \hbox (38.11029pt too wide) in paragraph at lines 3--5
+[]\T1/cmr/m/n/10 Se implementa el codificador matricial y el decodificador en los archivos \T1/cmtt/m/n/10 GolayEncoder.py \T1/cmr/m/n/10 y \T1/cmtt/m/n/10 GolayDecoder.py\T1/cmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-<img/code-weight-distribution.png, id=175, 505.89pt x 94.3525pt>
-File: img/code-weight-distribution.png Graphic file (type png)
-<use img/code-weight-distribution.png>
-Package pdftex.def Info: img/code-weight-distribution.png  used on input line 32.
-(pdftex.def)             Requested size: 202.3524pt x 37.74031pt.
-<img/model-weight-distribution.png, id=176, 340.27126pt x 162.6075pt>
-File: img/model-weight-distribution.png Graphic file (type png)
-<use img/model-weight-distribution.png>
-Package pdftex.def Info: img/model-weight-distribution.png  used on input line 34.
-(pdftex.def)             Requested size: 170.13521pt x 81.30354pt.
-
-Overfull \hbox (19.28267pt too wide) in paragraph at lines 39--40
-[]\T1/cmr/m/n/10 Posteriormente, se desarrolló el modelo del decoder implementando los diferentes casos de la decodificación.
+Overfull \hbox (44.19214pt too wide) in paragraph at lines 6--9
+[]\T1/cmr/m/n/10 La tabla de síndromes se encuentra en el archivo \T1/cmtt/m/n/10 fec-lab2/model/outputs/syndromes/error_syndromes.txt\T1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-) [5 <./img/code-matrices.png (PNG copy)> <./img/code-properties.png (PNG copy)> <./img/code-weight-distribution.png (PNG copy)> <./img/model-weight-distribution.png (PNG copy)>] (sections/Parte C/Ejercicio 8.tex
-<img/encoder-stage1.png, id=183, 586.19pt x 656.4525pt>
-File: img/encoder-stage1.png Graphic file (type png)
-<use img/encoder-stage1.png>
-Package pdftex.def Info: img/encoder-stage1.png  used on input line 9.
-(pdftex.def)             Requested size: 175.85835pt x 196.93727pt.
- [6 <./img/encoder-stage1.png>]
-<img/encoder-stage2-a.png, id=193, 777.90625pt x 663.47874pt>
-File: img/encoder-stage2-a.png Graphic file (type png)
-<use img/encoder-stage2-a.png>
-Package pdftex.def Info: img/encoder-stage2-a.png  used on input line 20.
-(pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
-<img/encoder-stage2-b.png, id=194, 777.90625pt x 663.47874pt>
-File: img/encoder-stage2-b.png Graphic file (type png)
-<use img/encoder-stage2-b.png>
-Package pdftex.def Info: img/encoder-stage2-b.png  used on input line 27.
-(pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
-<img/encoder-stage2-c.png, id=195, 777.90625pt x 663.47874pt>
-File: img/encoder-stage2-c.png Graphic file (type png)
-<use img/encoder-stage2-c.png>
-Package pdftex.def Info: img/encoder-stage2-c.png  used on input line 34.
-(pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
- [7 <./img/encoder-stage2-a.png> <./img/encoder-stage2-b.png> <./img/encoder-stage2-c.png>]
-<img/wave-encoder-1.png, id=206, 1521.685pt x 226.8475pt>
-File: img/wave-encoder-1.png Graphic file (type png)
-<use img/wave-encoder-1.png>
-Package pdftex.def Info: img/wave-encoder-1.png  used on input line 62.
-(pdftex.def)             Requested size: 456.50903pt x 68.05476pt.
-
-Overfull \hbox (3.54114pt too wide) in paragraph at lines 62--63
+Overfull \hbox (11.86157pt too wide) in paragraph at lines 29--38
  [][] 
  []
 
-<img/verification-encoder.png, id=207, 673.51625pt x 148.555pt>
-File: img/verification-encoder.png Graphic file (type png)
-<use img/verification-encoder.png>
-Package pdftex.def Info: img/verification-encoder.png  used on input line 71.
-(pdftex.def)             Requested size: 202.05643pt x 44.56683pt.
-) (sections/partc.tex
+) (sections/Parte B/Ejercicio_7.tex
+Overfull \hbox (115.61914pt too wide) in paragraph at lines 42--1
+[]\T1/cmr/m/n/10 Los valores decodificados se encuentran en el archivo \T1/cmtt/m/n/10 ../outputs/decoder/decoder_top_testing/codeword_with_erros.txt\T1/cmr/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--1
+
+ []
+
+
+Overfull \hbox (11.86157pt too wide) in paragraph at lines 14--25
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./img/code-matrices.png (PNG copy)> <./img/code-properties.png (PNG copy)>]))
+Overfull \hbox (40.54955pt too wide) in paragraph at lines 71--118
+\T1/cmr/m/n/10 se encuentran en $\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 path \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 =home=abel=Desktop=desktop=github[]epos=fec \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 lab\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 =model=outputs=decoderyencoder\OT1/cmr/m/n/10 "$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--118
+
+ []
+
+[11] (sections/partc.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
@@ -964,236 +1042,273 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[8 <./img/wave-encoder-1.png> <./img/verification-encoder.png>]
-<img/encoder-theros1.png, id=217, 1193.45876pt x 399.4925pt>
+<img/encoder-theros1.png, id=388, 1193.45876pt x 399.4925pt>
 File: img/encoder-theros1.png Graphic file (type png)
 <use img/encoder-theros1.png>
-Package pdftex.def Info: img/encoder-theros1.png  used on input line 37.
+Package pdftex.def Info: img/encoder-theros1.png  used on input line 36.
 (pdftex.def)             Requested size: 358.04039pt x 119.84866pt.
-<img/encoder-theros2.png, id=218, 1196.47pt x 491.8375pt>
+<img/encoder-theros2.png, id=389, 1196.47pt x 491.8375pt>
 File: img/encoder-theros2.png Graphic file (type png)
 <use img/encoder-theros2.png>
-Package pdftex.def Info: img/encoder-theros2.png  used on input line 44.
+Package pdftex.def Info: img/encoder-theros2.png  used on input line 43.
 (pdftex.def)             Requested size: 358.94377pt x 147.55238pt.
+[12 <./img/encoder-theros1.png (PNG copy)>] (sections/Parte C/Ejercicio_8.tex
+<img/encoder-stage1.png, id=396, 586.19pt x 656.4525pt>
+File: img/encoder-stage1.png Graphic file (type png)
+<use img/encoder-stage1.png>
+Package pdftex.def Info: img/encoder-stage1.png  used on input line 7.
+(pdftex.def)             Requested size: 175.85835pt x 196.93727pt.
+ [13 <./img/encoder-theros2.png (PNG copy)> <./img/encoder-stage1.png>]
+<img/encoder-stage2-a.png, id=404, 777.90625pt x 663.47874pt>
+File: img/encoder-stage2-a.png Graphic file (type png)
+<use img/encoder-stage2-a.png>
+Package pdftex.def Info: img/encoder-stage2-a.png  used on input line 18.
+(pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
+<img/encoder-stage2-b.png, id=405, 777.90625pt x 663.47874pt>
+File: img/encoder-stage2-b.png Graphic file (type png)
+<use img/encoder-stage2-b.png>
+Package pdftex.def Info: img/encoder-stage2-b.png  used on input line 25.
+(pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
+<img/encoder-stage2-c.png, id=406, 777.90625pt x 663.47874pt>
+File: img/encoder-stage2-c.png Graphic file (type png)
+<use img/encoder-stage2-c.png>
+Package pdftex.def Info: img/encoder-stage2-c.png  used on input line 32.
+(pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
+ [14 <./img/encoder-stage2-a.png> <./img/encoder-stage2-b.png> <./img/encoder-stage2-c.png>]
+<img/wave-encoder-1.png, id=417, 1521.685pt x 226.8475pt>
+File: img/wave-encoder-1.png Graphic file (type png)
+<use img/wave-encoder-1.png>
+Package pdftex.def Info: img/wave-encoder-1.png  used on input line 60.
+(pdftex.def)             Requested size: 456.50903pt x 68.05476pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-<inc/decoder.pdf, id=219, 614.295pt x 794.97pt>
-File: inc/decoder.pdf Graphic file (type pdf)
-<use inc/decoder.pdf>
-Package pdftex.def Info: inc/decoder.pdf  used on input line 57.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<inc/decoder.pdf, id=221, page=1, 614.295pt x 794.97pt>
-File: inc/decoder.pdf Graphic file (type pdf)
-<use inc/decoder.pdf, page 1>
-Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 57.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: inc/decoder.pdf Graphic file (type pdf)
-<use inc/decoder.pdf, page 1>
-Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 57.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[9 <./img/encoder-theros1.png (PNG copy)> <./img/encoder-theros2.png (PNG copy)>]
-File: inc/decoder.pdf Graphic file (type pdf)
-<use inc/decoder.pdf, page 1>
-Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 57.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: inc/decoder.pdf Graphic file (type pdf)
-<use inc/decoder.pdf, page 1>
-Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 57.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: inc/decoder.pdf Graphic file (type pdf)
-<use inc/decoder.pdf, page 1>
-Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 57.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [10
-
- <./inc/decoder.pdf>]
-<img/decoder-stage1.png, id=236, 1464.47125pt x 520.94624pt>
-File: img/decoder-stage1.png Graphic file (type png)
-<use img/decoder-stage1.png>
-Package pdftex.def Info: img/decoder-stage1.png  used on input line 61.
-(pdftex.def)             Requested size: 366.11691pt x 130.23624pt.
-<img/decoder-stage2.png, id=237, 1715.40875pt x 680.5425pt>
-File: img/decoder-stage2.png Graphic file (type png)
-<use img/decoder-stage2.png>
-Package pdftex.def Info: img/decoder-stage2.png  used on input line 68.
-(pdftex.def)             Requested size: 428.85114pt x 170.13521pt.
-<img/decoder-stage3.png, id=238, 1721.43124pt x 751.80875pt>
-File: img/decoder-stage3.png Graphic file (type png)
-<use img/decoder-stage3.png>
-Package pdftex.def Info: img/decoder-stage3.png  used on input line 75.
-(pdftex.def)             Requested size: 430.35677pt x 187.95172pt.
-<img/decoder-theros1.png, id=239, 1170.3725pt x 424.58624pt>
-File: img/decoder-theros1.png Graphic file (type png)
-<use img/decoder-theros1.png>
-Package pdftex.def Info: img/decoder-theros1.png  used on input line 83.
-(pdftex.def)             Requested size: 351.11446pt x 127.37685pt.
- [11 <./img/decoder-stage1.png (PNG copy)> <./img/decoder-stage2.png (PNG copy)> <./img/decoder-stage3.png (PNG copy)>]
-<img/decoder-theros2.png, id=247, 1207.51125pt x 674.52pt>
-File: img/decoder-theros2.png Graphic file (type png)
-<use img/decoder-theros2.png>
-Package pdftex.def Info: img/decoder-theros2.png  used on input line 90.
-(pdftex.def)             Requested size: 362.25616pt x 202.35756pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
-
-<img/decoder-wave-codeword-only.png, id=249, 1437.37pt x 326.21875pt>
-File: img/decoder-wave-codeword-only.png Graphic file (type png)
-<use img/decoder-wave-codeword-only.png>
-Package pdftex.def Info: img/decoder-wave-codeword-only.png  used on input line 102.
-(pdftex.def)             Requested size: 459.9678pt x 104.39212pt.
-
-Overfull \hbox (6.99991pt too wide) in paragraph at lines 102--103
+Overfull \hbox (3.54114pt too wide) in paragraph at lines 60--61
  [][] 
  []
 
-[12 <./img/decoder-theros1.png (PNG copy)> <./img/decoder-theros2.png (PNG copy)> <./img/decoder-wave-codeword-only.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+<img/verification-encoder.png, id=418, 673.51625pt x 148.555pt>
+File: img/verification-encoder.png Graphic file (type png)
+<use img/verification-encoder.png>
+Package pdftex.def Info: img/verification-encoder.png  used on input line 69.
+(pdftex.def)             Requested size: 202.05643pt x 44.56683pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+<inc/decoder.pdf, id=419, 614.295pt x 794.97pt>
+File: inc/decoder.pdf Graphic file (type pdf)
+<use inc/decoder.pdf>
+Package pdftex.def Info: inc/decoder.pdf  used on input line 58.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+<inc/decoder.pdf, id=421, page=1, 614.295pt x 794.97pt>
+File: inc/decoder.pdf Graphic file (type pdf)
+<use inc/decoder.pdf, page 1>
+Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: inc/decoder.pdf Graphic file (type pdf)
+<use inc/decoder.pdf, page 1>
+Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+[15 <./img/wave-encoder-1.png> <./img/verification-encoder.png>]
+File: inc/decoder.pdf Graphic file (type pdf)
+<use inc/decoder.pdf, page 1>
+Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: inc/decoder.pdf Graphic file (type pdf)
+<use inc/decoder.pdf, page 1>
+Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: inc/decoder.pdf Graphic file (type pdf)
+<use inc/decoder.pdf, page 1>
+Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [16
+
+ <./inc/decoder.pdf>]
+<img/decoder-stage1.png, id=439, 1464.47125pt x 520.94624pt>
+File: img/decoder-stage1.png Graphic file (type png)
+<use img/decoder-stage1.png>
+Package pdftex.def Info: img/decoder-stage1.png  used on input line 62.
+(pdftex.def)             Requested size: 366.11691pt x 130.23624pt.
+<img/decoder-stage2.png, id=440, 1715.40875pt x 680.5425pt>
+File: img/decoder-stage2.png Graphic file (type png)
+<use img/decoder-stage2.png>
+Package pdftex.def Info: img/decoder-stage2.png  used on input line 69.
+(pdftex.def)             Requested size: 428.85114pt x 170.13521pt.
+<img/decoder-stage3.png, id=441, 1721.43124pt x 751.80875pt>
+File: img/decoder-stage3.png Graphic file (type png)
+<use img/decoder-stage3.png>
+Package pdftex.def Info: img/decoder-stage3.png  used on input line 76.
+(pdftex.def)             Requested size: 430.35677pt x 187.95172pt.
+<img/decoder-theros1.png, id=442, 1170.3725pt x 424.58624pt>
+File: img/decoder-theros1.png Graphic file (type png)
+<use img/decoder-theros1.png>
+Package pdftex.def Info: img/decoder-theros1.png  used on input line 84.
+(pdftex.def)             Requested size: 351.11446pt x 127.37685pt.
+ [17 <./img/decoder-stage1.png (PNG copy)> <./img/decoder-stage2.png (PNG copy)> <./img/decoder-stage3.png (PNG copy)>]
+<img/decoder-theros2.png, id=450, 1207.51125pt x 674.52pt>
+File: img/decoder-theros2.png Graphic file (type png)
+<use img/decoder-theros2.png>
+Package pdftex.def Info: img/decoder-theros2.png  used on input line 91.
+(pdftex.def)             Requested size: 362.25616pt x 202.35756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+<img/decoder-wave-codeword-only.png, id=452, 1437.37pt x 326.21875pt>
+File: img/decoder-wave-codeword-only.png Graphic file (type png)
+<use img/decoder-wave-codeword-only.png>
+Package pdftex.def Info: img/decoder-wave-codeword-only.png  used on input line 103.
+(pdftex.def)             Requested size: 459.9678pt x 104.39212pt.
+
+Overfull \hbox (6.99991pt too wide) in paragraph at lines 103--104
+ [][] 
+ []
+
+[18 <./img/decoder-theros1.png (PNG copy)> <./img/decoder-theros2.png (PNG copy)> <./img/decoder-wave-codeword-only.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
 
-Overfull \hbox (11.76225pt too wide) in paragraph at lines 112--115
+Overfull \hbox (11.76225pt too wide) in paragraph at lines 113--116
 []\T1/cmr/m/n/10 Durante la verificación se detectaron algunos errores en el decoder. Los problemas estuvieron relacionados
  []
 
 
-Overfull \hbox (11.00691pt too wide) in paragraph at lines 116--119
+Overfull \hbox (11.00691pt too wide) in paragraph at lines 117--120
 []\T1/cmr/m/n/10 Por observacion y analisis, se identificaron los problemas y se realizaron las correcciones correspondientes.
  []
 
 
-Overfull \hbox (5.69899pt too wide) in paragraph at lines 116--119
+Overfull \hbox (5.69899pt too wide) in paragraph at lines 117--120
 \T1/cmr/m/n/10 Luego de aplicar las correcciones, se logró validar el funcionamiento del decoder para los casos contemplados
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
 
  []
 
-<img/decoder-wave-full.png, id=258, 1907.125pt x 295.1025pt>
+<img/decoder-wave-full.png, id=461, 1907.125pt x 295.1025pt>
 File: img/decoder-wave-full.png Graphic file (type png)
 <use img/decoder-wave-full.png>
-Package pdftex.def Info: img/decoder-wave-full.png  used on input line 124.
+Package pdftex.def Info: img/decoder-wave-full.png  used on input line 125.
 (pdftex.def)             Requested size: 476.78009pt x 73.77544pt.
 
-Overfull \hbox (23.8122pt too wide) in paragraph at lines 124--125
+Overfull \hbox (23.8122pt too wide) in paragraph at lines 125--126
  [][] 
  []
 
-<img/decoder-error-table.png, id=259, 507.8975pt x 174.6525pt>
+<img/decoder-error-table.png, id=462, 507.8975pt x 174.6525pt>
 File: img/decoder-error-table.png Graphic file (type png)
 <use img/decoder-error-table.png>
-Package pdftex.def Info: img/decoder-error-table.png  used on input line 133.
+Package pdftex.def Info: img/decoder-error-table.png  used on input line 134.
 (pdftex.def)             Requested size: 203.1554pt x 69.85976pt.
-<img/report-table.png, id=260, 1520.68124pt x 838.13126pt>
+<img/report-table.png, id=463, 1520.68124pt x 838.13126pt>
 File: img/report-table.png Graphic file (type png)
 <use img/report-table.png>
-Package pdftex.def Info: img/report-table.png  used on input line 140.
+Package pdftex.def Info: img/report-table.png  used on input line 141.
 (pdftex.def)             Requested size: 456.2079pt x 251.44131pt.
 
-Overfull \hbox (3.24pt too wide) in paragraph at lines 140--141
+Overfull \hbox (3.24pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[13 <./img/decoder-wave-full.png (PNG copy)> <./img/decoder-error-table.png (PNG copy)>]
-<img/decoder-wave-3codeword.png, id=268, 1590.94376pt x 299.1175pt>
+[19 <./img/decoder-wave-full.png (PNG copy)> <./img/decoder-error-table.png (PNG copy)>]
+<img/decoder-wave-3codeword.png, id=471, 1590.94376pt x 299.1175pt>
 File: img/decoder-wave-3codeword.png Graphic file (type png)
 <use img/decoder-wave-3codeword.png>
-Package pdftex.def Info: img/decoder-wave-3codeword.png  used on input line 153.
+Package pdftex.def Info: img/decoder-wave-3codeword.png  used on input line 154.
 (pdftex.def)             Requested size: 477.2868pt x 89.73593pt.
 
-Overfull \hbox (24.31891pt too wide) in paragraph at lines 153--154
+Overfull \hbox (24.31891pt too wide) in paragraph at lines 154--155
  [][] 
  []
 
-<inc/top.pdf, id=269, 614.295pt x 794.97pt>
+<inc/top.pdf, id=472, 614.295pt x 794.97pt>
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf>
-Package pdftex.def Info: inc/top.pdf  used on input line 165.
+Package pdftex.def Info: inc/top.pdf  used on input line 166.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<inc/top.pdf, id=271, page=1, 614.295pt x 794.97pt>
+<inc/top.pdf, id=474, page=1, 614.295pt x 794.97pt>
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
-Package pdftex.def Info: inc/top.pdf , page1 used on input line 165.
+Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
-Package pdftex.def Info: inc/top.pdf , page1 used on input line 165.
+Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[14 <./img/report-table.png (PNG copy)> <./img/decoder-wave-3codeword.png (PNG copy)>]
+[20 <./img/report-table.png (PNG copy)> <./img/decoder-wave-3codeword.png (PNG copy)>]
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
-Package pdftex.def Info: inc/top.pdf , page1 used on input line 165.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: inc/top.pdf Graphic file (type pdf)
-<use inc/top.pdf, page 1>
-Package pdftex.def Info: inc/top.pdf , page1 used on input line 165.
+Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
-Package pdftex.def Info: inc/top.pdf , page1 used on input line 165.
+Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [15
+File: inc/top.pdf Graphic file (type pdf)
+<use inc/top.pdf, page 1>
+Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [21
 
  <./inc/top.pdf>]
-<img/top-wave-general.png, id=287, 1594.95876pt x 298.11375pt>
+<img/top-wave-general.png, id=490, 1594.95876pt x 298.11375pt>
 File: img/top-wave-general.png Graphic file (type png)
 <use img/top-wave-general.png>
-Package pdftex.def Info: img/top-wave-general.png  used on input line 185.
+Package pdftex.def Info: img/top-wave-general.png  used on input line 186.
 (pdftex.def)             Requested size: 478.49132pt x 89.43481pt.
 
-Overfull \hbox (25.52342pt too wide) in paragraph at lines 185--186
+Overfull \hbox (25.52342pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
-<img/top-wave-error-w0.png, id=289, 1418.29875pt x 305.14pt>
+<img/top-wave-error-w0.png, id=492, 1418.29875pt x 305.14pt>
 File: img/top-wave-error-w0.png Graphic file (type png)
 <use img/top-wave-error-w0.png>
-Package pdftex.def Info: img/top-wave-error-w0.png  used on input line 197.
+Package pdftex.def Info: img/top-wave-error-w0.png  used on input line 198.
 (pdftex.def)             Requested size: 482.2152pt x 103.74622pt.
 
-Overfull \hbox (29.2473pt too wide) in paragraph at lines 197--198
+Overfull \hbox (29.2473pt too wide) in paragraph at lines 198--199
  [][] 
  []
 
-<img/top-wave-error-w1w2.png, id=291, 1350.04375pt x 298.11375pt>
+<img/top-wave-error-w1w2.png, id=494, 1350.04375pt x 298.11375pt>
 File: img/top-wave-error-w1w2.png Graphic file (type png)
 <use img/top-wave-error-w1w2.png>
-Package pdftex.def Info: img/top-wave-error-w1w2.png  used on input line 208.
+Package pdftex.def Info: img/top-wave-error-w1w2.png  used on input line 209.
 (pdftex.def)             Requested size: 486.01538pt x 107.32086pt.
 
-Overfull \hbox (33.04749pt too wide) in paragraph at lines 208--209
+Overfull \hbox (33.04749pt too wide) in paragraph at lines 209--210
  [][] 
  []
 
-<img/top-wave-error-w2w3.png, id=293, 1417.295pt x 299.1175pt>
+<img/top-wave-error-w2w3.png, id=496, 1417.295pt x 299.1175pt>
 File: img/top-wave-error-w2w3.png Graphic file (type png)
 <use img/top-wave-error-w2w3.png>
-Package pdftex.def Info: img/top-wave-error-w2w3.png  used on input line 218.
+Package pdftex.def Info: img/top-wave-error-w2w3.png  used on input line 219.
 (pdftex.def)             Requested size: 481.87393pt x 101.6986pt.
 
-Overfull \hbox (28.90604pt too wide) in paragraph at lines 218--219
+Overfull \hbox (28.90604pt too wide) in paragraph at lines 219--220
  [][] 
  []
 
-[16 <./img/top-wave-general.png (PNG copy)> <./img/top-wave-error-w0.png (PNG copy)> <./img/top-wave-error-w1w2.png (PNG copy)>]
-<img/top-wave-error-w3w4.png, id=303, 1484.54625pt x 299.1175pt>
+[22 <./img/top-wave-general.png (PNG copy)> <./img/top-wave-error-w0.png (PNG copy)> <./img/top-wave-error-w1w2.png (PNG copy)>]
+<img/top-wave-error-w3w4.png, id=506, 1484.54625pt x 299.1175pt>
 File: img/top-wave-error-w3w4.png Graphic file (type png)
 <use img/top-wave-error-w3w4.png>
-Package pdftex.def Info: img/top-wave-error-w3w4.png  used on input line 232.
+Package pdftex.def Info: img/top-wave-error-w3w4.png  used on input line 233.
 (pdftex.def)             Requested size: 489.90178pt x 98.70908pt.
 
-Overfull \hbox (36.93388pt too wide) in paragraph at lines 232--233
+Overfull \hbox (36.93388pt too wide) in paragraph at lines 233--234
  [][] 
  []
 
-) [17 <./img/top-wave-error-w2w3.png (PNG copy)> <./img/top-wave-error-w3w4.png (PNG copy)>] (main.aux
+) [23 <./img/top-wave-error-w2w3.png (PNG copy)> <./img/top-wave-error-w3w4.png (PNG copy)>] (main.aux
 LaTeX Info: Redefining \. on input line 15.
 LaTeX Info: Redefining \% on input line 15.
 )
@@ -1206,23 +1321,23 @@ L3 programming layer <2026-08-10>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C551C730636F2EE53B23A67B1E0C5B9A;3735.
+(rerunfilecheck)             Checksum: 30210053B2DEFA282A1457A815DC0C25;7610.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25641 strings out of 469378
- 443886 string characters out of 5459718
- 1452992 words of memory out of 5000000
- 54293 multiletter control sequences out of 15000+600000
- 639610 words of font info for 63 fonts, out of 8000000 for 9000
+ 25825 strings out of 469378
+ 447339 string characters out of 5459718
+ 1511761 words of memory out of 5000000
+ 54364 multiletter control sequences out of 15000+600000
+ 646110 words of font info for 87 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 74i,17n,88p,1939b,1895s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecit0900.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0500.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1728.pk></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (18 pages, 1966084 bytes).
+ 74i,17n,88p,1939b,2253s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecit0900.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0500.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1728.pk></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (24 pages, 2082788 bytes).
 PDF statistics:
- 747 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 315 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1012 PDF objects out of 1200 (max. 8388607)
+ 190 named destinations out of 1000 (max. 500000)
+ 507 words of extra memory for PDF output out of 10000 (max. 10000000)
 
