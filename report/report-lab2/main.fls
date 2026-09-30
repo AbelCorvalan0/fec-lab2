@@ -325,15 +325,6 @@ INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam7.
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT ./sections/Parte B/Ejercicio_6.tex
-INPUT ./sections/Parte B/Ejercicio_6.tex
-INPUT sections/Parte B/Ejercicio_6.tex
-INPUT ./sections/Parte B/Ejercicio_7.tex
-INPUT ./sections/Parte B/Ejercicio_7.tex
-INPUT sections/Parte B/Ejercicio_7.tex
-INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ectt0900.tfm
-INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0900.tfm
-INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecit0900.tfm
 INPUT ./sections/partb.tex
 INPUT ./sections/partb.tex
 INPUT sections/partb.tex
@@ -355,8 +346,15 @@ INPUT ./img/code-properties.png
 INPUT ./img/code-properties.png
 INPUT ./img/code-properties.png
 INPUT ./img/code-properties.png
+INPUT ./sections/Parte B/Ejercicio_6.tex
+INPUT ./sections/Parte B/Ejercicio_6.tex
 INPUT sections/Parte B/Ejercicio_6.tex
+INPUT ./sections/Parte B/Ejercicio_7.tex
+INPUT ./sections/Parte B/Ejercicio_7.tex
 INPUT sections/Parte B/Ejercicio_7.tex
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ectt0900.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0900.tfm
+INPUT /home/abel/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecit0900.tfm
 INPUT ./sections/partc.tex
 INPUT ./sections/partc.tex
 INPUT sections/partc.tex

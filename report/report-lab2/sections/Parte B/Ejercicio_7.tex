@@ -2,11 +2,10 @@
 
 Para cada peso entre 0 y 4, se recorre la totalidad de los patrones
 de error correspondientes a dicho peso. Estos vectores son generados
-en el golden model \texttt{golay\_decoder.ipynb}.
+en el golden model \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/golay_decoder.ipynb}{\textbf{golay decoder.ipynb}}.
 
 Luego, estos vectores son procesados por un objeto decodificador para
-obtener el archivo de vectores
-\texttt{outputs/decoder/decoder\_top\_testing/codeword\_with\_errors.txt}.
+obtener el archivo de vectores \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/outputs/decoder/decoder_top_testing/codeword_with_errors.txt}{\textbf{codeword with errors.txt}}.
 
 Este archivo tiene la siguiente convención de vectores.
 \begin{table}[h!]
@@ -68,4 +67,4 @@ El script con el cual se genera el conjunto de vectores es el siguiente:
     len(received_word_array_with_errors)
 \end{lstlisting}
 
-Además se genera un conjunto de vectores por cada submódulo. Los archivos de los vectores generados se encuentran en $"path: /home/abel/Desktop/desktop/github_repos/fec-lab2/model/outputs/decoder y encoder"$
+Además se genera un conjunto de vectores por cada submódulo. Los archivos de los vectores generados se encuentran en \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/golay_encoder.ipynb}{\textbf{golay encoder.ipynb}} y \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/golay_decoder.ipynb}{\textbf{golay decoder.ipynb}}

@@ -1,6 +1,5 @@
 \subsection{Desarrollo y verificación de módulos comunes}
-Se comenzo describiendo en Verilog los módulos comunes que serán utilizados posteriormente como parte de los bloques correspondientes al encoder y al decoder. 
-
+Se comenzó describiendo en Verilog los módulos comunes que serán utilizados posteriormente como parte de los bloques correspondientes al encoder y al decoder. 
 Una vez implementados, los módulos fueron verificados mediante un testbench sencillo en UVM, con secuencias básicas para validar el funcionamiento de cada uno.
 
 \subsection{Analisis: Posible modificacion del decoder}
@@ -28,7 +27,6 @@ Sin embargo, el análisis de la implementación mostró que la modificación req
 Considerando tanto el incremento logica como un analisis basico de la actividad de switching de los modulos cuando cambia el vector r, se descartó esta alternativa. Por lo tanto, se mantuvo la arquitectura originalmente propuesta, conservando el cálculo del síndrome y del vector $q$ en las etapas de pipeline inicialmente definidas.
 
 \subsection{Implementación RTL del encoder}
-
 
 \subsection{Resumen del encoder}
 \begin{figure}[H]
