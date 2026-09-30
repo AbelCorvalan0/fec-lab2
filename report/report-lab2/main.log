@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.12)  30 SEP 2026 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.12)  30 SEP 2026 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -120,8 +120,8 @@ Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 20.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 20.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 21.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 21.
  (/home/abel/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2026/05/19 v2.18d AMS math features
 \@mathmargin=\skip51
@@ -730,24 +730,24 @@ LaTeX Warning: Label `fig:encoder-theros1' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
 \c@lstlisting=\count468
  (/home/abel/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -768,8 +768,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/home/abel/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -809,7 +809,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 92.
+Package hyperref Info: Link coloring OFF on input line 93.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -830,16 +830,16 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 92.
-Package biblatex Info: Reference segment=0 on input line 92.
-LaTeX Info: Redefining \celsius on input line 92.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 92.
+Package biblatex Info: Reference section=0 on input line 93.
+Package biblatex Info: Reference segment=0 on input line 93.
+LaTeX Info: Redefining \celsius on input line 93.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 93.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 92.
-Package gensymb Info: Using \Omega for \ohm on input line 92.
+LaTeX Info: Redefining \ohm on input line 93.
+Package gensymb Info: Using \Omega for \ohm on input line 93.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -874,9 +874,9 @@ LaTeX Info: Redefining \% on input line 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.102 \newpage
+l.103 \newpage
                [1] (sections/Parte A/Ejercicio_1.tex [2]) (sections/Parte A/Ejercicio_2.tex
-<img/code-weight-distribution.png, id=241, 505.89pt x 94.3525pt>
+<img/code-weight-distribution.png, id=242, 505.89pt x 94.3525pt>
 File: img/code-weight-distribution.png Graphic file (type png)
 <use img/code-weight-distribution.png>
 Package pdftex.def Info: img/code-weight-distribution.png  used on input line 7.
@@ -886,46 +886,42 @@ Package pdftex.def Info: img/code-weight-distribution.png  used on input line 7.
 LaTeX Warning: Command \' invalid in math mode on input line 24.
 
 Missing character: There is no ó in font cmr10!
-) (sections/Parte A/Ejercicio_3.tex [3 <./img/code-weight-distribution.png (PNG copy)>]
-<img/correction-cases.png, id=247, 669.50125pt x 268.00125pt>
+[3 <./img/code-weight-distribution.png (PNG copy)>]) (sections/Parte A/Ejercicio_3.tex
+<img/correction-cases.png, id=248, 669.50125pt x 268.00125pt>
 File: img/correction-cases.png Graphic file (type png)
 <use img/correction-cases.png>
 Package pdftex.def Info: img/correction-cases.png  used on input line 10.
 (pdftex.def)             Requested size: 226.48395pt x 90.6612pt.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 77.
-
+ [4 <./img/correction-cases.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 77.
 
-[4 <./img/correction-cases.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 130.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 130.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+(hyperref)                removing `math shift' on input line 77.
 
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 223.
+(hyperref)                removing `math shift' on input line 130.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 130.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 223.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 223.
 
-[6]) [7] (sections/Parte B/Ejercicio_6.tex
+[6] [7]) [8] (sections/Parte B/Ejercicio_6.tex
 Overfull \hbox (38.11029pt too wide) in paragraph at lines 3--5
 []\T1/cmr/m/n/10 Se implementa el codificador matricial y el decodificador en los archivos \T1/cmtt/m/n/10 GolayEncoder.py \T1/cmr/m/n/10 y \T1/cmtt/m/n/10 GolayDecoder.py\T1/cmr/m/n/10 ,
  []
@@ -958,7 +954,7 @@ Overfull \hbox (11.86157pt too wide) in paragraph at lines 14--25
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 29.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 30.
-[8]) (sections/partb.tex
+[9]) (sections/partb.tex
 Overfull \hbox (40.54955pt too wide) in paragraph at lines 71--1
 \T1/cmr/m/n/10 se encuentran en $\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 path \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 =home=abel=Desktop=desktop=github[]epos=fec \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 lab\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 =model=outputs=decoderyencoder\OT1/cmr/m/n/10 "$
  []
@@ -968,18 +964,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--1
 
  []
 
-<img/gf2-test.png, id=310, 485.815pt x 810.02625pt>
+<img/gf2-test.png, id=315, 485.815pt x 810.02625pt>
 File: img/gf2-test.png Graphic file (type png)
 <use img/gf2-test.png>
 Package pdftex.def Info: img/gf2-test.png  used on input line 6.
 (pdftex.def)             Requested size: 145.74562pt x 243.00975pt.
-[9 <./img/gf2-test.png (PNG copy)>]
-<img/code-matrices.png, id=334, 530.98375pt x 669.50125pt>
+[10 <./img/gf2-test.png (PNG copy)>]
+<img/code-matrices.png, id=339, 530.98375pt x 669.50125pt>
 File: img/code-matrices.png Graphic file (type png)
 <use img/code-matrices.png>
 Package pdftex.def Info: img/code-matrices.png  used on input line 18.
 (pdftex.def)             Requested size: 212.38972pt x 267.79576pt.
-<img/code-properties.png, id=335, 336.25626pt x 667.49374pt>
+<img/code-properties.png, id=340, 336.25626pt x 667.49374pt>
 File: img/code-properties.png Graphic file (type png)
 <use img/code-properties.png>
 Package pdftex.def Info: img/code-properties.png  used on input line 20.
@@ -1017,17 +1013,17 @@ Overfull \hbox (11.86157pt too wide) in paragraph at lines 14--25
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./img/code-matrices.png (PNG copy)> <./img/code-properties.png (PNG copy)>]))
-Overfull \hbox (40.54955pt too wide) in paragraph at lines 71--118
+[11 <./img/code-matrices.png (PNG copy)> <./img/code-properties.png (PNG copy)>]))
+Overfull \hbox (40.54955pt too wide) in paragraph at lines 71--119
 \T1/cmr/m/n/10 se encuentran en $\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 path \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 =home=abel=Desktop=desktop=github[]epos=fec \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 lab\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 =model=outputs=decoderyencoder\OT1/cmr/m/n/10 "$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--118
+Underfull \hbox (badness 10000) in paragraph at lines 71--119
 
  []
 
-[11] (sections/partc.tex
+[12] (sections/partc.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
@@ -1042,40 +1038,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-<img/encoder-theros1.png, id=388, 1193.45876pt x 399.4925pt>
+<img/encoder-theros1.png, id=394, 1193.45876pt x 399.4925pt>
 File: img/encoder-theros1.png Graphic file (type png)
 <use img/encoder-theros1.png>
 Package pdftex.def Info: img/encoder-theros1.png  used on input line 36.
 (pdftex.def)             Requested size: 358.04039pt x 119.84866pt.
-<img/encoder-theros2.png, id=389, 1196.47pt x 491.8375pt>
+<img/encoder-theros2.png, id=395, 1196.47pt x 491.8375pt>
 File: img/encoder-theros2.png Graphic file (type png)
 <use img/encoder-theros2.png>
 Package pdftex.def Info: img/encoder-theros2.png  used on input line 43.
 (pdftex.def)             Requested size: 358.94377pt x 147.55238pt.
-[12 <./img/encoder-theros1.png (PNG copy)>] (sections/Parte C/Ejercicio_8.tex
-<img/encoder-stage1.png, id=396, 586.19pt x 656.4525pt>
+[13 <./img/encoder-theros1.png (PNG copy)>] (sections/Parte C/Ejercicio_8.tex
+<img/encoder-stage1.png, id=401, 586.19pt x 656.4525pt>
 File: img/encoder-stage1.png Graphic file (type png)
 <use img/encoder-stage1.png>
 Package pdftex.def Info: img/encoder-stage1.png  used on input line 7.
 (pdftex.def)             Requested size: 175.85835pt x 196.93727pt.
- [13 <./img/encoder-theros2.png (PNG copy)> <./img/encoder-stage1.png>]
-<img/encoder-stage2-a.png, id=404, 777.90625pt x 663.47874pt>
+ [14 <./img/encoder-theros2.png (PNG copy)> <./img/encoder-stage1.png>]
+<img/encoder-stage2-a.png, id=409, 777.90625pt x 663.47874pt>
 File: img/encoder-stage2-a.png Graphic file (type png)
 <use img/encoder-stage2-a.png>
 Package pdftex.def Info: img/encoder-stage2-a.png  used on input line 18.
 (pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
-<img/encoder-stage2-b.png, id=405, 777.90625pt x 663.47874pt>
+<img/encoder-stage2-b.png, id=410, 777.90625pt x 663.47874pt>
 File: img/encoder-stage2-b.png Graphic file (type png)
 <use img/encoder-stage2-b.png>
 Package pdftex.def Info: img/encoder-stage2-b.png  used on input line 25.
 (pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
-<img/encoder-stage2-c.png, id=406, 777.90625pt x 663.47874pt>
+<img/encoder-stage2-c.png, id=411, 777.90625pt x 663.47874pt>
 File: img/encoder-stage2-c.png Graphic file (type png)
 <use img/encoder-stage2-c.png>
 Package pdftex.def Info: img/encoder-stage2-c.png  used on input line 32.
 (pdftex.def)             Requested size: 233.37367pt x 199.04515pt.
- [14 <./img/encoder-stage2-a.png> <./img/encoder-stage2-b.png> <./img/encoder-stage2-c.png>]
-<img/wave-encoder-1.png, id=417, 1521.685pt x 226.8475pt>
+ [15 <./img/encoder-stage2-a.png> <./img/encoder-stage2-b.png> <./img/encoder-stage2-c.png>]
+<img/wave-encoder-1.png, id=422, 1521.685pt x 226.8475pt>
 File: img/wave-encoder-1.png Graphic file (type png)
 <use img/wave-encoder-1.png>
 Package pdftex.def Info: img/wave-encoder-1.png  used on input line 60.
@@ -1085,7 +1081,7 @@ Overfull \hbox (3.54114pt too wide) in paragraph at lines 60--61
  [][] 
  []
 
-<img/verification-encoder.png, id=418, 673.51625pt x 148.555pt>
+<img/verification-encoder.png, id=423, 673.51625pt x 148.555pt>
 File: img/verification-encoder.png Graphic file (type png)
 <use img/verification-encoder.png>
 Package pdftex.def Info: img/verification-encoder.png  used on input line 69.
@@ -1095,12 +1091,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-<inc/decoder.pdf, id=419, 614.295pt x 794.97pt>
+<inc/decoder.pdf, id=424, 614.295pt x 794.97pt>
 File: inc/decoder.pdf Graphic file (type pdf)
 <use inc/decoder.pdf>
 Package pdftex.def Info: inc/decoder.pdf  used on input line 58.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<inc/decoder.pdf, id=421, page=1, 614.295pt x 794.97pt>
+<inc/decoder.pdf, id=426, page=1, 614.295pt x 794.97pt>
 File: inc/decoder.pdf Graphic file (type pdf)
 <use inc/decoder.pdf, page 1>
 Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
@@ -1109,7 +1105,7 @@ File: inc/decoder.pdf Graphic file (type pdf)
 <use inc/decoder.pdf, page 1>
 Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[15 <./img/wave-encoder-1.png> <./img/verification-encoder.png>]
+[16 <./img/wave-encoder-1.png> <./img/verification-encoder.png>]
 File: inc/decoder.pdf Graphic file (type pdf)
 <use inc/decoder.pdf, page 1>
 Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
@@ -1122,31 +1118,31 @@ File: inc/decoder.pdf Graphic file (type pdf)
 <use inc/decoder.pdf, page 1>
 Package pdftex.def Info: inc/decoder.pdf , page1 used on input line 58.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [16
+ [17
 
  <./inc/decoder.pdf>]
-<img/decoder-stage1.png, id=439, 1464.47125pt x 520.94624pt>
+<img/decoder-stage1.png, id=444, 1464.47125pt x 520.94624pt>
 File: img/decoder-stage1.png Graphic file (type png)
 <use img/decoder-stage1.png>
 Package pdftex.def Info: img/decoder-stage1.png  used on input line 62.
 (pdftex.def)             Requested size: 366.11691pt x 130.23624pt.
-<img/decoder-stage2.png, id=440, 1715.40875pt x 680.5425pt>
+<img/decoder-stage2.png, id=445, 1715.40875pt x 680.5425pt>
 File: img/decoder-stage2.png Graphic file (type png)
 <use img/decoder-stage2.png>
 Package pdftex.def Info: img/decoder-stage2.png  used on input line 69.
 (pdftex.def)             Requested size: 428.85114pt x 170.13521pt.
-<img/decoder-stage3.png, id=441, 1721.43124pt x 751.80875pt>
+<img/decoder-stage3.png, id=446, 1721.43124pt x 751.80875pt>
 File: img/decoder-stage3.png Graphic file (type png)
 <use img/decoder-stage3.png>
 Package pdftex.def Info: img/decoder-stage3.png  used on input line 76.
 (pdftex.def)             Requested size: 430.35677pt x 187.95172pt.
-<img/decoder-theros1.png, id=442, 1170.3725pt x 424.58624pt>
+<img/decoder-theros1.png, id=447, 1170.3725pt x 424.58624pt>
 File: img/decoder-theros1.png Graphic file (type png)
 <use img/decoder-theros1.png>
 Package pdftex.def Info: img/decoder-theros1.png  used on input line 84.
 (pdftex.def)             Requested size: 351.11446pt x 127.37685pt.
- [17 <./img/decoder-stage1.png (PNG copy)> <./img/decoder-stage2.png (PNG copy)> <./img/decoder-stage3.png (PNG copy)>]
-<img/decoder-theros2.png, id=450, 1207.51125pt x 674.52pt>
+ [18 <./img/decoder-stage1.png (PNG copy)> <./img/decoder-stage2.png (PNG copy)> <./img/decoder-stage3.png (PNG copy)>]
+<img/decoder-theros2.png, id=456, 1207.51125pt x 674.52pt>
 File: img/decoder-theros2.png Graphic file (type png)
 <use img/decoder-theros2.png>
 Package pdftex.def Info: img/decoder-theros2.png  used on input line 91.
@@ -1156,7 +1152,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<img/decoder-wave-codeword-only.png, id=452, 1437.37pt x 326.21875pt>
+<img/decoder-wave-codeword-only.png, id=458, 1437.37pt x 326.21875pt>
 File: img/decoder-wave-codeword-only.png Graphic file (type png)
 <use img/decoder-wave-codeword-only.png>
 Package pdftex.def Info: img/decoder-wave-codeword-only.png  used on input line 103.
@@ -1166,7 +1162,7 @@ Overfull \hbox (6.99991pt too wide) in paragraph at lines 103--104
  [][] 
  []
 
-[18 <./img/decoder-theros1.png (PNG copy)> <./img/decoder-theros2.png (PNG copy)> <./img/decoder-wave-codeword-only.png (PNG copy)>]
+[19 <./img/decoder-theros1.png (PNG copy)> <./img/decoder-theros2.png (PNG copy)> <./img/decoder-wave-codeword-only.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
@@ -1191,7 +1187,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--120
 
  []
 
-<img/decoder-wave-full.png, id=461, 1907.125pt x 295.1025pt>
+<img/decoder-wave-full.png, id=466, 1907.125pt x 295.1025pt>
 File: img/decoder-wave-full.png Graphic file (type png)
 <use img/decoder-wave-full.png>
 Package pdftex.def Info: img/decoder-wave-full.png  used on input line 125.
@@ -1201,12 +1197,12 @@ Overfull \hbox (23.8122pt too wide) in paragraph at lines 125--126
  [][] 
  []
 
-<img/decoder-error-table.png, id=462, 507.8975pt x 174.6525pt>
+<img/decoder-error-table.png, id=467, 507.8975pt x 174.6525pt>
 File: img/decoder-error-table.png Graphic file (type png)
 <use img/decoder-error-table.png>
 Package pdftex.def Info: img/decoder-error-table.png  used on input line 134.
 (pdftex.def)             Requested size: 203.1554pt x 69.85976pt.
-<img/report-table.png, id=463, 1520.68124pt x 838.13126pt>
+<img/report-table.png, id=468, 1520.68124pt x 838.13126pt>
 File: img/report-table.png Graphic file (type png)
 <use img/report-table.png>
 Package pdftex.def Info: img/report-table.png  used on input line 141.
@@ -1216,8 +1212,8 @@ Overfull \hbox (3.24pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[19 <./img/decoder-wave-full.png (PNG copy)> <./img/decoder-error-table.png (PNG copy)>]
-<img/decoder-wave-3codeword.png, id=471, 1590.94376pt x 299.1175pt>
+[20 <./img/decoder-wave-full.png (PNG copy)> <./img/decoder-error-table.png (PNG copy)>]
+<img/decoder-wave-3codeword.png, id=476, 1590.94376pt x 299.1175pt>
 File: img/decoder-wave-3codeword.png Graphic file (type png)
 <use img/decoder-wave-3codeword.png>
 Package pdftex.def Info: img/decoder-wave-3codeword.png  used on input line 154.
@@ -1227,12 +1223,12 @@ Overfull \hbox (24.31891pt too wide) in paragraph at lines 154--155
  [][] 
  []
 
-<inc/top.pdf, id=472, 614.295pt x 794.97pt>
+<inc/top.pdf, id=477, 614.295pt x 794.97pt>
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf>
 Package pdftex.def Info: inc/top.pdf  used on input line 166.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<inc/top.pdf, id=474, page=1, 614.295pt x 794.97pt>
+<inc/top.pdf, id=479, page=1, 614.295pt x 794.97pt>
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
 Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
@@ -1241,7 +1237,7 @@ File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
 Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[20 <./img/report-table.png (PNG copy)> <./img/decoder-wave-3codeword.png (PNG copy)>]
+[21 <./img/report-table.png (PNG copy)> <./img/decoder-wave-3codeword.png (PNG copy)>]
 File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
 Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
@@ -1254,10 +1250,10 @@ File: inc/top.pdf Graphic file (type pdf)
 <use inc/top.pdf, page 1>
 Package pdftex.def Info: inc/top.pdf , page1 used on input line 166.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [21
+ [22
 
  <./inc/top.pdf>]
-<img/top-wave-general.png, id=490, 1594.95876pt x 298.11375pt>
+<img/top-wave-general.png, id=495, 1594.95876pt x 298.11375pt>
 File: img/top-wave-general.png Graphic file (type png)
 <use img/top-wave-general.png>
 Package pdftex.def Info: img/top-wave-general.png  used on input line 186.
@@ -1267,7 +1263,7 @@ Overfull \hbox (25.52342pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
-<img/top-wave-error-w0.png, id=492, 1418.29875pt x 305.14pt>
+<img/top-wave-error-w0.png, id=497, 1418.29875pt x 305.14pt>
 File: img/top-wave-error-w0.png Graphic file (type png)
 <use img/top-wave-error-w0.png>
 Package pdftex.def Info: img/top-wave-error-w0.png  used on input line 198.
@@ -1277,7 +1273,7 @@ Overfull \hbox (29.2473pt too wide) in paragraph at lines 198--199
  [][] 
  []
 
-<img/top-wave-error-w1w2.png, id=494, 1350.04375pt x 298.11375pt>
+<img/top-wave-error-w1w2.png, id=499, 1350.04375pt x 298.11375pt>
 File: img/top-wave-error-w1w2.png Graphic file (type png)
 <use img/top-wave-error-w1w2.png>
 Package pdftex.def Info: img/top-wave-error-w1w2.png  used on input line 209.
@@ -1287,7 +1283,7 @@ Overfull \hbox (33.04749pt too wide) in paragraph at lines 209--210
  [][] 
  []
 
-<img/top-wave-error-w2w3.png, id=496, 1417.295pt x 299.1175pt>
+<img/top-wave-error-w2w3.png, id=501, 1417.295pt x 299.1175pt>
 File: img/top-wave-error-w2w3.png Graphic file (type png)
 <use img/top-wave-error-w2w3.png>
 Package pdftex.def Info: img/top-wave-error-w2w3.png  used on input line 219.
@@ -1297,8 +1293,8 @@ Overfull \hbox (28.90604pt too wide) in paragraph at lines 219--220
  [][] 
  []
 
-[22 <./img/top-wave-general.png (PNG copy)> <./img/top-wave-error-w0.png (PNG copy)> <./img/top-wave-error-w1w2.png (PNG copy)>]
-<img/top-wave-error-w3w4.png, id=506, 1484.54625pt x 299.1175pt>
+[23 <./img/top-wave-general.png (PNG copy)> <./img/top-wave-error-w0.png (PNG copy)> <./img/top-wave-error-w1w2.png (PNG copy)>]
+<img/top-wave-error-w3w4.png, id=511, 1484.54625pt x 299.1175pt>
 File: img/top-wave-error-w3w4.png Graphic file (type png)
 <use img/top-wave-error-w3w4.png>
 Package pdftex.def Info: img/top-wave-error-w3w4.png  used on input line 233.
@@ -1308,7 +1304,7 @@ Overfull \hbox (36.93388pt too wide) in paragraph at lines 233--234
  [][] 
  []
 
-) [23 <./img/top-wave-error-w2w3.png (PNG copy)> <./img/top-wave-error-w3w4.png (PNG copy)>] (main.aux
+) [24 <./img/top-wave-error-w2w3.png (PNG copy)> <./img/top-wave-error-w3w4.png (PNG copy)>] (main.aux
 LaTeX Info: Redefining \. on input line 15.
 LaTeX Info: Redefining \% on input line 15.
 )
@@ -1327,17 +1323,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25825 strings out of 469378
- 447339 string characters out of 5459718
- 1511761 words of memory out of 5000000
- 54364 multiletter control sequences out of 15000+600000
+ 25820 strings out of 469378
+ 447268 string characters out of 5459718
+ 1511947 words of memory out of 5000000
+ 54358 multiletter control sequences out of 15000+600000
  646110 words of font info for 87 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  74i,17n,88p,1939b,2253s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecit0900.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0500.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1000.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk> </home/abel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1728.pk></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/abel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (24 pages, 2082788 bytes).
+Output written on main.pdf (25 pages, 2084016 bytes).
 PDF statistics:
- 1012 PDF objects out of 1200 (max. 8388607)
- 190 named destinations out of 1000 (max. 500000)
+ 1017 PDF objects out of 1200 (max. 8388607)
+ 191 named destinations out of 1000 (max. 500000)
  507 words of extra memory for PDF output out of 10000 (max. 10000000)
 
