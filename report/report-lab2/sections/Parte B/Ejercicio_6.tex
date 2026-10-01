@@ -4,18 +4,18 @@ Se implementa el codificador matricial y el decodificador en los archivos
 \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/classes/GolayEncoder.py}{\textbf{GolayEncoder.py}} y
 \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/classes/GolayDecoder.py}{\textbf{GolayDecoder.py}}, respectivamente.
 
-La tabla de síndromes se encuentra en el archivo \href{https://github.com/AbelCorvalan0/fec-lab2/tree/main/model/outputs/syndromes}{\textbf{error syndromes.txt}}. Estos son generados con los scripts del golden model.
+La tabla de síndromes se encuentra en el archivo \href{https://github.com/AbelCorvalan0/fec-lab2/tree/main/model/outputs/syndromes/error_syndromes.txt}{\textbf{error syndromes.txt}}. Estos son generados con los scripts del golden model.
 Los vectores se presentan de la siguiente forma:
 
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|}
         \hline
-        1. Palabra recibida     &
-        2. Palabra incorregible \\
+        1. Vector recibido     &
+        2. Sindrome \\
         \hline
     \end{tabular}
-    \caption{Descripción de las columnas de salida del decodificador.}
+    % \caption{Descripción de las columnas de salida del decodificador.}
     \label{tab:decoder_output}
 \end{table}
 
@@ -28,7 +28,7 @@ El orden en que se encuentran las variables es el siguiente:
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        1. Palabra recibida     &
+        1. Vector recibido     &
         2. Mensaje              &
         3. Máscara de error     &
         4. Palabra corregida    &

@@ -2,19 +2,19 @@
 
 \subsection{Decodificación manual}
 
-Se codifican palabras recibidas propuestas siguiendo el algoritmo de cuatro casos. Se hace el desarrollo en hoja cálculo adjunta en repositorio (\href{https://github.com/AbelCorvalan0/fec-lab2/tree/main/reference-calc}{\textbf{reference.ods}}). En la siguiente figura se presentan los casos de obtención de la máscara de error:
+Se decodifican palabras recibidas propuestas siguiendo el algoritmo de cuatro casos. Se hace el desarrollo en hoja cálculo adjunta en repositorio (\href{https://github.com/AbelCorvalan0/fec-lab2/tree/main/reference-calc}{\textbf{reference.ods}}). En la siguiente figura se presentan los casos de obtención de la máscara de error:
 
 %% Llevar al archivo LaTeX local
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{correction-cases.png}
     \caption{Casos de evaluación para correción}
     \label{fig:correction cases}
 \end{figure}
 
-Las palabras recibidas propuestas para evaluar en el codificador son las siguientes:
+Las palabras recibidas propuestas para evaluar en el decodificador son las siguientes:
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{ccc}
         \hline
@@ -31,33 +31,11 @@ $$ \boxed{s = r[23:12]  \cdot \textbf{B} \, \oplus r[11:0]} $$
 
 $$ q = s \cdot \textbf{B} = (r[23:12]  \cdot \textbf{B} \, \oplus r[11:0]) \cdot \textbf{B} $$
 
-$$ \boxed{q = r[23:12] \oplus (r[11:0] \cdot \textbf{B})} $$
-
-A continuación se muestra la matriz $\textbf{B}$:
-
-\[
-\textbf{B} =
-\left[
-\begin{array}{@{}cccccccccccc@{}}
-1&0&0&1&1&0&0&0&1&1&1&1\\
-0&1&0&0&1&1&1&0&0&1&1&1\\
-0&0&1&1&0&1&0&1&0&1&1&1\\
-1&0&1&1&1&1&1&0&0&0&1&0\\
-1&1&0&1&1&1&0&1&0&0&0&1\\
-0&1&1&1&1&1&0&0&1&1&0&0\\
-0&1&0&1&0&0&1&1&1&1&0&1\\
-0&0&1&0&1&0&1&1&1&1&1&0\\
-1&0&0&0&0&1&1&1&1&0&1&1\\
-1&1&1&0&0&1&1&1&0&1&0&0\\
-1&1&1&1&0&0&0&1&1&0&1&0\\
-1&1&1&0&1&0&1&0&1&0&0&1
-\end{array}
-\right]
-\]
+$$ \boxed{q = r[23:12] \oplus (r[11:0] \cdot \textbf{B})} $$\\
 
 Se obtienen los siguientes conjuntos de vectores $s$ y $q$ para las palabras a decodificar:
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{ccc}
         \hline
@@ -78,7 +56,7 @@ Estos resultados y los cálculos que siguen, se realizaron en la hoja de cálcul
 
 \subsection{Palabra recibida 1: $0xA5D9A6$}
 
-\subsubsection{Caso 1}
+\subsubsection*{Caso 1}
 
 Luego se evalúa el peso del vector $s$ y la condición correspondiente al primer caso:
 
@@ -86,13 +64,13 @@ $$ weight(s) \leq 3 = 7 \leq 3 = FALSE $$
 
 Por lo que no se cumple con la primera condición.
 
-\subsubsection{Caso 2}
+\subsubsection*{Caso 2}
 
 Se evalúa si algún peso de las operaciones $s \oplus b_{i}$ es menor a 2. Esto es:
 
 $$ weight(S \oplus b_{i}) \leq 2 $$
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{lc}
         \hline
@@ -124,14 +102,14 @@ $$ \textbf{e} = (u_{i} | (s \oplus bi)) $$
 
 En este caso resulta:
 
-$$ \boxed{\textbf{e} = 0x000001}$$
+$$ \boxed{\textbf{e} = 0x001003}$$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % r2 = 0xA5F9A4
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Palabra recibida 2: $0xA5F9A4$}
 
-\subsubsection{Caso 1}
+\subsubsection*{Caso 1}
 
 Luego se evalúa el peso del vector $s$ y la condición correspondiente al primer caso:
 
@@ -139,13 +117,13 @@ $$ weight(s) \leq 3 = 5 \leq 3 = FALSE $$
 
 Por lo que no se cumple con la primera condición.
 
-\subsubsection{Caso 2}
+\subsubsection*{Caso 2}
 
 Se evalúa si algún peso de las operaciones $s \oplus b_{i}$ es menor a 2. Esto es:
 
 $$ weight(S \oplus b_{i}) \leq 2 $$
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{lc}
         \hline
@@ -169,7 +147,7 @@ $$ weight(S \oplus b_{i}) \leq 2 $$
 
 Ninguna de las operaciones cumple con la condición.
 
-\subsubsection{Caso 3}
+\subsubsection*{Caso 3}
 
 Se calcula el peso del vector $q$. Se tiene:
 
@@ -179,13 +157,13 @@ $$ weight(q) \leq 3 = 7 \leq 3 = FALSE $$
 
 Por lo que no se cumple la condición.
 
-\subsubsection{Caso 4}
+\subsubsection*{Caso 4}
 
 Se evalúa si algún peso de las operaciones $q \oplus b_{i}$ es menor a 2. Esto es:
 
 $$ weight(q \oplus b_{i}) \leq 2 $$
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{lc}
         \hline
@@ -224,7 +202,7 @@ $$ \boxed{\textbf{e} = 0x003001}$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Palabra recibida 3: $0xA5C9AA$}
 
-\subsubsection{Caso 1}
+\subsubsection*{Caso 1}
 
 Se evalúa el peso del vector $s$ y la condición correspondiente al primer caso:
 
@@ -232,13 +210,13 @@ $$ weight(s) \leq 3 = 4 \leq 3 = FALSE $$
 
 Por lo que no se cumple con la primera condición.
 
-\subsubsection{Caso 2}
+\subsubsection*{Caso 2}
 
 Se evalúa si algún peso de las operaciones $s \oplus b_{i}$ es menor a 2. Esto es:
 
 $$ weight(S \oplus b_{i}) \leq 2 $$
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{lc}
         \hline
@@ -262,7 +240,7 @@ $$ weight(S \oplus b_{i}) \leq 2 $$
 
 Ninguna de las operaciones cumple con la condición.
 
-\subsubsection{Caso 3}
+\subsubsection*{Caso 3}
 
 Se calcula el peso del vector $q$. Se tiene:
 
@@ -272,13 +250,13 @@ $$ weight(q) \leq 3 = 8 \leq 3 = FALSE $$
 
 Por lo que no se cumple la condición.
 
-\subsubsection{Caso 4}
+\subsubsection*{Caso 4}
 
 Se evalúa si algún peso de las operaciones $q \oplus b_{i}$ es menor a 2. Esto es:
 
 $$ weight(q \oplus b_{i}) \leq 2 $$
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{lc}
         \hline
