@@ -1,37 +1,20 @@
-Se diseñó el módulo de codificación de codewords para realizar la multiplicación de la información recibida con la matriz $\textbf{G}= {I | B}$. 
+Se diseñó el módulo de codificación de codewords para realizar la multiplicación de la información recibida con la matriz $\textbf{G}= {I | B}$. La logica resultante es combinacional y el diseño final queda:
 
-Se presenta la implementación del codificador. En la siguiente figura se muestra la primer estapa de buffers y las primeras 6 LUTs del circuito.
+\includepdf[pages=-]{inc/encoder.pdf}
 
-\begin{figure}[h!]
+\subsection{Resumen del encoder}
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{encoder-stage1.png}
+    \includegraphics[scale=0.3]{encoder-theros1.png}
     % \caption{Implementación RTL del encoder.}
     \label{fig:encoder-theros1}
 \end{figure}
 
-\newpage
-
-Luego se presentan las siguientes 12 LUTs con los buffers de salidas del módulo.
-
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{encoder-stage2-a.png}
-    % \caption{Implementación RTL del encoder.}
-    \label{fig:encoder-theros1}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.3]{encoder-stage2-b.png}
-    % \caption{Implementación RTL del encoder.}
-    \label{fig:encoder-theros1}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.3]{encoder-stage2-c.png}
-    % \caption{Implementación RTL del encoder.}
-    \label{fig:encoder-theros1}
+    \includegraphics[scale=0.3]{encoder-theros2.png}
+    \caption{Resumen de la implementación RTL del encoder.}
+    \label{fig:encoder-theros2}
 \end{figure}
 
 \subsection{Validación del encoder}

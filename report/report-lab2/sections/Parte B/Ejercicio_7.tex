@@ -7,12 +7,12 @@ en el golden model \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/mod
 Luego, estos vectores son procesados por un objeto decodificador para
 obtener el archivo de vectores \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/outputs/decoder/decoder_top_testing/codeword_with_errors.txt}{\textbf{codeword with errors.txt}}.
 
-Este archivo tiene la siguiente convención de vectores.
+Este archivo tiene el siguiente formato:
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        1. Palabra recibida &
+        1. Vector recibido &
         2. Mensaje &
         3. Máscara de error &
         4. Palabra corregida &
@@ -23,48 +23,15 @@ Este archivo tiene la siguiente convención de vectores.
     \label{tab:decoder_output}
 \end{table}
 
-El script con el cual se genera el conjunto de vectores es el siguiente:
+Con estos vectores se valido el modelo del decoder obteniendo exitosamente la tabla esperada de casos segun el peso de error:
 
-\begin{lstlisting}[language=Python, caption={Generación de los vectores de prueba del decodificador}]
-    def write_codewords_with_error(filename, codeword, max_errors):
-        n = len(codeword)
-        received_word_array_with_errors = []
-        # Convertir codeword [0,1,1,...] -> entero
-        codeword_int = int("".join(map(str, codeword)), 2)
-        # Todas las posiciones posibles donde colocar los errores, por peso
-        # C(24,0) + C(24,1) + C(24,2) + C(24,3) + C(24,4) = 12951
-        error_masks = [
-            sum(1 << (n - 1 - pos) for pos in error_positions)
-            for n_errors in range(max_errors + 1)
-            for error_positions in combinations(range(n), n_errors)
-        ]
-        with open(filename, "w") as file:
-            for mask in error_masks:
-                received_word = codeword_int ^ mask
-                received_bits = np.array(
-                    [int(bit) for bit in format(received_word, f"0{n}b")], dtype=np.uint16)
-                msg, corrected, uncorrectable = decoder_model.decode(received_bits)
-                received_word_array_with_errors.append(received_bits)
-                file.write(" ".join([
-                    format(received_word, f"0{n}b"),
-                    "".join(map(str, msg)),
-                    format(mask, f"0{n}b") if uncorrectable is False else format(0, f"0{n}b"),
-                    str(int(corrected)),
-                    str(int(uncorrectable)),
-                ]) + "\n")
-        return np.array(received_word_array_with_errors), msg, error_masks, corrected, uncorrectable, len(error_masks)
-    import os
-    import shutil
-    max_errors = 4 # 4 errors limit
-    filename_codeword_with_errors = "outputs/decoder/decoder_top_testing/codeword_with_errors.txt"
-    received_word_array_with_errors, msg, error_masks, corrected, uncorrectable, n_lines = write_codewords_with_error(filename_codeword_with_errors, encoder_output[3838], max_errors)
-    print(f"{n_lines} codewords written to {filename_codeword_with_errors}")
-    # Copia para las secuencias UVM
-    uvm_sequences_dir = "../implem/golay_decoder/decoder/decoder.uvm/sequences"
-    os.makedirs(uvm_sequences_dir, exist_ok=True)
-    uvm_codeword_with_errors = shutil.copy(filename_codeword_with_errors, uvm_sequences_dir)
-    print(f"{n_lines} codewords written to {uvm_codeword_with_errors}")
-    len(received_word_array_with_errors)
-\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{decoder-error-table.png}
+    \hfill
+    \includegraphics[scale=0.4]{decoder-error-model.png}
+    \caption{Tabla de casos de decodificacion segun peso de error (modelo).}
+    \label{fig:decoder-error-table}
+\end{figure}
 
-Además se genera un conjunto de vectores por cada submódulo. Los archivos de los vectores generados se encuentran en \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/golay_encoder.ipynb}{\textbf{golay encoder.ipynb}} y \href{https://github.com/AbelCorvalan0/fec-lab2/blob/main/model/golay_decoder.ipynb}{\textbf{golay decoder.ipynb}}
+Además se genera un conjunto de vectores por cada submódulo, todos los archivos se encuentran en \href{https://github.com/AbelCorvalan0/fec-lab2/tree/main/model/outputs/decoder}{\textbf{(vectores)}}.

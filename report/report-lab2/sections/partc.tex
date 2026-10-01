@@ -28,21 +28,6 @@ Considerando tanto el incremento logica como un analisis basico de la actividad 
 
 \subsection{Implementación RTL del encoder}
 
-\subsection{Resumen del encoder}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.3]{encoder-theros1.png}
-    % \caption{Implementación RTL del encoder.}
-    \label{fig:encoder-theros1}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.3]{encoder-theros2.png}
-    \caption{Resumen de la implementación RTL del encoder.}
-    \label{fig:encoder-theros2}
-\end{figure}
-
 \input{sections/Parte C/Ejercicio_8.tex}
 
 \subsection{Implementación RTL del decoder}
@@ -92,7 +77,7 @@ Una vez validados los módulos, se incorporaron los registros de pipeline corres
 \end{figure}
 
 \subsection{Validacion del decoder}
-Se realizó su verificación funcional usando el entorno UVM mediante vector matching, con archivos de referencia generados a partir del modelo desarrollado previamente. En los vectores cada línea contiene el vector de entrada $rx$ y las salidas esperadas correspondientes al mensaje decodificado, el patrón de error y las flags corrected y uncorrectable.\\
+Se realizó su verificación funcional usando el entorno UVM mediante vector matching, con archivos de referencia generados a partir del modelo desarrollado previamente.\\
 
 Como primera verificación funcional, se utilizaron codewords sin errores. En este caso se verificó que el patrón de error sea nulo, y que las señales corrected y uncorrectable permanecieran en bajo durante todo el test. La Figura~\ref{fig:decoder-wave-codeword-only} muestra los resultados obtenidos durante el test:
 
