@@ -31,3 +31,16 @@ class GolayEncoder:
 
         codeword = np.array([word, parity], dtype=np.uint8).flatten()
         return codeword
+
+    def get_output(self, word):
+        word = [(word >> i) & 1 for i in range(self._k)]
+        word =  np.array(word[::-1], dtype=np.uint8)
+    
+        codeword = self.encode(word)
+
+        print(f"", flush=True)
+        print(f"From python: GolayDecoder.get_output({word}) = {codeword}", flush=True)
+
+        codeword = sum([int(bi) << i for i, bi in enumerate(codeword[::-1])])
+        codeword = int(codeword)
+        return codeword
