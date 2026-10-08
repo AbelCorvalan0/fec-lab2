@@ -35,7 +35,6 @@ int dut_model_get_output(int word) {
         // Call: model.get_output(word)
         PyObject *pValue = PyObject_CallObject(pMethod, pArgs);
         
-        
         if (pValue != NULL) {
             result = (int)PyLong_AsLong(pValue);
             
@@ -75,3 +74,9 @@ void dut_model_cleanup() {
 //      sudo dnf install python3-devel
 //      Config vivado:
 //          tools > settings > Simulation > Compilation > xsim.compile.xsc.more_options: --gcc_compile_options "-I/usr/include/python3.14"
+
+// Config PYTHONPATH before launch vivado
+// 
+//      goto model directory
+//      export PYTHONPATH=$PYTHONPATH:$(pwd)/classes
+//      launch vivado

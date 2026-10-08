@@ -5,7 +5,7 @@ class tb_scoreboard extends uvm_scoreboard;
         super.new(name, parent);
     endfunction
 
-    virtual python_if model;
+    virtual python_if                           model;
     uvm_analysis_imp#(seq_item, tb_scoreboard)  scb_analysis_imp;
 
     virtual function void build_phase(uvm_phase phase);
